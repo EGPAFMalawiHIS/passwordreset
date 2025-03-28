@@ -1,0 +1,89 @@
+<div class="flex min-h-screen flex-col md:flex-row">
+  <!-- Info section with glass morphism effect -->
+  <div class="flex flex-1 items-center justify-center bg-gradient-to-br from-primary-600 to-primary-800 p-8 md:p-12">
+    <div class="glass-card p-8 text-white md:p-12">
+      <h1 class="mb-6 text-4xl font-bold">Password Reset Portal</h1>
+      <p class="mb-8 text-lg">Secure password reset management system for helpdesk officers.</p>
+      
+      <div class="space-y-6">
+        <div class="flex items-center space-x-4">
+          <div class="flex h-12 w-12 items-center justify-center rounded-full bg-white/20">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold">Secure Password Reset</h3>
+            <p class="text-primary-100">AES-256 encryption for reset codes</p>
+          </div>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+          <div class="flex h-12 w-12 items-center justify-center rounded-full bg-white/20">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold">24-hour Expiration</h3>
+            <p class="text-primary-100">Automatic code expiration for security</p>
+          </div>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+          <div class="flex h-12 w-12 items-center justify-center rounded-full bg-white/20">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold">Comprehensive Reporting</h3>
+            <p class="text-primary-100">Export transaction data in multiple formats</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Form section -->
+  <div class="flex flex-1 items-center justify-center bg-white p-8 md:p-12">
+    <div class="w-full max-w-md space-y-8">
+      <div class="text-center">
+        <h2 class="mt-6 text-3xl font-bold tracking-tight text-gray-900">Sign in to your account</h2>
+        <p class="mt-2 text-sm text-gray-600">
+          Or
+          <%= link_to "create a new account", signup_path, class: "font-medium text-primary-600 hover:text-primary-500" %>
+        </p>
+      </div>
+      
+      <%= form_with url: login_path, method: :post, class: "mt-8 space-y-6" do |f| %>
+        <div class="-space-y-px rounded-md shadow-sm">
+          <div>
+            <%= f.label :username, class: "sr-only" %>
+            <%= f.text_field :username, class: "relative block w-full rounded-t-md border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:z-10 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6", placeholder: "Username", required: true, autofocus: true %>
+          </div>
+          <div>
+            <%= f.label :password, class: "sr-only" %>
+            <%= f.password_field :password, class: "relative block w-full rounded-b-md border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:z-10 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6", placeholder: "Password", required: true %>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between">
+          <div class="flex items-center">
+            <input id="remember-me" name="remember-me" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-primary-600 focus:ring-primary-600">
+            <label for="remember-me" class="ml-2 block text-sm text-gray-900">Remember me</label>
+          </div>
+
+          <div class="text-sm">
+            <a href="#" class="font-medium text-primary-600 hover:text-primary-500">Forgot your password?</a>
+          </div>
+        </div>
+
+        <div>
+          <%= f.submit "Sign in", class: "group relative flex w-full justify-center rounded-md bg-primary-600 px-3 py-2 text-sm font-semibold text-white hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,84 @@
+wb = xlsx_package.workbook
+
+# Add styles
+styles = wb.styles
+header_style = styles.add_style(bg_color: "DDDDDD", 
+                             b: true, 
+                             border: { style: :thin, color: "00000000" },
+                             alignment: { horizontal: :center })
+                             
+date_format = styles.add_style(format_code: "yyyy-mm-dd hh:mm:ss")
+active_style = styles.add_style(fg_color: "008800")
+expired_style = styles.add_style(fg_color: "CC0000")
+used_style = styles.add_style(fg_color: "0000CC")
+
+# Add summary worksheet
+wb.add_worksheet(name: "Summary") do |sheet|
+  # Add title
+  sheet.add_row ["Password Reset Transactions Report"]
+  sheet.add_row ["Generated on:", Time.now.strftime('%Y-%m-%d %H:%M:%S')]
+  sheet.add_row []
+
+  # Add summary data
+  active_count = @transactions.select { |t| t.status == "active" }.count
+  expired_count = @transactions.select { |t| t.status == "expired" }.count
+  used_count = @transactions.select { |t| t.status == "used" }.count
+
+  sheet.add_row ["Summary"]
+  sheet.add_row ["Total Transactions:", @transactions.count]
+  sheet.add_row ["Active:", active_count]
+  sheet.add_row ["Expired:", expired_count]
+  sheet.add_row ["Used:", used_count]
+
+  # Merge title cell
+  sheet.merge_cells("A1:B1")
+
+  # Style the title
+  sheet.row_style 0, styles.add_style(b: true, sz: 16)
+  sheet.row_style 3, styles.add_style(b: true)
+end
+
+# Add transactions worksheet
+wb.add_worksheet(name: "Transactions") do |sheet|
+  # Add headers
+  sheet.add_row [
+    'Transaction ID', 
+    'Username', 
+    'Full Name', 
+    'Reset Code', 
+    'Status', 
+    'Created At', 
+    'Expires At', 
+    'Location'
+  ], style: header_style
+
+  # Add data rows
+  @transactions.each do |transaction|
+    # Determine style for status cell
+    status_style = case transaction.status
+                   when "active" then active_style
+                   when "expired" then expired_style
+                   when "used" then used_style
+                   else nil
+                   end
+    
+    # Add row with appropriate styles
+    sheet.add_row [
+      transaction.id,
+      transaction.user.username,
+      transaction.user.full_name,
+      transaction.formatted_reset_code,
+      transaction.status.capitalize,
+      transaction.created_at,
+      transaction.expires_at,
+      transaction.location
+    ], style: [nil, nil, nil, nil, status_style, date_format, date_format, nil]
+  end
+
+  # Auto-filter the header row
+  sheet.auto_filter = "A1:H1"
+
+  # Auto-fit columns
+  sheet.column_widths 15, 20, 25, 30, 15, 20, 20, 20
+end
+

@@ -1,0 +1,166 @@
+<% content_for :title, "Dashboard Reports | Password Reset System" %>
+
+<div class="row mb-4">
+  <div class="col">
+    <h1>Dashboard Reports</h1>
+    <p class="text-muted">Overview of system activity and statistics</p>
+  </div>
+</div>
+
+<div class="row mb-4">
+  <div class="col-md-3">
+    <div class="card border-0 shadow-sm h-100">
+      <div class="card-body">
+        <div class="d-flex align-items-center mb-3">
+          <div class="bg-primary bg-opacity-10 rounded p-2 me-3">
+            <i class="bi bi-calendar-check text-primary fs-4"></i>
+          </div>
+          <h5 class="card-title mb-0">Total Transactions</h5>
+        </div>
+        <h2 class="display-5 fw-bold mb-0"><%= @stats[:total_transactions] %></h2>
+        <p class="text-muted">All-time reset codes</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card border-0 shadow-sm h-100">
+      <div class="card-body">
+        <div class="d-flex align-items-center mb-3">
+          <div class="bg-success bg-opacity-10 rounded p-2 me-3">
+            <i class="bi bi-check-circle text-success fs-4"></i>
+          </div>
+          <h5 class="card-title mb-0">Active Codes</h5>
+        </div>
+        <h2 class="display-5 fw-bold mb-0"><%= @stats[:active_codes] %></h2>
+        <p class="text-muted">Currently active reset codes</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card border-0 shadow-sm h-100">
+      <div class="card-body">
+        <div class="d-flex align-items-center mb-3">
+          <div class="bg-danger bg-opacity-10 rounded p-2 me-3">
+            <i class="bi bi-x-circle text-danger fs-4"></i>
+          </div>
+          <h5 class="card-title mb-0">Expired Codes</h5>
+        </div>
+        <h2 class="display-5 fw-bold mb-0"><%= @stats[:expired_codes] %></h2>
+        <p class="text-muted">Expired reset codes</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card border-0 shadow-sm h-100">
+      <div class="card-body">
+        <div class="d-flex align-items-center mb-3">
+          <div class="bg-info bg-opacity-10 rounded p-2 me-3">
+            <i class="bi bi-check2-all text-info fs-4"></i>
+          </div>
+          <h5 class="card-title mb-0">Used Codes</h5>
+        </div>
+        <h2 class="display-5 fw-bold mb-0"><%= @stats[:used_codes] %></h2>
+        <p class="text-muted">Successfully used reset codes</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-8">
+    <div class="card border-0 shadow-sm">
+      <div class="card-header bg-white">
+        <h5 class="mb-0">Monthly Transactions</h5>
+      </div>
+      <div class="card-body">
+        <canvas id="monthlyChart" height="300"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-4">
+    <div class="card border-0 shadow-sm">
+      <div class="card-header bg-white">
+        <h5 class="mb-0">Status Distribution</h5>
+      </div>
+      <div class="card-body">
+        <canvas id="statusChart" height="300"></canvas>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% content_for :head do %>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<% end %>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Monthly transactions chart
+    const monthlyData = <%= raw @monthly_data.to_json %>;
+    const months = monthlyData.map(item => item.month);
+    const activeData = monthlyData.map(item => item.active);
+    const expiredData = monthlyData.map(item => item.expired);
+    const usedData = monthlyData.map(item => item.used);
+    
+    new Chart(document.getElementById('monthlyChart'), {
+      type: 'bar',
+      data: {
+        labels: months,
+        datasets: [
+          {
+            label: 'Active',
+            data: activeData,
+            backgroundColor: '#28a745',
+          },
+          {
+            label: 'Expired',
+            data: expiredData,
+            backgroundColor: '#dc3545',
+          },
+          {
+            label: 'Used',
+            data: usedData,
+            backgroundColor: '#17a2b8',
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          x: {
+            stacked: true,
+          },
+          y: {
+            stacked: true,
+            beginAtZero: true
+          }
+        }
+      }
+    });
+    
+    // Status distribution chart
+    new Chart(document.getElementById('statusChart'), {
+      type: 'doughnut',
+      data: {
+        labels: ['Active', 'Expired', 'Used'],
+        datasets: [{
+          data: [<%= @stats[:active_codes] %>, <%= @stats[:expired_codes] %>, <%= @stats[:used_codes] %>],
+          backgroundColor: ['#28a745', '#dc3545', '#17a2b8'],
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'bottom',
+          }
+        }
+      }
+    });
+  });
+</script>
+

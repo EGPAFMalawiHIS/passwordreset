@@ -1,0 +1,19 @@
+{
+  "name": "password-managers",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=assets --external:chart.js",
+    "build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/tailwind.css"
+  },
+  "dependencies": {
+    "@hotwired/stimulus": "^3.2.2",
+    "@hotwired/turbo-rails": "^8.0.0",
+    "chart.js": "^4.4.8",
+    "esbuild": "^0.19.11",
+    "tailwindcss": "^3.4.1"
+  },
+  "devDependencies": {
+    "esbuild-loader": "^4.0.2"
+  }
+}

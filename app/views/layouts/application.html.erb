@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html class="h-full">
+<head>
+  <title><%= content_for?(:title) ? yield(:title) : "Password Reset System" %></title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <%= stylesheet_link_tag "tailwind", "inter-font", "application", "data-turbo-track": "reload" %>
+  <!-- Heroicons -->
+  <link rel="stylesheet" href="https://unpkg.com/heroicons@1.0.6/dist/heroicons.min.css">
+  
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <%= javascript_include_tag %>
+  
+  <%= yield :head %>
+</head>
+
+<body class="h-full bg-gradient-to-br from-gray-50 to-gray-100">
+  <div class="min-h-full">
+    <% if logged_in? %>
+      <%= render 'shared/navbar' %>
+    <% end %>
+    
+    <main>
+      <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+        <%= render 'shared/flash' %>
+        <%= yield %>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
