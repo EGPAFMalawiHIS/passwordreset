@@ -1,5 +1,4 @@
 source "https://rubygems.org"
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.2.0"
 
@@ -15,8 +14,8 @@ gem "mysql2", "~> 0.5"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 6.0"
 
-# Bundle and transpile JavaScript [https://github.com/rails/jsbundling-rails]
-gem "jsbundling-rails"
+# Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
+gem "importmap-rails"
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
@@ -24,11 +23,17 @@ gem "turbo-rails"
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
 
+# Use Tailwind CSS [https://github.com/rails/tailwindcss-rails]
+gem "tailwindcss-rails"
+
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
 # Use Redis adapter to run Action Cable in production
 gem "redis", "~> 5.0"
+
+# Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
+# gem "kredis"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 gem "bcrypt", "~> 3.1.7"
@@ -39,56 +44,30 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
-# Use Sass to process CSS
-gem "sassc-rails"
+# Use JWT for token-based authentication
+gem "jwt"
 
-# Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
-gem "image_processing", "~> 1.2"
+# Use Pagy for pagination
+gem "pagy", "~> 6.0"
 
-# JWT for token based authentication
-gem 'jwt'
+# Use Faker for generating fake data
+gem "faker"
 
-# Pagination
-gem 'pagy', '~> 6.0'
-
-# PDF generation
-gem 'prawn'
-gem 'prawn-table'
-
-# Barcode generation
-gem 'barby'
-gem 'chunky_png'
-
-# Export to various formats
-gem 'axlsx'
-gem 'caxlsx_rails'
-
-# Charts
-gem 'chartkick'
-gem 'groupdate'
-
-# Tailwind CSS for styling
-gem 'tailwindcss-rails'
-
-# View components
-gem 'view_component'
-
-# Simple form
-gem 'simple_form'
-
-# Heroicon
-gem 'heroicon'
-
-# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
-gem "rack-cors"
+# PDF and XLSX generation
+gem 'prawn'  # PDF generation
+gem 'axlsx', '~> 1.3.6'  # XLSX generation
+gem 'axlsx_rails'  # Rails integration for Axlsx
+gem 'base32'
+gem 'base62'
+gem 'base64'
+gem 'base62-rb'
+gem 'zlib'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
-  gem 'rspec-rails'
-  gem 'factory_bot_rails'
-  gem 'faker'
-  gem 'pry-rails'
+  gem "rspec-rails"
+  gem "factory_bot_rails"
 end
 
 group :development do
@@ -96,24 +75,14 @@ group :development do
   gem "web-console"
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
-  gem "rack-mini-profiler"
+  # gem "rack-mini-profiler"
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
-  gem "spring"
-
-  # Encryption and decryption logic in the applications
-  gem 'activesupport'
-
-  # Better errors
-  gem 'better_errors'
-  gem 'binding_of_caller'
+  # gem "spring"
 end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
-  gem 'shoulda-matchers'
-  gem 'database_cleaner'
 end
-
