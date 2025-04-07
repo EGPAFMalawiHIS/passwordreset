@@ -1,38 +1,30 @@
 Rails.application.routes.draw do
   # Root path
-  root 'home#index'
-
-  # Authentication routes
-  get 'login', to: 'sessions#new'
-  post 'login', to: 'sessions#create'
-  delete 'logout', to: 'sessions#destroy'
-
-  # Registration routes
-  get 'signup', to: 'users#new'
-  post 'signup', to: 'users#create'
-
-  # Dashboard
-  get 'dashboard', to: 'dashboard#index'
-
-  # Reports
-  get 'reports/dashboard', to: 'reports#dashboard'
-
-  # Reset transactions
-  resources :reset_transactions do
+  root "dashboard#index"
+  
+  # Authentication
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  delete '/logout', to: 'sessions#destroy'
+  
+  # User registration
+  get '/signup', to: 'users#new'
+  resources :users, only: [:create, :index, :show] do
     collection do
-      get 'reports'
-      get 'export_csv'
-      get 'export_pdf'
-      get 'export_excel'
+      get :search
     end
   end
-
-  # API routes
-  namespace :api do
-    namespace :v1 do
-      post 'auth/login', to: 'authentication#login'
-      resources :reset_transactions, only: [:index, :show, :create]
+  
+  # Dashboard
+  get '/dashboard', to: 'dashboard#index'
+  
+  # Password Resets
+  resources :password_resets, only: [:index, :new, :create, :show] do
+    collection do
+      get :search
     end
   end
+  
+  # Reports
+  resources :reports, only: [:index]
 end
-

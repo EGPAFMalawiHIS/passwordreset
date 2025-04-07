@@ -1,0 +1,1300 @@
+name,description,retired,uuid
+Unknown,"A patient may or may not know the location where something occurred. The system should not use this value.",0,ba16cbe4-8d80-11d8-abbb-0024217bb78e
+Other,"Legacy data may contain locations listed as "other"",0,ba16d274-8d80-11d8-abbb-0024217bb78e
+"Assalaam Clinic","Health Centre , Private Health Facility",0,ba16d40e-8d80-11d8-abbb-0024217bb78e
+"Admarc Dispensary","Dispensary , Public Health Facility",0,ba16d594-8d80-11d8-abbb-0024217bb78e
+"Adventist Health Centre (Lilongwe)","Health Centre , Private Health Facility",0,ba16d71a-8d80-11d8-abbb-0024217bb78e
+"African Bible College Health Centre","Health Centre , Private Health Facility",0,ba16d896-8d80-11d8-abbb-0024217bb78e
+"Alinafe Rehabilitation Centre","Rehabilitation Centre , Private Health Facility",0,ba16da12-8d80-11d8-abbb-0024217bb78e
+"Area 18 Urban Health Centre","Health Centre , Public Health Facility",0,ba16de72-8d80-11d8-abbb-0024217bb78e
+"Area 25 Banja La Mtsogolo Dispensary","Dispensary , Private Health Organisation (NGO/CBO)",0,ba16dff8-8d80-11d8-abbb-0024217bb78e
+"Area 25 Urban Health Centre","Health Centre , Public Health Facility",0,ba16e174-8d80-11d8-abbb-0024217bb78e
+"Balaka District Health Office","District Health Office , Public Health Facility",0,ba16e2f0-8d80-11d8-abbb-0024217bb78e
+"Balaka District Hospital","District Hospital , Public Health Facility",0,ba16e46c-8d80-11d8-abbb-0024217bb78e
+"Balaka Health Area","Health Area , Public Administrative Unit",0,ba16e5de-8d80-11d8-abbb-0024217bb78e
+"Balaka Health District","Health District , Public Administrative Unit",0,ba16e750-8d80-11d8-abbb-0024217bb78e
+"Balaka OPD Health Centre","Health Centre , Public Health Facility",0,ba16e840-8d80-11d8-abbb-0024217bb78e
+"Bangwe Health Centre","Health Centre , Public Health Facility",0,ba16e926-8d80-11d8-abbb-0024217bb78e
+"Bembeke Health Centre","Health Centre , Private Health Facility",0,ba16ea02-8d80-11d8-abbb-0024217bb78e
+"Benga Health Centre","Health Centre , Public Health Facility",0,ba16eae8-8d80-11d8-abbb-0024217bb78e
+"Bilal Dispensary","Dispensary , Public Health Facility",0,ba16ebce-8d80-11d8-abbb-0024217bb78e
+"Bilira Health Centre","Health Centre , Public Health Facility",0,ba16ecaa-8d80-11d8-abbb-0024217bb78e
+"Bimbi Health Centre","Health Centre , Public Health Facility",0,ba16ed90-8d80-11d8-abbb-0024217bb78e
+"Biriwiri Health Centre","Health Centre , Public Health Facility",0,ba16ee6c-8d80-11d8-abbb-0024217bb78e
+"Blantyre Civic Centre Dispensary","Dispensary , Public Health Facility",0,ba16ef52-8d80-11d8-abbb-0024217bb78e
+"Blantyre District Health Office","District Health Office , Public Health Facility",0,ba16f02e-8d80-11d8-abbb-0024217bb78e
+"Blantyre Health Area","Health Area , Public Administrative Unit",0,ba16f114-8d80-11d8-abbb-0024217bb78e
+"Blantyre Health District","Health District , Public Administrative Unit",0,ba16f1f0-8d80-11d8-abbb-0024217bb78e
+"Bolero Rural Health Centre","Health Centre , Public Health Facility",0,ba16f2cc-8d80-11d8-abbb-0024217bb78e
+"Bondo Health Centre","Health Centre , Public Health Facility",0,ba16f3b2-8d80-11d8-abbb-0024217bb78e
+"Bowe Health Centre","Health Centre , Public Health Facility",0,ba16f48e-8d80-11d8-abbb-0024217bb78e
+"Bua Dispensary (Kasungu)","Dispensary , Public Health Facility",0,ba16f574-8d80-11d8-abbb-0024217bb78e
+"Bua Health Centre (Nkhotakota)","Dispensary , Public Health Facility",0,ba16f65a-8d80-11d8-abbb-0024217bb78e
+"Bula Health Centre","Health Centre , Public Health Facility",0,ba16f736-8d80-11d8-abbb-0024217bb78e
+"Bulala Health Centre","Health Centre , Public Health Facility",0,ba17a848-8d80-11d8-abbb-0024217bb78e
+"Bvumbwe Research Health Centre","Health Centre , Public Health Facility",0,ba17a974-8d80-11d8-abbb-0024217bb78e
+"Bvumbwe-Makungwa Health Centre","Health Centre , Public Health Facility",0,ba17aa5a-8d80-11d8-abbb-0024217bb78e
+"Bwanje Health Centre","Health Centre , Public Health Facility",0,ba17ab4a-8d80-11d8-abbb-0024217bb78e
+"Bwengu Health Centre","Health Centre , Public Health Facility",0,ba17ac26-8d80-11d8-abbb-0024217bb78e
+"Chabvala Health Centre","Health Centre , Public Health Facility",0,ba17ad16-8d80-11d8-abbb-0024217bb78e
+"Chadza Health Centre","Health Centre , Public Health Facility",0,ba17adfc-8d80-11d8-abbb-0024217bb78e
+"Chakhaza Health Centre","Health Centre , Public Health Facility",0,ba17aed8-8d80-11d8-abbb-0024217bb78e
+"Chamba Dispensary (Machinga)","Dispensary , Public Health Facility",0,ba17afbe-8d80-11d8-abbb-0024217bb78e
+"Chamba Dispensary (Zomba)","Dispensary , Public Health Facility",0,ba17b09a-8d80-11d8-abbb-0024217bb78e
+"Chambe Health Centre","Health Centre , Public Health Facility",0,ba17b176-8d80-11d8-abbb-0024217bb78e
+"Chambo Health Centre","Health Centre , Private Health Facility",0,ba17b25c-8d80-11d8-abbb-0024217bb78e
+"Chamwabvi Dispensary","Dispensary , Public Health Facility",0,ba17b338-8d80-11d8-abbb-0024217bb78e
+"Chang'Ambika Health Centre","Health Centre , Public Health Facility",0,ba17b41e-8d80-11d8-abbb-0024217bb78e
+"Changata Health Centre","Health Centre , Public Health Facility",0,ba17b4fa-8d80-11d8-abbb-0024217bb78e
+"Chankhungu Health Centre","Health Centre , Public Health Facility",0,ba17b5d6-8d80-11d8-abbb-0024217bb78e
+"Chapananga Health Centre","Health Centre , Public Health Facility",0,ba17b6bc-8d80-11d8-abbb-0024217bb78e
+"Chesamu Health Centre","Health Centre , Public Health Facility",0,ba17b7a2-8d80-11d8-abbb-0024217bb78e
+"Chezi Dispensary","Dispensary , Private Health Facility",0,ba17b87e-8d80-11d8-abbb-0024217bb78e
+"Chididi Health Centre (Nkhotakota)","Health Centre , Private Health Facility",0,ba17b964-8d80-11d8-abbb-0024217bb78e
+"Chididi Health Centre (Nsanje)","Health Centre , Private Health Facility",0,ba17ba4a-8d80-11d8-abbb-0024217bb78e
+"Chiendausiku Health Centre","Health Centre , Public Health Facility",0,ba17bb30-8d80-11d8-abbb-0024217bb78e
+"Chifunga Health Centre","Health Centre , Public Health Facility",0,ba17bc0c-8d80-11d8-abbb-0024217bb78e
+"Chigodi Health Centre","Health Centre , Private Health Facility",0,ba17bce8-8d80-11d8-abbb-0024217bb78e
+"Chikande Health Centre","Health Centre , Public Health Facility",0,ba17bdce-8d80-11d8-abbb-0024217bb78e
+"Chikangawa Health Centre","Health Centre , Public Health Facility",0,ba17beaa-8d80-11d8-abbb-0024217bb78e
+"Chikole Dispensary","Dispensary , Public Health Facility",0,ba17bf86-8d80-11d8-abbb-0024217bb78e
+"Chikowa Health Centre (Blantyre)","Health Centre , Public Health Facility",0,ba17c0da-8d80-11d8-abbb-0024217bb78e
+"Chikowa Health Centre (Lilongwe)","Health Centre , Public Health Facility",0,ba17c1c0-8d80-11d8-abbb-0024217bb78e
+"Chikuse Health Centre","Health Centre , Public Health Facility",0,ba17c2a6-8d80-11d8-abbb-0024217bb78e
+"Chikwawa District Health Office","District Health Office , Public Health Facility",0,ba17c38c-8d80-11d8-abbb-0024217bb78e
+"Chikwawa District Hospital","District Hospital , Public Health Facility",0,ba17c468-8d80-11d8-abbb-0024217bb78e
+"Chikwawa Health Area","Health Area , Public Administrative Unit",0,ba17c54e-8d80-11d8-abbb-0024217bb78e
+"Chikwawa Health District","Health District , Public Administrative Unit",0,ba17c62a-8d80-11d8-abbb-0024217bb78e
+"Chikweo Health Centre","Health Centre , Public Health Facility",0,ba17c9fe-8d80-11d8-abbb-0024217bb78e
+"Chikwina Health Centre","Health Centre , Private Health Facility",0,ba17cae4-8d80-11d8-abbb-0024217bb78e
+"Chilambwe Health Centre","Health Centre , Private Health Facility",0,ba17cbca-8d80-11d8-abbb-0024217bb78e
+"Chileka Health Centre","Health Centre , Public Health Facility",0,ba17cca6-8d80-11d8-abbb-0024217bb78e
+"Chileka Health Centre (Lilongwe)","Health Centre , Public Health Facility",0,ba17cd8c-8d80-11d8-abbb-0024217bb78e
+"Chileka SDQ Health Centre (Blantyre)","Health Centre , Private Health Facility",0,ba17ce72-8d80-11d8-abbb-0024217bb78e
+"Chilipa Health Centre (Mangochi)","Health Centre , Public Health Facility",0,ba17cf4e-8d80-11d8-abbb-0024217bb78e
+"Chilipa Health Centre (Zomba)","Health Centre , Private Health Facility",0,ba17d034-8d80-11d8-abbb-0024217bb78e
+"Chilobwe Majiga Health Centre","Health Centre , Public Health Facility",0,ba17d138-8d80-11d8-abbb-0024217bb78e
+"Chilomoni Health Centre","Health Centre , Public Health Facility",0,ba17d228-8d80-11d8-abbb-0024217bb78e
+"Chilumba Garrison Dispensary","Dispensary , Public Health Facility",0,ba17d318-8d80-11d8-abbb-0024217bb78e
+"Chilumba Rural Hospital","Rural Hospital , Public Health Facility",0,ba17d3fe-8d80-11d8-abbb-0024217bb78e
+"Chimaliro Health Centre","Health Centre , Public Health Facility",0,ba17d4e4-8d80-11d8-abbb-0024217bb78e
+"Chimbalanga Health Centre","Health Centre , Public Health Facility",0,ba17d5ca-8d80-11d8-abbb-0024217bb78e
+"Chimembe Health Centre","Health Centre , Public Health Facility",0,ba17d6b0-8d80-11d8-abbb-0024217bb78e
+"Chimoto Health Centre","Health Centre , Public Health Facility",0,ba17d7a0-8d80-11d8-abbb-0024217bb78e
+"Chimvu Health Centre","Health Centre , Public Health Facility",0,ba17dd4a-8d80-11d8-abbb-0024217bb78e
+"Chimwala Dispensary","Dispensary , Private Health Facility",0,ba17de30-8d80-11d8-abbb-0024217bb78e
+"Ching'Oma Dispensary","Dispensary , Public Health Facility",0,ba17df0c-8d80-11d8-abbb-0024217bb78e
+"Chingale Health Centre","Health Centre , Public Health Facility",0,ba17dff2-8d80-11d8-abbb-0024217bb78e
+"Chingazi Health Centre","Health Centre , Private Health Facility",0,ba17e0d8-8d80-11d8-abbb-0024217bb78e
+"Chinguluwe Health Centre (Ntchisi)","Health Centre , Public Health Facility",0,ba17e1be-8d80-11d8-abbb-0024217bb78e
+"Chinguluwe Health Centre (Salima)","Health Centre , Public Health Facility",0,ba17e75e-8d80-11d8-abbb-0024217bb78e
+"Chinkhwiri Health Centre","Health Centre , Public Health Facility",0,ba17e844-8d80-11d8-abbb-0024217bb78e
+"Chinsapo Dispensary","Dispensary , Private Health Facility",0,ba17e92a-8d80-11d8-abbb-0024217bb78e
+"Chintheche Rural Hospital","Rural Hospital , Public Health Facility",0,ba181760-8d80-11d8-abbb-0024217bb78e
+"Chinthembwe Health Centre","Health Centre , Private Health Facility",0,ba181db4-8d80-11d8-abbb-0024217bb78e
+"Chinyama Health Centre","Health Centre , Public Health Facility",0,ba181f26-8d80-11d8-abbb-0024217bb78e
+"Chioshya Health Centre","Health Centre , Public Health Facility",0,ba182098-8d80-11d8-abbb-0024217bb78e
+"Chipho Health Centre","Health Centre , Private Health Facility",0,ba18abda-8d80-11d8-abbb-0024217bb78e
+"Chipini Health Centre","Health Centre , Private Health Facility",0,ba18ad60-8d80-11d8-abbb-0024217bb78e
+"Chipoka Health Centre","Health Centre , Public Health Facility",0,ba18b68e-8d80-11d8-abbb-0024217bb78e
+"Chiponde Health Centre","Health Centre , Public Health Facility",0,ba18bcce-8d80-11d8-abbb-0024217bb78e
+"Chipumi Health Centre","Health Centre , Public Health Facility",0,ba18c322-8d80-11d8-abbb-0024217bb78e
+"Chipwaila Health Centre","Health Centre , Public Health Facility",0,ba18c944-8d80-11d8-abbb-0024217bb78e
+"Chipwanya St Josephs Health Centre","Health Centre , Private Health Facility",0,ba18d7ae-8d80-11d8-abbb-0024217bb78e
+"Chiradzulu District Health Office","District Health Office , Public Health Facility",0,ba18d8b2-8d80-11d8-abbb-0024217bb78e
+"Chiradzulu District Hospital","District Hospital , Public Health Facility",0,ba18d9ac-8d80-11d8-abbb-0024217bb78e
+"Chiradzulu Health Area","Health Area , Public Administrative Unit",0,ba18daba-8d80-11d8-abbb-0024217bb78e
+"Chiradzulu Health District","Health District , Public Administrative Unit",0,ba18dbaa-8d80-11d8-abbb-0024217bb78e
+"Chiringa Dispensary","Dispensary , Private Health Facility",0,ba18dca4-8d80-11d8-abbb-0024217bb78e
+"Chiringa Maternity","Maternity , Public Health Facility",0,ba18dd9e-8d80-11d8-abbb-0024217bb78e
+"Chisala Health Centre","Health Centre , Public Health Facility",0,ba18de8e-8d80-11d8-abbb-0024217bb78e
+"Chisepo Health Centre","Health Centre , Public Health Facility",0,ba18df88-8d80-11d8-abbb-0024217bb78e
+"Chisinga Dispensary","Dispensary , Public Health Facility",0,ba18e082-8d80-11d8-abbb-0024217bb78e
+"Chisitu Health Centre","Health Centre , Public Health Facility",0,ba18e172-8d80-11d8-abbb-0024217bb78e
+"Chitala Health Centre","Health Centre , Private Health Facility",0,ba18e262-8d80-11d8-abbb-0024217bb78e
+"Chitedze Health Centre","Health Centre , Public Health Facility",0,ba18e35c-8d80-11d8-abbb-0024217bb78e
+"Chitekesa Health Centre","Health Centre , Public Health Facility",0,ba18e456-8d80-11d8-abbb-0024217bb78e
+"Chitera Health Centre","Health Centre , Public Health Facility",0,ba18e546-8d80-11d8-abbb-0024217bb78e
+"Chitheka Health Centre","Health Centre , Public Health Facility",0,ba18e636-8d80-11d8-abbb-0024217bb78e
+"Chithumba Maternity","Maternity , Public Health Facility",0,ba18e730-8d80-11d8-abbb-0024217bb78e
+"Chitimba Health Centre","Health Centre , Public Health Facility",0,ba18e820-8d80-11d8-abbb-0024217bb78e
+"Chitipa District Health Office","District Health Office , Public Health Facility",0,ba18e910-8d80-11d8-abbb-0024217bb78e
+"Chitipa District Hospital","District Hospital , Public Health Facility",0,ba18ea0a-8d80-11d8-abbb-0024217bb78e
+"Chitipa Health Area","Health Area , Public Administrative Unit",0,ba18eafa-8d80-11d8-abbb-0024217bb78e
+"Chitipa Health District","Health District , Public Administrative Unit",0,ba18ebea-8d80-11d8-abbb-0024217bb78e
+"Chitowo Health Centre","Health Centre , Public Health Facility",0,ba18ece4-8d80-11d8-abbb-0024217bb78e
+"Chiumbangame Health Centre","Health Centre , Public Health Facility",0,ba18edd4-8d80-11d8-abbb-0024217bb78e
+"Chiunjiza Health Centre","Health Centre , Public Health Facility",0,ba18eec4-8d80-11d8-abbb-0024217bb78e
+"Chiwamba Health Centre","Health Centre , Public Health Facility",0,ba18efbe-8d80-11d8-abbb-0024217bb78e
+"Chiwe Health Centre","Health Centre , Private Health Facility",0,ba18f0ae-8d80-11d8-abbb-0024217bb78e
+"St Marys Health Centre (Chizumulo)","Health Centre , Private Health Facility",0,ba18f19e-8d80-11d8-abbb-0024217bb78e
+"Choma Health Centre","Health Centre , Public Health Facility",0,ba18f28e-8d80-11d8-abbb-0024217bb78e
+"Chonde Health Centre","Health Centre , Public Health Facility",0,ba18f388-8d80-11d8-abbb-0024217bb78e
+"Chongoni Health Centre","Health Centre , Public Health Facility",0,ba18f482-8d80-11d8-abbb-0024217bb78e
+"Chulu Health Centre","Health Centre , Public Health Facility",0,ba18f572-8d80-11d8-abbb-0024217bb78e
+"City Assembly Dispensary","Dispensary , Private Health Facility",0,ba18f662-8d80-11d8-abbb-0024217bb78e
+"Cobbe Barracks Hospital","Hospital , Public Health Facility",0,ba18f75c-8d80-11d8-abbb-0024217bb78e
+"Dedza District Health Office","District Health Office , Public Health Facility",0,ba18f84c-8d80-11d8-abbb-0024217bb78e
+"Dedza District Hospital","arv code:DZA",0,ba18f93c-8d80-11d8-abbb-0024217bb78e
+"Dedza Health Area","Health Area , Public Administrative Unit",0,ba18fa36-8d80-11d8-abbb-0024217bb78e
+"Dedza Health District","Health District , Public Administrative Unit",0,ba18fb26-8d80-11d8-abbb-0024217bb78e
+"DGM Livingstonia Hospital","Hospital , Private Health Facility",0,ba18fc20-8d80-11d8-abbb-0024217bb78e
+"Diamphwe Health Centre","Health Centre , Public Health Facility",0,ba18fd10-8d80-11d8-abbb-0024217bb78e
+"Dickson Health Centre","Health Centre , Public Health Facility",0,ba18fe00-8d80-11d8-abbb-0024217bb78e
+"Dolo Health Centre","Health Centre , Public Health Facility",0,ba18fefa-8d80-11d8-abbb-0024217bb78e
+"Domasi Rural Hospital","Rural Hospital , Public Health Facility",0,ba18ffea-8d80-11d8-abbb-0024217bb78e
+"Doviko Dispensary","Dispensary , Public Health Facility",0,ba1900e4-8d80-11d8-abbb-0024217bb78e
+"Dowa District Health Office","District Health Office , Public Health Facility",0,ba1901d4-8d80-11d8-abbb-0024217bb78e
+"Dowa District Hospital","District Hospital , Public Health Facility",0,ba1902ce-8d80-11d8-abbb-0024217bb78e
+"Dowa Health Area","Health Area , Public Administrative Unit",0,ba1903c8-8d80-11d8-abbb-0024217bb78e
+"Dowa Health District","Health District , Public Administrative Unit",0,ba1904b8-8d80-11d8-abbb-0024217bb78e
+"Dwambazi Health Centre","Health Centre , Public Health Facility",0,ba1905a8-8d80-11d8-abbb-0024217bb78e
+"Dwambazi Rural Hospital","Rural Hospital , Public Health Facility",0,ba1906ac-8d80-11d8-abbb-0024217bb78e
+"Dwangwa Cane Growers Association Clinic","Health Centre , Private Health Facility",0,ba190850-8d80-11d8-abbb-0024217bb78e
+"Dwangwa Health Centre","Dispensary , Public Health Facility",0,ba1909e0-8d80-11d8-abbb-0024217bb78e
+"Dzalanyama Dispensary","Dispensary , Public Health Facility",0,ba190bf2-8d80-11d8-abbb-0024217bb78e
+"Dzeleka Refugee Camp Health Centre","Health Centre , Public Health Facility",0,ba190d8c-8d80-11d8-abbb-0024217bb78e
+"Dzenje Maternity","Maternity , Public Health Facility",0,ba190f26-8d80-11d8-abbb-0024217bb78e
+"Dzenza Health Centre","Health Centre , Private Health Facility",0,ba1910c0-8d80-11d8-abbb-0024217bb78e
+"Dzindevu Health Centre","Health Centre , Public Health Facility",0,ba19125a-8d80-11d8-abbb-0024217bb78e
+"Dziwe Dispensary","Dispensary , Public Health Facility",0,ba199b76-8d80-11d8-abbb-0024217bb78e
+"Dzonzi-Mvai Health Centre","Health Centre , Public Health Facility",0,ba199d24-8d80-11d8-abbb-0024217bb78e
+"Dzoole Health Centre","Health Centre , Public Health Facility",0,ba199ec8-8d80-11d8-abbb-0024217bb78e
+"Dzunje Dispensary","Dispensary , Public Health Facility",0,ba19a062-8d80-11d8-abbb-0024217bb78e
+"Edingeni Rural Hospital","Rural Hospital , Public Health Facility",0,ba19a1fc-8d80-11d8-abbb-0024217bb78e
+"Ehehleni Dispensary","Dispensary , Public Health Facility",0,ba19a396-8d80-11d8-abbb-0024217bb78e
+"Ekwaiweni Dispensary","Dispensary , Public Health Facility",0,ba19a526-8d80-11d8-abbb-0024217bb78e
+"Ekwendeni Hospital","Hospital , Private Health Facility",0,ba19a6c0-8d80-11d8-abbb-0024217bb78e
+"Embangweni Hospital","Hospital , Private Health Facility",0,ba19a85a-8d80-11d8-abbb-0024217bb78e
+"Emfeni Health Centre","Health Centre , Public Health Facility",0,ba19a9ea-8d80-11d8-abbb-0024217bb78e
+"Emsizini Health Centre","Health Centre , Public Health Facility",0,ba19ab84-8d80-11d8-abbb-0024217bb78e
+"Endindeni Health Centre","Health Centre , Public Health Facility",0,ba19ac88-8d80-11d8-abbb-0024217bb78e
+"Engucwini Dispensary","Dispensary , Public Health Facility",0,ba19ad78-8d80-11d8-abbb-0024217bb78e
+"Enukweni Mission Health Centre","Health Centre , Public Health Facility",0,ba19ae72-8d80-11d8-abbb-0024217bb78e
+"Euthini Rural Hospital","Rural Hospital , Public Health Facility",0,ba19af62-8d80-11d8-abbb-0024217bb78e
+"Falls Banja La Mtsogolo Dispensary","Dispensary , Private Health Facility",0,ba19b052-8d80-11d8-abbb-0024217bb78e
+"Fulirwa Health Centre","Health Centre , Public Health Facility",0,ba19b14c-8d80-11d8-abbb-0024217bb78e
+"Gaga Health Centre","Health Centre , Public Health Facility",0,ba19b246-8d80-11d8-abbb-0024217bb78e
+"Ganya Maternity","Maternity , Private Health Facility",0,ba19b336-8d80-11d8-abbb-0024217bb78e
+"Gawanani Health Centre","Health Centre , Private Health Facility",0,ba19b430-8d80-11d8-abbb-0024217bb78e
+"Gogode Dispensary","Dispensary , Public Health Facility",0,ba19b552-8d80-11d8-abbb-0024217bb78e
+"Gola Dispensary","Dispensary , Public Health Facility",0,ba19b64c-8d80-11d8-abbb-0024217bb78e
+"Golomoti Health Centre","Health Centre , Public Health Facility",0,ba19b73c-8d80-11d8-abbb-0024217bb78e
+"Gombe Maternity","Maternity , Public Health Facility",0,ba19b836-8d80-11d8-abbb-0024217bb78e
+"Gowa Health Centre","Health Centre , Private Health Facility",0,ba19b930-8d80-11d8-abbb-0024217bb78e
+"Guilleme St Michaels Health Centre","Health Centre , Private Health Facility",0,ba19ba20-8d80-11d8-abbb-0024217bb78e
+"H Parker Sharp Dispensary","Dispensary , Private Health Facility",0,ba19bb10-8d80-11d8-abbb-0024217bb78e
+"Hallena Oakley Ntambanyama Health Centre","Health Centre , Private Health Facility",0,ba19bc0a-8d80-11d8-abbb-0024217bb78e
+"Hara Dispensary","Dispensary , Public Health Facility",0,ba19bcfa-8d80-11d8-abbb-0024217bb78e
+"Hoho Health Centre","Health Centre , Public Health Facility",0,ba19bdea-8d80-11d8-abbb-0024217bb78e
+"Iba Health Centre","Health Centre , Public Health Facility",0,ba19bee4-8d80-11d8-abbb-0024217bb78e
+"Ifumbo Health Centre","Health Centre , Public Health Facility",0,ba19bfd4-8d80-11d8-abbb-0024217bb78e
+"Iponga Health Centre","Health Centre , Public Health Facility",0,ba19c0c4-8d80-11d8-abbb-0024217bb78e
+"Jalasi Health Centre","Health Centre , Public Health Facility",0,ba19c1b4-8d80-11d8-abbb-0024217bb78e
+"Jenda Health Centre","Health Centre , Public Health Facility",0,ba19c2ae-8d80-11d8-abbb-0024217bb78e
+"Kabudula Health Area","Health Area , Public Administrative Unit",0,ba19c39e-8d80-11d8-abbb-0024217bb78e
+"Kabudula Rural Hospital","Rural Hospital , Public Health Facility",0,ba19c48e-8d80-11d8-abbb-0024217bb78e
+"Kabuwa Health Centre","Health Centre , Public Health Facility",0,ba19c588-8d80-11d8-abbb-0024217bb78e
+"Kabwafu Health Centre","Health Centre , Public Health Facility",0,ba19c678-8d80-11d8-abbb-0024217bb78e
+"Kachale Health Centre","Health Centre , Public Health Facility",0,ba19c768-8d80-11d8-abbb-0024217bb78e
+"Kachere Health Centre","Health Centre , Public Health Facility",0,ba19c862-8d80-11d8-abbb-0024217bb78e
+"Kafele Health Centre","Health Centre , Public Health Facility",0,ba19c952-8d80-11d8-abbb-0024217bb78e
+"Kafukule Health Centre","Health Centre , Public Health Facility",0,ba19ca42-8d80-11d8-abbb-0024217bb78e
+"Kaigwazanga Health Centre","Health Centre , Public Health Facility",0,ba19cb32-8d80-11d8-abbb-0024217bb78e
+"Kakoma Health Centre","Health Centre , Public Health Facility",0,ba19cc2c-8d80-11d8-abbb-0024217bb78e
+"Kalemba Health Centre","Health Centre , Private Health Facility",0,ba19cd1c-8d80-11d8-abbb-0024217bb78e
+"Kalembo Dispensary","Dispensary , Public Health Facility",0,ba19ce0c-8d80-11d8-abbb-0024217bb78e
+"Kalikumbi Health Centre","Health Centre , Private Health Facility",0,ba19cf06-8d80-11d8-abbb-0024217bb78e
+"Kalinde Dispensary","Dispensary , Public Health Facility",0,ba19cff6-8d80-11d8-abbb-0024217bb78e
+"Kaloga Dispensary","Dispensary , Public Health Facility",0,ba19d0e6-8d80-11d8-abbb-0024217bb78e
+"Kalulu Health Centre","Health Centre , Public Health Facility",0,ba19d1d6-8d80-11d8-abbb-0024217bb78e
+"Kaluluma Rural Hospital","Rural Hospital , Public Health Facility",0,ba19d2c6-8d80-11d8-abbb-0024217bb78e
+"Kambenje Health Centre","Health Centre , Public Health Facility",0,ba19d3c0-8d80-11d8-abbb-0024217bb78e
+"Kamboni Health Centre","Health Centre , Public Health Facility",0,ba19d4b0-8d80-11d8-abbb-0024217bb78e
+"Kameme Health Centre","Health Centre , Public Health Facility",0,ba19d596-8d80-11d8-abbb-0024217bb78e
+"Kampanje Maternity","Maternity , Public Health Facility",0,ba19d690-8d80-11d8-abbb-0024217bb78e
+"Kamphata Dispensary","Dispensary , Public Health Facility",0,ba19dc6c-8d80-11d8-abbb-0024217bb78e
+"Kamsonga Health Centre","Health Centre , Public Health Facility",0,ba19dd5c-8d80-11d8-abbb-0024217bb78e
+"Kamteteka Health Centre","Health Centre , Public Health Facility",0,ba19de4c-8d80-11d8-abbb-0024217bb78e
+"Kamuzu Barracks Dispensary","Dispensary , Public Health Facility",0,ba19df3c-8d80-11d8-abbb-0024217bb78e
+"Kamwe Health Centre","Health Centre , Public Health Facility",0,ba19e02c-8d80-11d8-abbb-0024217bb78e
+"Kande Health Centre","Health Centre , Public Health Facility",0,ba19e126-8d80-11d8-abbb-0024217bb78e
+"Kandeu Health Centre (Dispensary)","Dispensary , Public Health Facility",0,ba19e220-8d80-11d8-abbb-0024217bb78e
+"Kang'oma Health Centre","Health Centre , Public Health Facility",0,ba19e310-8d80-11d8-abbb-0024217bb78e
+"Kangolwa Health Centre","Health Centre , Public Health Facility",0,ba19e40a-8d80-11d8-abbb-0024217bb78e
+"Kankao Health Centre","Health Centre , Private Health Facility",0,ba1a742e-8d80-11d8-abbb-0024217bb78e
+"Kanyama Health Centre","Health Centre , Private Health Facility",0,ba1a7532-8d80-11d8-abbb-0024217bb78e
+"Kanyezi Health Centre","Health Centre , Public Health Facility",0,ba1a762c-8d80-11d8-abbb-0024217bb78e
+"Kanyimbi Dispensary","Dispensary , Public Health Facility",0,ba1a7730-8d80-11d8-abbb-0024217bb78e
+"Kaombe Dispensary","Dispensary , Public Health Facility",0,ba1a782a-8d80-11d8-abbb-0024217bb78e
+"Kapanga Health Centre","Health Centre , Public Health Facility",0,ba1a7910-8d80-11d8-abbb-0024217bb78e
+"Kapelula Health Centre","Health Centre , Public Health Facility",0,ba1a7a00-8d80-11d8-abbb-0024217bb78e
+"Kapenda Health Centre","Health Centre , Public Health Facility",0,ba1a7ae6-8d80-11d8-abbb-0024217bb78e
+"Kapeni Health Centre","Health Centre , Public Health Facility",0,ba1a7bcc-8d80-11d8-abbb-0024217bb78e
+"Kaphatenga Health Centre","Health Centre , Private Health Facility",0,ba1a7cb2-8d80-11d8-abbb-0024217bb78e
+"Kaphuka Health Centre","Health Centre , Public Health Facility",0,ba1a7d98-8d80-11d8-abbb-0024217bb78e
+"Kapichila (ESCOM) Health Centre","Health Centre , Private Health Facility",0,ba1a8342-8d80-11d8-abbb-0024217bb78e
+"Kapili Health Centre","Health Centre , Private Health Facility",0,ba1a8432-8d80-11d8-abbb-0024217bb78e
+"Kapire Health Centre","Health Centre , Private Health Facility",0,ba1a869e-8d80-11d8-abbb-0024217bb78e
+"Kapiri Health Centre","Health Centre , Private Health Facility",0,ba1a878e-8d80-11d8-abbb-0024217bb78e
+"Kaporo Rural Hospital","Rural Hospital , Public Health Facility",0,ba1a887e-8d80-11d8-abbb-0024217bb78e
+"Karonga District Health Office","District Health Office , Public Health Facility",0,ba1a8978-8d80-11d8-abbb-0024217bb78e
+"Karonga District Hospital","District Hospital , Public Health Facility",0,ba1a9076-8d80-11d8-abbb-0024217bb78e
+"Karonga Health Area","Health Area , Public Administrative Unit",0,ba1a9166-8d80-11d8-abbb-0024217bb78e
+"Karonga Health District","Health District , Public Administrative Unit",0,ba1a924c-8d80-11d8-abbb-0024217bb78e
+"Kasalika Health Centre","Dispensary , Public Health Facility",0,ba1a9332-8d80-11d8-abbb-0024217bb78e
+"Kaseye St Michaels Health Centre","Health Centre , Private Health Facility",0,ba1aae08-8d80-11d8-abbb-0024217bb78e
+"Kasina Health Centre","Health Centre , Private Health Facility",0,ba1ab06a-8d80-11d8-abbb-0024217bb78e
+"Kasinje Health Centre","Health Centre , Public Health Facility",0,ba1ab1fa-8d80-11d8-abbb-0024217bb78e
+"Kasinthula Dispensary","Dispensary , Public Health Facility",0,ba1ab9a2-8d80-11d8-abbb-0024217bb78e
+"Kasitu Dispensary","Dispensary , Private Health Facility",0,ba1abb14-8d80-11d8-abbb-0024217bb78e
+"Kasitu Health Centre","Health Centre , Private Health Facility",0,ba1ac168-8d80-11d8-abbb-0024217bb78e
+"Kasiya Health Centre","Health Centre , Public Health Facility",0,ba1ac3b6-8d80-11d8-abbb-0024217bb78e
+"Kasungu District Health Office","District Health Office , Public Health Facility",0,ba1acb72-8d80-11d8-abbb-0024217bb78e
+"Kasungu District Hospital","District Hospital , Public Health Facility",0,ba1ad234-8d80-11d8-abbb-0024217bb78e
+"Kasungu Health Area","Health Area , Public Administrative Unit",0,ba1ad892-8d80-11d8-abbb-0024217bb78e
+"Kasungu Health District","Health District , Public Administrative Unit",0,ba1ae710-8d80-11d8-abbb-0024217bb78e
+"Katema Health Centre","Health Centre , Private Health Facility",0,ba1ae814-8d80-11d8-abbb-0024217bb78e
+"Katete Rural Hospital","Rural Hospital , Private Health Facility",0,ba1ae90e-8d80-11d8-abbb-0024217bb78e
+"Katimbila Health Centre","Health Centre , Public Health Facility",0,ba1aea08-8d80-11d8-abbb-0024217bb78e
+"Katowo Rural Hospital","Rural Hospital , Public Health Facility",0,ba1aeb02-8d80-11d8-abbb-0024217bb78e
+"Katsekera Health Centre","Health Centre , Public Health Facility",0,ba1aebf2-8d80-11d8-abbb-0024217bb78e
+"Katuli Health Centre","Health Centre , Public Health Facility",0,ba1aecec-8d80-11d8-abbb-0024217bb78e
+"Kaundu Health Centre","Health Centre , Private Health Facility",0,ba1aede6-8d80-11d8-abbb-0024217bb78e
+"Kawale Banja La Mtsogolo Dispensary","Dispensary , Private Health Facility",0,ba1aeed6-8d80-11d8-abbb-0024217bb78e
+"Kawale Urban Health Centre","Health Centre , Public Health Facility",0,ba1aefd0-8d80-11d8-abbb-0024217bb78e
+"Kawamba Health Centre","Health Centre , Public Health Facility",0,ba1af0c0-8d80-11d8-abbb-0024217bb78e
+"Kawinga Health Centre (Machinga)","Dispensary , Public Health Facility",0,ba1af1ba-8d80-11d8-abbb-0024217bb78e
+"Kayembe Health Centre","Health Centre , Public Health Facility",0,ba1af2aa-8d80-11d8-abbb-0024217bb78e
+"Kazyozyo Maternity","Maternity , Public Health Facility",0,ba1af3a4-8d80-11d8-abbb-0024217bb78e
+"Khasu Health Centre","Health Centre , Public Health Facility",0,ba1af494-8d80-11d8-abbb-0024217bb78e
+"Khola Health Centre","Health Centre , Private Health Facility",0,ba1af58e-8d80-11d8-abbb-0024217bb78e
+"Khombedza Health Centre","Health Centre , Public Health Facility",0,ba1af67e-8d80-11d8-abbb-0024217bb78e
+"Khondowe Health Centre","Health Centre , Public Health Facility",0,ba1af76e-8d80-11d8-abbb-0024217bb78e
+"Khongoni Health Centre","Health Centre , Public Health Facility",0,ba1af868-8d80-11d8-abbb-0024217bb78e
+"Khonjeni Health Centre","Health Centre , Public Health Facility",0,ba1af958-8d80-11d8-abbb-0024217bb78e
+"Khosolo Health Centre","Health Centre , Public Health Facility",0,ba1afa52-8d80-11d8-abbb-0024217bb78e
+"Khuwi Health Centre","Health Centre , Public Health Facility",0,ba1afb42-8d80-11d8-abbb-0024217bb78e
+"Koche Health Centre","Health Centre , Private Health Facility",0,ba1afc3c-8d80-11d8-abbb-0024217bb78e
+"Kochilira Rural Hospital","Rural Hospital , Public Health Facility",0,ba1afd2c-8d80-11d8-abbb-0024217bb78e
+"KTFT Dispensary (Mziza)","Dispensary , Private Health Facility",0,ba1afe1c-8d80-11d8-abbb-0024217bb78e
+"Kukalanga Dispensary","Dispensary , Public Health Facility",0,ba1aff16-8d80-11d8-abbb-0024217bb78e
+"Kunenekude Health Centre","Health Centre , Public Health Facility",0,ba1b0006-8d80-11d8-abbb-0024217bb78e
+"Kwitanda Health Centre","Health Centre , Public Health Facility",0,ba1b0100-8d80-11d8-abbb-0024217bb78e
+"Lakeview Health Centre","Health Centre , Private Health Facility",0,ba1b01fa-8d80-11d8-abbb-0024217bb78e
+"Lambulira Health Centre","Health Centre , Public Health Facility",0,ba1b02ea-8d80-11d8-abbb-0024217bb78e
+"Lemwe Health Centre","Health Centre , Public Health Facility",0,ba1b03e4-8d80-11d8-abbb-0024217bb78e
+"Lengwe Dispensary","Dispensary , Public Health Facility",0,ba1b04d4-8d80-11d8-abbb-0024217bb78e
+"Lifuwu Health Centre","Dispensary , Public Health Facility",0,ba1b05ce-8d80-11d8-abbb-0024217bb78e
+"Likangala Health Centre","Health Centre , Public Health Facility",0,ba1b06c8-8d80-11d8-abbb-0024217bb78e
+"Likoma District Health Office","District Health Office , Public Health Facility",0,ba1b8a58-8d80-11d8-abbb-0024217bb78e
+"Likoma Health Area","Health Area , Public Administrative Unit",0,ba1b8b66-8d80-11d8-abbb-0024217bb78e
+"Likoma Health District","Health District , Public Administrative Unit",0,ba1b8c60-8d80-11d8-abbb-0024217bb78e
+"Likuni Hospital","Hospital , Private Health Facility",0,ba1b8d50-8d80-11d8-abbb-0024217bb78e
+"Lilongwe Bottom Hospital","Hospital , Public Health Facility (arv code: LBH)",0,ba1b8e54-8d80-11d8-abbb-0024217bb78e
+"Lilongwe Central Hospital","Central Hospital , Public Health Facility",0,ba1b8f4e-8d80-11d8-abbb-0024217bb78e
+"Lilongwe District Health Office","District Health Office , Public Health Facility",0,ba1b9048-8d80-11d8-abbb-0024217bb78e
+"Lilongwe Health Area","Health Area , Public Administrative Unit",0,ba1b9142-8d80-11d8-abbb-0024217bb78e
+"Lilongwe Health District","Health District , Public Administrative Unit",0,ba1b9296-8d80-11d8-abbb-0024217bb78e
+"Limbe Health Centre","Health Centre , Public Health Facility",0,ba1b9390-8d80-11d8-abbb-0024217bb78e
+"Linyangwa Health Centre","Health Centre , Private Health Facility",0,ba1b948a-8d80-11d8-abbb-0024217bb78e
+"Lirangwe Health Centre","Health Centre , Public Health Facility",0,ba1b957a-8d80-11d8-abbb-0024217bb78e
+"Lisungwi Health Centre","Health Centre , Public Health Facility",0,ba1b9674-8d80-11d8-abbb-0024217bb78e
+"Liuzi Health Centre","Health Centre , Public Health Facility",0,ba1b9764-8d80-11d8-abbb-0024217bb78e
+"Liwaladzi Health Centre","Health Centre , Private Health Facility",0,ba1b9868-8d80-11d8-abbb-0024217bb78e
+"Lizulu Health Centre","Health Centre , Public Health Facility",0,ba1b9a02-8d80-11d8-abbb-0024217bb78e
+"Lobi Rural Health Centre","Health Centre , Public Health Facility",0,ba1b9b88-8d80-11d8-abbb-0024217bb78e
+"Ludzi St Josephs Health Centre","Health Centre , Private Health Facility",0,ba1b9e58-8d80-11d8-abbb-0024217bb78e
+"Lugola Health Centre","Health Centre , Private Health Facility",0,ba1b9ffc-8d80-11d8-abbb-0024217bb78e
+"Lujeri Health Centre","Health Centre , Private Health Facility",0,ba1ba196-8d80-11d8-abbb-0024217bb78e
+"Lulanga Health Centre","Health Centre , Private Health Facility",0,ba1ba330-8d80-11d8-abbb-0024217bb78e
+"Lulwe Health Centre","Health Centre , Private Health Facility",0,ba1ba4d4-8d80-11d8-abbb-0024217bb78e
+"Lumbadzi Health Centre","Health Centre , Public Health Facility",0,ba1ba664-8d80-11d8-abbb-0024217bb78e
+"Lundu Health Centre","Health Centre , Public Health Facility",0,ba1ba7f4-8d80-11d8-abbb-0024217bb78e
+"Lungwena Health Centre","Health Centre , Public Health Facility",0,ba1ba98e-8d80-11d8-abbb-0024217bb78e
+"Lunjika Health Centre","Health Centre , Private Health Facility",0,ba1bab1e-8d80-11d8-abbb-0024217bb78e
+"Lupembe Health Centre","Health Centre , Public Health Facility",0,ba1bacb8-8d80-11d8-abbb-0024217bb78e
+"Luvwere Health Centre ","Dispensary , Public Health Facility",0,ba1bae48-8d80-11d8-abbb-0024217bb78e
+"Luwalika Health Centre","Health Centre , Private Health Facility",0,ba1bafd8-8d80-11d8-abbb-0024217bb78e
+"Luwani Health Centre","Health Centre , Public Health Facility",0,ba1bb172-8d80-11d8-abbb-0024217bb78e
+"Luwawa Health Centre","Health Centre , Public Health Facility",0,ba1bb302-8d80-11d8-abbb-0024217bb78e
+"Luwerezi Health Centre","Health Centre , Public Health Facility",0,ba1bb49c-8d80-11d8-abbb-0024217bb78e
+"Luwuchi Health Centre","Health Centre , Private Health Facility",0,ba1bb636-8d80-11d8-abbb-0024217bb78e
+"Luzi Health Centre","Health Centre , Public Health Facility",0,ba1bb7c6-8d80-11d8-abbb-0024217bb78e
+"Lwazi Dispensary","Dispensary , Private Health Facility",0,ba1bb8c0-8d80-11d8-abbb-0024217bb78e
+"Lwezga Health Centre","Health Centre , Public Health Facility",0,ba1bb9b0-8d80-11d8-abbb-0024217bb78e
+"Mabili Health Centre","Health Centre , Private Health Facility",0,ba1bbaaa-8d80-11d8-abbb-0024217bb78e
+"Machinga District Health Office","District Health Office , Public Health Facility",0,ba1bbba4-8d80-11d8-abbb-0024217bb78e
+"Machinga District Hospital","District Hospital , Public Health Facility",0,ba1bbc94-8d80-11d8-abbb-0024217bb78e
+"Machinga Health Area","Health Area , Public Administrative Unit",0,ba1bbd8e-8d80-11d8-abbb-0024217bb78e
+"Machinga Health Centre","Health Centre , Public Health Facility",0,ba1bbe7e-8d80-11d8-abbb-0024217bb78e
+"Machinga Health District","Health District , Public Administrative Unit",0,ba1bbf6e-8d80-11d8-abbb-0024217bb78e
+"Madede Health Centre","Health Centre , Public Health Facility",0,ba1bc068-8d80-11d8-abbb-0024217bb78e
+"Madisi Hospital","Hospital , Private Health Facility",0,ba1bc162-8d80-11d8-abbb-0024217bb78e
+"Madziabango Health Centre","Health Centre , Public Health Facility",0,ba1bc252-8d80-11d8-abbb-0024217bb78e
+"Mafco Health Centre","Health Centre , Public Health Facility",0,ba1bc342-8d80-11d8-abbb-0024217bb78e
+"Maganga Health Centre","Health Centre , Public Health Facility",0,ba1bc43c-8d80-11d8-abbb-0024217bb78e
+"Magareta Health Centre","Health Centre , Public Health Facility",0,ba1bc52c-8d80-11d8-abbb-0024217bb78e
+"Magomero Health Centre","Health Centre , Private Health Facility",0,ba1bc61c-8d80-11d8-abbb-0024217bb78e
+"Makanjira Health Centre","Health Centre , Public Health Facility",0,ba1bc70c-8d80-11d8-abbb-0024217bb78e
+"Makapwa Health Centre","Health Centre , Private Health Facility",0,ba1bc806-8d80-11d8-abbb-0024217bb78e
+"Makata Dispensary","Dispensary , Public Health Facility",0,ba1bc8f6-8d80-11d8-abbb-0024217bb78e
+"Makhanga Health Centre","Health Centre , Public Health Facility",0,ba1bc9e6-8d80-11d8-abbb-0024217bb78e
+"Makhwira Health Centre","Health Centre , Public Health Facility",0,ba1bcae0-8d80-11d8-abbb-0024217bb78e
+"Makiyoni Health Centre","Health Centre , Public Health Facility",0,ba1bcbd0-8d80-11d8-abbb-0024217bb78e
+"Makwapala Health Centre","Health Centre , Public Health Facility",0,ba1bccc0-8d80-11d8-abbb-0024217bb78e
+"Malamulo Hospital","Hospital , Private Health Facility",0,ba1bcdba-8d80-11d8-abbb-0024217bb78e
+"Malawi (National government)","Country , Public Administrative Unit",0,ba1bceaa-8d80-11d8-abbb-0024217bb78e
+"Malawi Zone","Zone , Public Administrative Unit",0,ba1bcf9a-8d80-11d8-abbb-0024217bb78e
+"Malembo Health Centre (Lilongwe)","Health Centre , Public Health Facility",0,ba1bd08a-8d80-11d8-abbb-0024217bb78e
+"Malembo Health Centre (Lilongwe)","Health Centre , Public Health Facility",0,ba1bd17a-8d80-11d8-abbb-0024217bb78e
+"Malidadi Health Centre","Health Centre , Public Health Facility",0,ba1bd274-8d80-11d8-abbb-0024217bb78e
+"Malingunde Health Centre","Health Centre , Private Health Facility",0,ba1bd364-8d80-11d8-abbb-0024217bb78e
+"Maloa Dispensary","Dispensary , Public Health Facility",0,ba1bd454-8d80-11d8-abbb-0024217bb78e
+"Malombe Health Centre","Health Centre , Public Health Facility",0,ba1bd54e-8d80-11d8-abbb-0024217bb78e
+"Malomo Health Centre","Health Centre , Public Health Facility",0,ba1bd63e-8d80-11d8-abbb-0024217bb78e
+"Maluwa Health Centre","Health Centre , Public Health Facility",0,ba1bd72e-8d80-11d8-abbb-0024217bb78e
+"Mangamba Dispensary","Dispensary , Public Health Facility",0,ba1bd81e-8d80-11d8-abbb-0024217bb78e
+"Mangochi District Health Office","District Health Office , Public Health Facility",0,ba1bd918-8d80-11d8-abbb-0024217bb78e
+"Mangochi District Hospital","District Hospital , Public Health Facility",0,ba1bda12-8d80-11d8-abbb-0024217bb78e
+"Mangochi Health Area","Health Area , Public Administrative Unit",0,ba1c5cb2-8d80-11d8-abbb-0024217bb78e
+"Mangochi Health District","Health District , Public Administrative Unit",0,ba1c5dc0-8d80-11d8-abbb-0024217bb78e
+"Mangunda Maternity","Maternity , Public Health Facility",0,ba1c5eba-8d80-11d8-abbb-0024217bb78e
+"Manjawira Maternity","Maternity , Public Health Facility",0,ba1c5faa-8d80-11d8-abbb-0024217bb78e
+"Manyamula Health Centre","Health Centre , Public Health Facility",0,ba1c60a4-8d80-11d8-abbb-0024217bb78e
+"Maonde Health Centre","Health Centre , Public Health Facility",0,ba1c6194-8d80-11d8-abbb-0024217bb78e
+"Mapanga Maternity","Maternity , Public Health Facility",0,ba1c6284-8d80-11d8-abbb-0024217bb78e
+"Mapelera Health Centre","Health Centre , Public Health Facility",0,ba1c637e-8d80-11d8-abbb-0024217bb78e
+"Masasa Health Centre","Dispensary , Public Health Facility",0,ba1c6874-8d80-11d8-abbb-0024217bb78e
+"Mase Health Centre","Health Centre , Private Health Facility",0,ba1c696e-8d80-11d8-abbb-0024217bb78e
+"Masenjere Health Centre","Health Centre , Public Health Facility",0,ba1c6a5e-8d80-11d8-abbb-0024217bb78e
+"Matanda Health Centre (Dispensary)","Dispensary , Private Health Facility",0,ba1c6b4e-8d80-11d8-abbb-0024217bb78e
+"Matandani Health Centre","Health Centre , Private Health Facility",0,ba1c6c48-8d80-11d8-abbb-0024217bb78e
+"Matapila Health Centre","Health Centre , Public Health Facility",0,ba1c6d42-8d80-11d8-abbb-0024217bb78e
+"Matawale Urban Health Centre","Health Centre , Public Health Facility",0,ba1c6e32-8d80-11d8-abbb-0024217bb78e
+"Matiki Health Centre","Health Centre , Public Health Facility",0,ba1c6f2c-8d80-11d8-abbb-0024217bb78e
+"Matiya Health Centre","Health Centre , Private Health Facility",0,ba1c7026-8d80-11d8-abbb-0024217bb78e
+"Matope Health Centre","Health Centre , Private Health Facility",0,ba1c7116-8d80-11d8-abbb-0024217bb78e
+"Matuli Health Centre","Dispensary , Public Health Facility",0,ba1c7210-8d80-11d8-abbb-0024217bb78e
+"Matumba Health Centre","Health Centre , Private Health Facility",0,ba1c7314-8d80-11d8-abbb-0024217bb78e
+"Mauwa Health Centre","Health Centre , Public Health Facility",0,ba1c7404-8d80-11d8-abbb-0024217bb78e
+"Mauwa Maternity","Maternity , Public Health Facility",0,ba1c74f4-8d80-11d8-abbb-0024217bb78e
+"Mayaka Health Centre","Health Centre , Private Health Facility",0,ba1c75da-8d80-11d8-abbb-0024217bb78e
+"Mayani Health Centre","Health Centre , Public Health Facility",0,ba1c76c0-8d80-11d8-abbb-0024217bb78e
+"Mbabvi Health Centre","Health Centre , Public Health Facility",0,ba1c77a6-8d80-11d8-abbb-0024217bb78e
+"Mbalachanda Health Centre","Health Centre , Public Health Facility",0,ba1c788c-8d80-11d8-abbb-0024217bb78e
+"Mbalanguzi Dispensary","Dispensary , Public Health Facility",0,ba1c7972-8d80-11d8-abbb-0024217bb78e
+"Mbang'ombe 1 Health Centre","Health Centre , Public Health Facility",0,ba1c7a58-8d80-11d8-abbb-0024217bb78e
+"Mbang'ombe 2 Health Centre","Health Centre , Public Health Facility",0,ba1c7ff8-8d80-11d8-abbb-0024217bb78e
+"Mbenje Health Centre","Health Centre , Public Health Facility",0,ba1c823c-8d80-11d8-abbb-0024217bb78e
+"Mbera Health Centre","Health Centre , Public Health Facility",0,ba1c832c-8d80-11d8-abbb-0024217bb78e
+"Mbingwa Health Centre","Health Centre , Public Health Facility",0,ba1c841c-8d80-11d8-abbb-0024217bb78e
+"Mbiza Health Centre","Health Centre , Public Health Facility",0,ba1c8520-8d80-11d8-abbb-0024217bb78e
+"Mbonechera Health Centre","Dispensary , Public Health Facility",0,ba1c8610-8d80-11d8-abbb-0024217bb78e
+"Mbulumbudzi Health Centre","Health Centre , Public Health Facility",0,ba1c8cf0-8d80-11d8-abbb-0024217bb78e
+"Mbulumbudzi Maternity","Maternity , Public Health Facility",0,ba1c8de0-8d80-11d8-abbb-0024217bb78e
+"Mbwatalika Health Centre","Health Centre , Private Health Facility",0,ba1c8ebc-8d80-11d8-abbb-0024217bb78e
+"Mchacha Dispensary","Dispensary , Public Health Facility",0,ba1c8fa2-8d80-11d8-abbb-0024217bb78e
+"Mchinji District Health Office","District Health Office , Public Health Facility",0,ba1ca7ee-8d80-11d8-abbb-0024217bb78e
+"Mchinji District Hospital","District Hospital , Public Health Facility",0,ba1ca97e-8d80-11d8-abbb-0024217bb78e
+"Mchinji Health Area","Health Area , Public Administrative Unit",0,ba1cab04-8d80-11d8-abbb-0024217bb78e
+"Mchinji Health District","Health District , Public Administrative Unit",0,ba1cb284-8d80-11d8-abbb-0024217bb78e
+"Mchoka Health Centre","Health Centre , Public Health Facility",0,ba1cb3f6-8d80-11d8-abbb-0024217bb78e
+"Mdeka Health Centre","Health Centre , Public Health Facility",0,ba1cbae0-8d80-11d8-abbb-0024217bb78e
+"Mfera Health Centre","Health Centre , Public Health Facility",0,ba1cbc5c-8d80-11d8-abbb-0024217bb78e
+"Mhalaunda Health Centre","Health Centre , Public Health Facility",0,ba1cc512-8d80-11d8-abbb-0024217bb78e
+"Mhuju Rural Hospital","Rural Hospital , Public Health Facility",0,ba1ccb52-8d80-11d8-abbb-0024217bb78e
+"Migowi Health Centre","Health Centre , Public Health Facility",0,ba1cd17e-8d80-11d8-abbb-0024217bb78e
+"Mikolongwe Health Centre","Health Centre , Public Health Facility",0,ba1cdeb2-8d80-11d8-abbb-0024217bb78e
+"Mikondo Dispensary","Dispensary , Private Health Facility",0,ba1cdfb6-8d80-11d8-abbb-0024217bb78e
+"Mikundi Health Centre","Health Centre , Public Health Facility",0,ba1ce0b0-8d80-11d8-abbb-0024217bb78e
+"Milepa Health Centre","Health Centre , Public Health Facility",0,ba1ce1aa-8d80-11d8-abbb-0024217bb78e
+"Milonde Health Centre","Health Centre , Public Health Facility",0,ba1ce2ae-8d80-11d8-abbb-0024217bb78e
+"Mimosa Dispensary","Dispensary , Public Health Facility",0,ba1ce3a8-8d80-11d8-abbb-0024217bb78e
+"Ming'ongo Health Centre","Health Centre , Public Health Facility",0,ba1ce498-8d80-11d8-abbb-0024217bb78e
+"Misamvu Dispensary","Dispensary , Public Health Facility",0,ba1ce592-8d80-11d8-abbb-0024217bb78e
+"Misomali Health Centre","Health Centre , Private Health Facility",0,ba1ce68c-8d80-11d8-abbb-0024217bb78e
+"Misuku Health Centre","Health Centre , Public Health Facility",0,ba1ce786-8d80-11d8-abbb-0024217bb78e
+"Mitsidi Dispensary","Dispensary , Private Health Facility",0,ba1ce876-8d80-11d8-abbb-0024217bb78e
+"Mitundu Rural Hospital","Rural Hospital , Public Health Facility",0,ba1ce970-8d80-11d8-abbb-0024217bb78e
+"Mkanda Health Centre","Health Centre , Public Health Facility",0,ba1cea6a-8d80-11d8-abbb-0024217bb78e
+"Mkango Dispensary","Dispensary , Public Health Facility",0,ba1ceb5a-8d80-11d8-abbb-0024217bb78e
+"Mkhota Rural Growth Health Centre","Health Centre , Public Health Facility",0,ba1cec54-8d80-11d8-abbb-0024217bb78e
+"Mkhuzi Health Centre","Health Centre , Public Health Facility",0,ba1ced4e-8d80-11d8-abbb-0024217bb78e
+"Mkhwayi Health Centre","Health Centre , Public Health Facility",0,ba1cee3e-8d80-11d8-abbb-0024217bb78e
+"Mkoma Health Centre","Health Centre , Public Health Facility",0,ba1cef2e-8d80-11d8-abbb-0024217bb78e
+"Mkumaniza Health Centre","Health Centre , Public Health Facility",0,ba1cf028-8d80-11d8-abbb-0024217bb78e
+"Mkumba Health Centre","Health Centre , Public Health Facility",0,ba1cf122-8d80-11d8-abbb-0024217bb78e
+"Mkwepere Health Centre","Dispensary , Public Health Facility",0,ba1cf212-8d80-11d8-abbb-0024217bb78e
+"Mlale Mission Hospital","Hospital , Private Health Facility",0,ba1cf302-8d80-11d8-abbb-0024217bb78e
+"Mlambe Hospital","Hospital , Private Health Facility",0,ba1d83bc-8d80-11d8-abbb-0024217bb78e
+"Mlanda Health Centre","Health Centre , Private Health Facility",0,ba1d84ca-8d80-11d8-abbb-0024217bb78e
+"Mlangali Dispensary","Dispensary , Public Health Facility",0,ba1d85c4-8d80-11d8-abbb-0024217bb78e
+"Mlangeni Health Centre","Health Centre , Public Health Facility",0,ba1d86be-8d80-11d8-abbb-0024217bb78e
+"Mlangeni Police Health Centre","Health Centre , Public Health Facility",0,ba1d87b8-8d80-11d8-abbb-0024217bb78e
+"Mlodza SDA Dispensary","Dispensary , Private Health Facility",0,ba1d88a8-8d80-11d8-abbb-0024217bb78e
+"Mlolo Dispensary","Dispensary , Public Health Facility",0,ba1d89a2-8d80-11d8-abbb-0024217bb78e
+"Mlomba Dispensary","Dispensary , Public Health Facility",0,ba1d8a92-8d80-11d8-abbb-0024217bb78e
+"Mlowe Health Centre","Health Centre , Private Health Facility",0,ba1d8b8c-8d80-11d8-abbb-0024217bb78e
+"Monkey-Bay Health Centre","Health Centre , Public Health Facility",0,ba1d8c86-8d80-11d8-abbb-0024217bb78e
+"Mpala Health Centre","Health Centre , Public Health Facility",0,ba1d8d76-8d80-11d8-abbb-0024217bb78e
+"Mpamantha Health Centre","Dispensary , Public Health Facility",0,ba1d8e70-8d80-11d8-abbb-0024217bb78e
+"Mpamba Health Centre","Health Centre , Public Health Facility",0,ba1d8f60-8d80-11d8-abbb-0024217bb78e
+"Mpasa Health Centre","Health Centre , Public Health Facility",0,ba1d9050-8d80-11d8-abbb-0024217bb78e
+"Mpata Health Centre","Health Centre , Public Health Facility",0,ba1d914a-8d80-11d8-abbb-0024217bb78e
+"Mpemba Health Centre","Health Centre , Public Health Facility",0,ba1d9244-8d80-11d8-abbb-0024217bb78e
+"Mphathi Health Centre","Health Centre , Public Health Facility",0,ba1d9334-8d80-11d8-abbb-0024217bb78e
+"Mphepozinai Dispensary","Dispensary , Public Health Facility",0,ba1d942e-8d80-11d8-abbb-0024217bb78e
+"Mpherembe Health Centre","Health Centre , Public Health Facility",0,ba1d9528-8d80-11d8-abbb-0024217bb78e
+"Mpherere Health Centre","Health Centre , Private Health Facility",0,ba1d9622-8d80-11d8-abbb-0024217bb78e
+"Mphopha Health Centre","Health Centre , Public Health Facility",0,ba1d971c-8d80-11d8-abbb-0024217bb78e
+"Mphunzi Health Centre","Health Centre , Private Health Facility",0,ba1d980c-8d80-11d8-abbb-0024217bb78e
+"Mpiri Health Centre","Health Centre , Private Health Facility",0,ba1d9906-8d80-11d8-abbb-0024217bb78e
+"Mpondas Health Centre","Health Centre , Private Health Facility",0,ba1d9a00-8d80-11d8-abbb-0024217bb78e
+"Mponela Rural Hospital","Rural Hospital , Public Health Facility",0,ba1d9afa-8d80-11d8-abbb-0024217bb78e
+"Mposa Health Centre","Health Centre , Private Health Facility",0,ba1d9bfe-8d80-11d8-abbb-0024217bb78e
+"Msakambewa Health Centre","Health Centre , Public Health Facility",0,ba1d9d8e-8d80-11d8-abbb-0024217bb78e
+"Msenjere Health Centre","Health Centre , Public Health Facility",0,ba1d9f1e-8d80-11d8-abbb-0024217bb78e
+"Msese Health Centre","Health Centre , Public Health Facility",0,ba1da130-8d80-11d8-abbb-0024217bb78e
+"Mtakataka Health Centre","Health Centre , Public Health Facility",0,ba1da2d4-8d80-11d8-abbb-0024217bb78e
+"Mtende Health Centre","Health Centre , Public Health Facility",0,ba1da46e-8d80-11d8-abbb-0024217bb78e
+"Mtendere Health Centre","Health Centre , Private Health Facility",0,ba1da608-8d80-11d8-abbb-0024217bb78e
+"Mtengowanthenga Hospital","Hospital , Private Health Facility",0,ba1da7ac-8d80-11d8-abbb-0024217bb78e
+"Mtenthera Health Centre","Health Centre , Public Health Facility",0,ba1da946-8d80-11d8-abbb-0024217bb78e
+"Mtimabii Health Centre","Health Centre , Public Health Facility",0,ba1daae0-8d80-11d8-abbb-0024217bb78e
+"Mtonda Health Centre","Health Centre , Private Health Facility",0,ba1dac7a-8d80-11d8-abbb-0024217bb78e
+"Mtosa Health Centre","Health Centre , Public Health Facility",0,ba1dae14-8d80-11d8-abbb-0024217bb78e
+"Mtunthama Health Centre","Health Centre , Public Health Facility",0,ba1dafa4-8d80-11d8-abbb-0024217bb78e
+"Mtwalo Health Centre","Health Centre , Public Health Facility",0,ba1db134-8d80-11d8-abbb-0024217bb78e
+"Mua Mission Hospital","Health Centre , Private Health Facility",0,ba1db2c4-8d80-11d8-abbb-0024217bb78e
+"Mulanje District Health Office","District Health Office , Public Health Facility",0,ba1db45e-8d80-11d8-abbb-0024217bb78e
+"Mulanje District Hospital","District Hospital , Public Health Facility",0,ba1db558-8d80-11d8-abbb-0024217bb78e
+"Mulanje Health Area","Health Area , Public Administrative Unit",0,ba1db652-8d80-11d8-abbb-0024217bb78e
+"Mulanje Health District","Health District , Public Administrative Unit",0,ba1db74c-8d80-11d8-abbb-0024217bb78e
+"Mulanje Mission Hospital","Hospital , Private Health Facility",0,ba1db83c-8d80-11d8-abbb-0024217bb78e
+"Mulibwanji Health Centre (Mangochi)","Health Centre , Private Health Facility",0,ba1db92c-8d80-11d8-abbb-0024217bb78e
+"Mulomba Health Centre","Health Centre , Public Health Facility",0,ba1dba26-8d80-11d8-abbb-0024217bb78e
+"Muloza Health Centre","Health Centre , Public Health Facility",0,ba1dbb16-8d80-11d8-abbb-0024217bb78e
+"Muluma Dispensary","Dispensary , Private Health Facility",0,ba1dbc10-8d80-11d8-abbb-0024217bb78e
+"Municipality Assembly Dispensary","Dispensary , Public Health Facility",0,ba1dbd00-8d80-11d8-abbb-0024217bb78e
+"Mvera Army Camp Dispensary","Dispensary , Public Health Facility",0,ba1dbdf0-8d80-11d8-abbb-0024217bb78e
+"Mvera Mission Hospital","Health Centre , Private Health Facility",0,ba1dbeea-8d80-11d8-abbb-0024217bb78e
+"Mwanga Health Centre","Health Centre , Private Health Facility",0,ba1dbfda-8d80-11d8-abbb-0024217bb78e
+"Mwangala Health Centre","Health Centre , Public Health Facility",0,ba1dc0d4-8d80-11d8-abbb-0024217bb78e
+"Mwansambo Health Centre","Health Centre , Public Health Facility",0,ba1dc1c4-8d80-11d8-abbb-0024217bb78e
+"Mwanza District Health Office","District Health Office , Public Health Facility",0,ba1dc2be-8d80-11d8-abbb-0024217bb78e
+"Mwanza District Hospital","District Hospital , Public Health Facility",0,ba1dc3ae-8d80-11d8-abbb-0024217bb78e
+"Mwanza Health Area","Health Area , Public Administrative Unit",0,ba1dc49e-8d80-11d8-abbb-0024217bb78e
+"Mwanza Health District","Health District , Public Administrative Unit",0,ba1dc58e-8d80-11d8-abbb-0024217bb78e
+"Mwazisi Health Centre","Health Centre , Public Health Facility",0,ba1dc688-8d80-11d8-abbb-0024217bb78e
+"Mzalangwe Health Centre","Health Centre , Public Health Facility",0,ba1dc854-8d80-11d8-abbb-0024217bb78e
+"Mzambazi Rural Hospital","Rural Hospital , Private Health Facility",0,ba1dc94e-8d80-11d8-abbb-0024217bb78e
+"Mzandu Health Centre","Health Centre , Public Health Facility",0,ba1dca48-8d80-11d8-abbb-0024217bb78e
+"Mzenga Health Centre","Health Centre , Public Health Facility",0,ba1dcb38-8d80-11d8-abbb-0024217bb78e
+"Mzimba District Health Office","District Health Office , Public Health Facility",0,ba1dcc32-8d80-11d8-abbb-0024217bb78e
+"Mzimba District Hospital","District Hospital , Public Health Facility",0,ba1dcd2c-8d80-11d8-abbb-0024217bb78e
+"Mzimba Health Area","Health Area , Public Administrative Unit",0,ba1dce1c-8d80-11d8-abbb-0024217bb78e
+"Mzimba Health District","Health District , Public Administrative Unit",0,ba1dcf16-8d80-11d8-abbb-0024217bb78e
+"Mzokoto Health Centre","Health Centre , Public Health Facility",0,ba1dd006-8d80-11d8-abbb-0024217bb78e
+"Mzuzu Central Hospital","Central Hospital , Public Health Facility",0,ba1dd100-8d80-11d8-abbb-0024217bb78e
+"Mzuzu Urban Health Centre","Health Centre , Public Health Facility",0,ba1e5be8-8d80-11d8-abbb-0024217bb78e
+"Nakalanzi Health Centre","Health Centre , Private Health Facility",0,ba1e5cf6-8d80-11d8-abbb-0024217bb78e
+"Nalunga Mafika Health Centre","Health Centre , Public Health Facility",0,ba1e5df0-8d80-11d8-abbb-0024217bb78e
+"Namadzi Health Centre","Health Centre , Public Health Facility",0,ba1e5eea-8d80-11d8-abbb-0024217bb78e
+"Namalaka Health Centre","Health Centre , Private Health Facility",0,ba1e5fe4-8d80-11d8-abbb-0024217bb78e
+"Namandanje Health Centre","Health Centre , Private Health Facility",0,ba1e60d4-8d80-11d8-abbb-0024217bb78e
+"Namanja Health Centre","Health Centre , Public Health Facility",0,ba1e61ce-8d80-11d8-abbb-0024217bb78e
+"Namanolo Health Centre","Health Centre , Public Health Facility",0,ba1e62be-8d80-11d8-abbb-0024217bb78e
+"Namasalima Health Centre (Mulanje)","Health Centre , Private Health Facility",0,ba1e63b8-8d80-11d8-abbb-0024217bb78e
+"Namasalima Health Centre (Zomba)","Health Centre , Public Health Facility",0,ba1e64b2-8d80-11d8-abbb-0024217bb78e
+"Nambazo Health Centre","Health Centre , Public Health Facility",0,ba1e65a2-8d80-11d8-abbb-0024217bb78e
+"Nambuma Health Centre","Health Centre , Private Health Facility",0,ba1e669c-8d80-11d8-abbb-0024217bb78e
+"Namikango Health Centre","Health Centre , Private Health Facility",0,ba1e6796-8d80-11d8-abbb-0024217bb78e
+"Namikoko Health Centre","Dispensary , Public Health Facility",0,ba1e6886-8d80-11d8-abbb-0024217bb78e
+"Namisu Dispensary","Dispensary , Private Health Facility",0,ba1e6976-8d80-11d8-abbb-0024217bb78e
+"Namitambo Health Centre","Health Centre , Public Health Facility",0,ba1e6a70-8d80-11d8-abbb-0024217bb78e
+"Namizana Dispensary","Dispensary , Public Health Facility",0,ba1e6b60-8d80-11d8-abbb-0024217bb78e
+"Namphungo Health Centre","Health Centre , Public Health Facility",0,ba1e7056-8d80-11d8-abbb-0024217bb78e
+"Namulenga Health Centre","Health Centre , Private Health Facility",0,ba1e7150-8d80-11d8-abbb-0024217bb78e
+"Namwera Health Centre","Health Centre , Public Health Facility",0,ba1e7240-8d80-11d8-abbb-0024217bb78e
+"Nancholi Dispensary","Dispensary , Public Health Facility",0,ba1e733a-8d80-11d8-abbb-0024217bb78e
+"Nangalamu Health Centre","Health Centre , Public Health Facility",0,ba1e742a-8d80-11d8-abbb-0024217bb78e
+"Nankhwali Health Centre","Health Centre , Private Health Facility",0,ba1e7524-8d80-11d8-abbb-0024217bb78e
+"Nankumba Health Centre","Health Centre , Public Health Facility",0,ba1e761e-8d80-11d8-abbb-0024217bb78e
+"Naphimba Health Centre","Health Centre , Public Health Facility",0,ba1e770e-8d80-11d8-abbb-0024217bb78e
+"Nasawa Health Centre","Health Centre , Public Health Facility",0,ba1e7808-8d80-11d8-abbb-0024217bb78e
+"Nathenje Health Centre","Health Centre , Public Health Facility",0,ba1e78f8-8d80-11d8-abbb-0024217bb78e
+"Nayinunje Health Centre","Health Centre , Public Health Facility",0,ba1e79f2-8d80-11d8-abbb-0024217bb78e
+"Nayuchi Health Centre","Health Centre , Public Health Facility",0,ba1e7aec-8d80-11d8-abbb-0024217bb78e
+"Ndakwela Health Centre","Health Centre , Public Health Facility",0,ba1e7bdc-8d80-11d8-abbb-0024217bb78e
+"Ndamera Health Centre","Health Centre , Public Health Facility",0,ba1e7ce0-8d80-11d8-abbb-0024217bb78e
+"Ndaula Health Centre","Health Centre , Public Health Facility",0,ba1e7dda-8d80-11d8-abbb-0024217bb78e
+"Ndinda Dispensary","Dispensary , Public Health Facility",0,ba1e7ec0-8d80-11d8-abbb-0024217bb78e
+"Ndirande Urban Health Centre","Health Centre , Public Health Facility",0,ba1e7fb0-8d80-11d8-abbb-0024217bb78e
+"Ndunde Health Centre","Health Centre , Public Health Facility",0,ba1e8096-8d80-11d8-abbb-0024217bb78e
+"Neno District Hospital","District Hospital , Public Health Facility",0,ba1e8186-8d80-11d8-abbb-0024217bb78e
+"Neno Parish Health Centre","Health Centre , Private Health Facility",0,ba1e826c-8d80-11d8-abbb-0024217bb78e
+"New State House Dispensary","Dispensary , Public Health Facility",0,ba1e8352-8d80-11d8-abbb-0024217bb78e
+"Newa / Mpasazi Health Centre","Health Centre , Private Health Facility",0,ba1e88f2-8d80-11d8-abbb-0024217bb78e
+"Ngabu Rural Hospital","Rural Hospital , Public Health Facility",0,ba1e89e2-8d80-11d8-abbb-0024217bb78e
+"Ngala Health Centre","Health Centre , Public Health Facility",0,ba1e8c12-8d80-11d8-abbb-0024217bb78e
+"Ngana Health Centre","Health Centre , Public Health Facility",0,ba1e8d0c-8d80-11d8-abbb-0024217bb78e
+"Ngapani Health Centre","Health Centre , Public Health Facility",0,ba1e8dfc-8d80-11d8-abbb-0024217bb78e
+"Ngodzi Health Centre","Health Centre , Private Health Facility",0,ba1e8eec-8d80-11d8-abbb-0024217bb78e
+"Ngokwe Health Centre","Health Centre , Public Health Facility",0,ba1e95c2-8d80-11d8-abbb-0024217bb78e
+"Ngoni Health Centre","Health Centre , Public Health Facility",0,ba1e96b2-8d80-11d8-abbb-0024217bb78e
+"Nguludi St Josephs Hospital","Hospital , Private Health Facility",0,ba1e9798-8d80-11d8-abbb-0024217bb78e
+"Ngwelero Health Centre","Health Centre , Public Health Facility",0,ba1e9888-8d80-11d8-abbb-0024217bb78e
+"Njuyu Health Centre","Health Centre , Public Health Facility",0,ba1e996e-8d80-11d8-abbb-0024217bb78e
+"Nkalo Health Centre","Health Centre , Public Health Facility",0,ba1eb20a-8d80-11d8-abbb-0024217bb78e
+"Nkasala Health Centre","Health Centre , Private Health Facility",0,ba1eb39a-8d80-11d8-abbb-0024217bb78e
+"Nkhamenya Hospital","Hospital , Private Health Facility",0,ba1eb520-8d80-11d8-abbb-0024217bb78e
+"Nkhande Dispensary","Dispensary , Public Health Facility",0,ba1ebcb4-8d80-11d8-abbb-0024217bb78e
+"Nkhata Bay District Health Office","District Health Office , Public Health Facility",0,ba1ebe26-8d80-11d8-abbb-0024217bb78e
+"Nkhata Bay District Hospital","District Hospital , Public Health Facility",0,ba1ec506-8d80-11d8-abbb-0024217bb78e
+"Nkhata Bay Health Area","Health Area , Public Administrative Unit",0,ba1ec682-8d80-11d8-abbb-0024217bb78e
+"Nkhata Bay Health District","Health District , Public Administrative Unit",0,ba1ecdbc-8d80-11d8-abbb-0024217bb78e
+"Nkhataombere Maternity","Maternity , Public Health Facility",0,ba1ed3fc-8d80-11d8-abbb-0024217bb78e
+"Nkhoma Hospital","Hospital , Private Health Facility",0,ba1ed9f6-8d80-11d8-abbb-0024217bb78e
+"Nkhorongo Health Centre","Health Centre , Private Health Facility",0,ba1ee720-8d80-11d8-abbb-0024217bb78e
+"Nkhotakota District Health Office","District Health Office , Public Health Facility",0,ba1ee824-8d80-11d8-abbb-0024217bb78e
+"Nkhotakota District Hospital","District Hospital , Public Health Facility",0,ba1ee91e-8d80-11d8-abbb-0024217bb78e
+"Nkhotakota Health Area","Health Area , Public Administrative Unit",0,ba1eea22-8d80-11d8-abbb-0024217bb78e
+"Nkhotakota Health District","Health District , Public Administrative Unit",0,ba1eeb1c-8d80-11d8-abbb-0024217bb78e
+"Nkhulambe Health Centre","Health Centre , Public Health Facility",0,ba1eec16-8d80-11d8-abbb-0024217bb78e
+"Nkhunga Health Centre","Health Centre , Public Health Facility",0,ba1eed10-8d80-11d8-abbb-0024217bb78e
+"Nkhuyukuyu Health Centre","Health Centre , Public Health Facility",0,ba1eee00-8d80-11d8-abbb-0024217bb78e
+"Nkhwazi Health Centre","Health Centre , Public Health Facility",0,ba1eeefa-8d80-11d8-abbb-0024217bb78e
+"Nkope Health Centre","Health Centre , Private Health Facility",0,ba1eeff4-8d80-11d8-abbb-0024217bb78e
+"Nkula Health Centre","Health Centre , Private Health Facility",0,ba1ef0e4-8d80-11d8-abbb-0024217bb78e
+"Nsabwe Dispensary","Dispensary , Public Health Facility",0,ba1f8158-8d80-11d8-abbb-0024217bb78e
+"Nsambe Sda Health Centre","Health Centre , Private Health Facility",0,ba1f825c-8d80-11d8-abbb-0024217bb78e
+"Nsanama Health Centre","Health Centre , Private Health Facility",0,ba1f8360-8d80-11d8-abbb-0024217bb78e
+"Nsanje District Health Office","District Health Office , Public Health Facility",0,ba1f8450-8d80-11d8-abbb-0024217bb78e
+"Nsanje District Hospital","District Hospital , Public Health Facility",0,ba1f854a-8d80-11d8-abbb-0024217bb78e
+"Nsanje Health Area","Health Area , Public Administrative Unit",0,ba1f863a-8d80-11d8-abbb-0024217bb78e
+"Nsanje Health District","Health District , Public Administrative Unit",0,ba1f8734-8d80-11d8-abbb-0024217bb78e
+"Nsaru Health Centre","Health Centre , Public Health Facility",0,ba1f882e-8d80-11d8-abbb-0024217bb78e
+"Nsipe Health Centre","Health Centre , Private Health Facility",0,ba1f8928-8d80-11d8-abbb-0024217bb78e
+"Nsiyaludzu Health Centre","Health Centre , Public Health Facility",0,ba1f8a18-8d80-11d8-abbb-0024217bb78e
+"Ntaja Health Centre","Health Centre , Public Health Facility",0,ba1f8b12-8d80-11d8-abbb-0024217bb78e
+"Ntcheu District Health Office","arv code:DZA",0,ba1f8c0c-8d80-11d8-abbb-0024217bb78e
+"Ntcheu District Hospital","Health District , Public Administrative Unit arv code:NCH",0,ba1f8cfc-8d80-11d8-abbb-0024217bb78e
+"Ntcheu Health Area","Health Area , Public Administrative Unit",0,ba1f8df6-8d80-11d8-abbb-0024217bb78e
+"Ntcheu Health District","Health District , Public Administrative Unit",0,ba1f8ef0-8d80-11d8-abbb-0024217bb78e
+"Ntchisi District Health Office","District Health Office , Public Health Facility",0,ba1f8fea-8d80-11d8-abbb-0024217bb78e
+"Ntchisi District Hospital","District Hospital , Public Health Facility",0,ba1f90e4-8d80-11d8-abbb-0024217bb78e
+"Ntchisi Health Area","Health Area , Public Administrative Unit",0,ba1f91de-8d80-11d8-abbb-0024217bb78e
+"Ntchisi Health District","Health District , Public Administrative Unit",0,ba1f92ce-8d80-11d8-abbb-0024217bb78e
+"Nthalire Health Centre","Health Centre , Public Health Facility",0,ba1f93c8-8d80-11d8-abbb-0024217bb78e
+"Nthenje Dispensary","Dispensary , Private Health Facility",0,ba1f94b8-8d80-11d8-abbb-0024217bb78e
+"Nthondo Health Centre (Lilongwe)","Health Centre , Public Health Facility",0,ba1f95b2-8d80-11d8-abbb-0024217bb78e
+"Nthondo Health Centre (Ntchisi)","Health Centre , Public Health Facility",0,ba1f96a2-8d80-11d8-abbb-0024217bb78e
+"Nthungwa Health Centre","Health Centre , Public Health Facility",0,ba1f979c-8d80-11d8-abbb-0024217bb78e
+"Nyambi Health Centre","Health Centre , Public Health Facility",0,ba1f988c-8d80-11d8-abbb-0024217bb78e
+"Nyamithuthu Health Centre","Health Centre , Public Health Facility",0,ba1f9986-8d80-11d8-abbb-0024217bb78e
+"Nyungwe Health Centre","Health Centre , Public Health Facility",0,ba1f9a80-8d80-11d8-abbb-0024217bb78e
+"Nzama Health Centre","Health Centre , Private Health Facility",0,ba1f9b70-8d80-11d8-abbb-0024217bb78e
+"Ofesi Dispensary","Dispensary , Public Health Facility",0,ba1f9c60-8d80-11d8-abbb-0024217bb78e
+"Old Maula Court Health Centre","Health Centre , Public Health Facility",0,ba1f9d5a-8d80-11d8-abbb-0024217bb78e
+"Phalombe Dispensary","Dispensary , Public Health Facility",0,ba1f9e54-8d80-11d8-abbb-0024217bb78e
+"Phalombe District Health Office","District Health Office , Public Health Facility",0,ba1f9f4e-8d80-11d8-abbb-0024217bb78e
+"Phalombe Health Area","Health Area , Public Administrative Unit",0,ba1fa048-8d80-11d8-abbb-0024217bb78e
+"Phalombe Health District","Health District , Public Administrative Unit",0,ba1fa142-8d80-11d8-abbb-0024217bb78e
+"Phalombe Mission Hospital","Hospital , Private Health Facility",0,ba1fa232-8d80-11d8-abbb-0024217bb78e
+"Phalula Health Centre","Health Centre , Public Health Facility",0,ba1fa34a-8d80-11d8-abbb-0024217bb78e
+"Phimbi Health Centre","Health Centre , Public Health Facility",0,ba1fa4e4-8d80-11d8-abbb-0024217bb78e
+"Phirilongwe Health Centre","Health Centre , Public Health Facility",0,ba1fa674-8d80-11d8-abbb-0024217bb78e
+"Phokera Dispensary","Dispensary , Public Health Facility",0,ba1fa886-8d80-11d8-abbb-0024217bb78e
+"PIM Health Centre","Health Centre , Private Health Facility",0,ba1faa20-8d80-11d8-abbb-0024217bb78e
+"Pirimiti Health Centre","Health Centre , Private Health Facility",0,ba1fabba-8d80-11d8-abbb-0024217bb78e
+"Police (Area 30) Dispensary","Dispensary , Public Health Facility",0,ba1fad5e-8d80-11d8-abbb-0024217bb78e
+"Police College Dispensary","Dispensary , Public Health Facility",0,ba1faef8-8d80-11d8-abbb-0024217bb78e
+"Police College Hospital (Zomba)","Hospital , Public Health Facility",0,ba1fb092-8d80-11d8-abbb-0024217bb78e
+"Queen Elizabeth Central Hospital","Central Hospital , Public Health Facility arv code:QEC",0,ba1fb22c-8d80-11d8-abbb-0024217bb78e
+"Raiply Dispensary Clinic","Dispensary , Public Health Facility",0,ba1fb3c6-8d80-11d8-abbb-0024217bb78e
+"Ruarwe Dispensary","Dispensary , Public Health Facility",0,ba1fb56a-8d80-11d8-abbb-0024217bb78e
+"Rumphi District Health Office","District Health Office , Public Health Facility",0,ba1fb6fa-8d80-11d8-abbb-0024217bb78e
+"Rumphi District Hospital","District Hospital , Public Health Facility",0,ba1fb894-8d80-11d8-abbb-0024217bb78e
+"Rumphi Health Area","Health Area , Public Administrative Unit",0,ba1fba2e-8d80-11d8-abbb-0024217bb78e
+"Rumphi Health District","Health District , Public Administrative Unit",0,ba1fbbc8-8d80-11d8-abbb-0024217bb78e
+"Salima District Health Office","District Health Office , Public Health Facility",0,ba1fbd62-8d80-11d8-abbb-0024217bb78e
+"Salima District Hospital","District Hospital , Public Health Facility arv code:SAL",0,ba1fbefc-8d80-11d8-abbb-0024217bb78e
+"Salima Health Area","Health Area , Public Administrative Unit",0,ba1fc096-8d80-11d8-abbb-0024217bb78e
+"Salima Health District","Health District , Public Administrative Unit",0,ba1fc230-8d80-11d8-abbb-0024217bb78e
+"Sangilo Health Centre","Health Centre , Private Health Facility",0,ba1fc320-8d80-11d8-abbb-0024217bb78e
+"Sankhulani Health Centre","Health Centre , Public Health Facility",0,ba1fc41a-8d80-11d8-abbb-0024217bb78e
+"Santhe Health Centre","Health Centre , Public Health Facility",0,ba1fc50a-8d80-11d8-abbb-0024217bb78e
+"Senga Bay Baptist Dispensary","Dispensary , Private Health Facility",0,ba1fc5fa-8d80-11d8-abbb-0024217bb78e
+"Senzani Health Centre","Health Centre , Private Health Facility",0,ba1fc6ea-8d80-11d8-abbb-0024217bb78e
+"Sharpe Valley Maternity","Maternity , Private Health Facility",0,ba1fc7e4-8d80-11d8-abbb-0024217bb78e
+"Simlemba Health Centre","Health Centre , Public Health Facility",0,ba1fc8d4-8d80-11d8-abbb-0024217bb78e
+"Sinyala Health Centre","Health Centre , Public Health Facility",0,ba1fc9ce-8d80-11d8-abbb-0024217bb78e
+"Sister Teleza Health Centre","Health Centre , Public Health Facility",0,ba1fcac8-8d80-11d8-abbb-0024217bb78e
+"Soche Dispensary","Dispensary , Private Health Facility",0,ba1fcbb8-8d80-11d8-abbb-0024217bb78e
+"Soche Maternity","Maternity , Public Health Facility",0,ba1fccb2-8d80-11d8-abbb-0024217bb78e
+"Sorgin Health Centre","Health Centre , Public Health Facility",0,ba1fcda2-8d80-11d8-abbb-0024217bb78e
+"South Lunzu Dispensary","Dispensary , Public Health Facility",0,ba1fce92-8d80-11d8-abbb-0024217bb78e
+"South Lunzu Health Centre","Health Centre , Public Health Facility",0,ba20545c-8d80-11d8-abbb-0024217bb78e
+"St Anne's Mission Hospital","Health Centre , Private Health Facility",0,ba20556a-8d80-11d8-abbb-0024217bb78e
+"St Annes Hospital","Hospital , Private Health Facility",0,ba205664-8d80-11d8-abbb-0024217bb78e
+"St Gabriels Hospital","Hospital , Private Health Facility",0,ba20575e-8d80-11d8-abbb-0024217bb78e
+"St Johns Mzuzu Hospital","Hospital , Private Health Facility",0,ba205858-8d80-11d8-abbb-0024217bb78e
+"St Johns of God Mental Hospital","Mental Hospital , Private Health Facility",0,ba205948-8d80-11d8-abbb-0024217bb78e
+"St Josephs Mitengo Health Centre","Health Centre , Private Health Facility",0,ba205a42-8d80-11d8-abbb-0024217bb78e
+"St Lukes Hospital","Hospital , Private Health Facility",0,ba205b3c-8d80-11d8-abbb-0024217bb78e
+"St Marthas Health Centre","Health Centre , Private Health Facility",0,ba205c36-8d80-11d8-abbb-0024217bb78e
+"St Martin Hospital","Hospital , Private Health Facility",0,ba205d26-8d80-11d8-abbb-0024217bb78e
+"St Martins Health Centre","Health Centre , Private Health Facility",0,ba205e20-8d80-11d8-abbb-0024217bb78e
+"St Martins Molere Health Centre","Health Centre , Private Health Facility",0,ba205f10-8d80-11d8-abbb-0024217bb78e
+"St Montfort Hospital","Hospital , Private Health Facility",0,ba20600a-8d80-11d8-abbb-0024217bb78e
+"St Patricks Rumphi Health Centre","Health Centre , Private Health Facility",0,ba206104-8d80-11d8-abbb-0024217bb78e
+"St Peters Mission Rural Hospital (Likoma) ","Rural Hospital , Private Health Facility",0,ba2061f4-8d80-11d8-abbb-0024217bb78e
+"St Peters Hospital","Hospital , Private Health Facility",0,ba2062ee-8d80-11d8-abbb-0024217bb78e
+"State House Dispensary","Dispensary , Public Health Facility",0,ba2063de-8d80-11d8-abbb-0024217bb78e
+"SUCOMA Health Centre (Illovo)","Health Centre , Private Health Facility",0,ba2064d8-8d80-11d8-abbb-0024217bb78e
+"Sukasanje Health Centre","Health Centre , Private Health Facility",0,ba2065d2-8d80-11d8-abbb-0024217bb78e
+"Tcharo Dispensary","Dispensary , Private Health Facility",0,ba2066c2-8d80-11d8-abbb-0024217bb78e
+"Tembwe Health Centre","Dispensary , Public Health Facility",0,ba2067bc-8d80-11d8-abbb-0024217bb78e
+"Tengani Health Centre","Health Centre , Public Health Facility",0,ba2068b6-8d80-11d8-abbb-0024217bb78e
+"Thambani Health Centre","Health Centre , Public Health Facility",0,ba2069a6-8d80-11d8-abbb-0024217bb78e
+"Thavite Health Centre","Health Centre , Private Health Facility",0,ba206aa0-8d80-11d8-abbb-0024217bb78e
+"Thekerani Rural Hospital","Rural Hospital , Public Health Facility",0,ba206b90-8d80-11d8-abbb-0024217bb78e
+"Thembe Dispensary","Dispensary , Private Health Facility",0,ba206c8a-8d80-11d8-abbb-0024217bb78e
+"Thomasi Health Centre","Health Centre , Private Health Facility",0,ba206d7a-8d80-11d8-abbb-0024217bb78e
+"Thondwe Dispensary","Dispensary , Public Health Facility",0,ba206e74-8d80-11d8-abbb-0024217bb78e
+"Thonje Health Centre","Health Centre , Public Health Facility",0,ba206f6e-8d80-11d8-abbb-0024217bb78e
+"Thuchila Health Centre","Health Centre , Public Health Facility",0,ba20705e-8d80-11d8-abbb-0024217bb78e
+"Thunduwike Health Centre","Health Centre , Public Health Facility",0,ba207522-8d80-11d8-abbb-0024217bb78e
+"Thyolo District Health Office","District Health Office , Public Health Facility",0,ba207612-8d80-11d8-abbb-0024217bb78e
+"Thyolo District Hospital","District Hospital , Public Health Facility",0,ba207702-8d80-11d8-abbb-0024217bb78e
+"Thyolo Health Area","Health Area , Public Administrative Unit",0,ba2077fc-8d80-11d8-abbb-0024217bb78e
+"Thyolo Health District","Health District , Public Administrative Unit",0,ba2078f6-8d80-11d8-abbb-0024217bb78e
+"Trinity - Fatima Hospital","Hospital , Private Health Facility",0,ba2079f0-8d80-11d8-abbb-0024217bb78e
+"Tsangano Health Centre","Dispensary , Private Health Facility",0,ba207ae0-8d80-11d8-abbb-0024217bb78e
+"Tsoyo Maternity","Maternity , Public Health Facility",0,ba207bda-8d80-11d8-abbb-0024217bb78e
+"Tulonkhondo Health Centre","Health Centre , Public Health Facility",0,ba207cd4-8d80-11d8-abbb-0024217bb78e
+"Ukwe Health Centre","Health Centre , Public Health Facility",0,ba207dc4-8d80-11d8-abbb-0024217bb78e
+"Ulongwe Health Centre","Health Centre , Private Health Facility",0,ba207ebe-8d80-11d8-abbb-0024217bb78e
+"Usisya Health Centre","Health Centre , Public Health Facility",0,ba207fcc-8d80-11d8-abbb-0024217bb78e
+"Utale 1 Health Centre","Health Centre , Private Health Facility",0,ba2080bc-8d80-11d8-abbb-0024217bb78e
+"Utale 2 Health Centre","Health Centre , Private Health Facility",0,ba2081a2-8d80-11d8-abbb-0024217bb78e
+"Vibangalala Health Centre","Dispensary , Public Health Facility",0,ba208288-8d80-11d8-abbb-0024217bb78e
+"Wenya Health Centre","Health Centre , Public Health Facility",0,ba208378-8d80-11d8-abbb-0024217bb78e
+"Wiliro Health Centre","Health Centre , Public Health Facility",0,ba20845e-8d80-11d8-abbb-0024217bb78e
+"Wimbe Health Centre","Health Centre , Public Health Facility",0,ba208544-8d80-11d8-abbb-0024217bb78e
+"Zingwangwa Urban Health Centre","Health Centre , Public Health Facility",0,ba208634-8d80-11d8-abbb-0024217bb78e
+"Zoa Dispensary","Dispensary , Public Health Facility",0,ba208846-8d80-11d8-abbb-0024217bb78e
+"Zoa Maternity","Maternity , Private Health Facility",0,ba208936-8d80-11d8-abbb-0024217bb78e
+"Zomba Central Hospital","Central Hospital , Public Health Facility",0,ba208a26-8d80-11d8-abbb-0024217bb78e
+"Zomba District Health Office","District Health Office , Public Health Facility",0,ba208b20-8d80-11d8-abbb-0024217bb78e
+"Zomba Forestry Dispensary","Dispensary , Public Health Facility",0,ba208c1a-8d80-11d8-abbb-0024217bb78e
+"Zomba Health Area","Health Area , Public Administrative Unit",0,ba208d14-8d80-11d8-abbb-0024217bb78e
+"Zomba Health District","Health District , Public Administrative Unit",0,ba208e04-8d80-11d8-abbb-0024217bb78e
+"Zomba Mental Hospital","Mental Hospital , Public Health Facility",0,ba208efe-8d80-11d8-abbb-0024217bb78e
+"Zomba Central Prison Clinic","Dispensary , Public Health Facility",0,ba208ff8-8d80-11d8-abbb-0024217bb78e
+"Kamuzu Central Hospital","Government Hospital (arv code:KCH)",0,ba2090f2-8d80-11d8-abbb-0024217bb78e
+"Moyo Clinic (Lilongwe)",Clinic,0,ba2092e6-8d80-11d8-abbb-0024217bb78e
+"Dalitso Clinic",0,ba2093e0-8d80-11d8-abbb-0024217bb78e
+"Martin Preuss Centre","arv code:MPC",0,ba2094d0-8d80-11d8-abbb-0024217bb78e
+Lighthouse,"arv code:LLH",0,ba2095ca-8d80-11d8-abbb-0024217bb78e
+"Lighthouse HTC","Health Centre",0,ba2096c4-8d80-11d8-abbb-0024217bb78e
+"Partners in Hope",0,ba2097be-8d80-11d8-abbb-0024217bb78e
+"MACRO Blantyre","Malawi AIDS Counselling & Resource Organisation",0,ba2098b8-8d80-11d8-abbb-0024217bb78e
+Lepra,"Voluntary Counseling and Testing",0,ba2099a8-8d80-11d8-abbb-0024217bb78e
+"Adventist Hospital (Blantyre)","District hospital
+",0,ba209aa2-8d80-11d8-abbb-0024217bb78e
+Tiyanjane,0,ba209b9c-8d80-11d8-abbb-0024217bb78e
+Napham,0,ba209c96-8d80-11d8-abbb-0024217bb78e
+"Mwaiwathu Private Hospital","Other hospital
+",0,ba209d90-8d80-11d8-abbb-0024217bb78e
+"John Hopkins",0,ba2120f8-8d80-11d8-abbb-0024217bb78e
+"College of Medicine",0,ba212206-8d80-11d8-abbb-0024217bb78e
+"UNC Project Bwaila Hospital","University of North Carolina Project",0,ba212300-8d80-11d8-abbb-0024217bb78e
+"UNC Project Tidziwe Centre","University of North Carolina",0,ba2123fa-8d80-11d8-abbb-0024217bb78e
+"UNC Project Area 18 Health Centre","UNC at Area 18 Health Centre",0,ba2124f4-8d80-11d8-abbb-0024217bb78e
+"UNC Project Area 25 Health Centre","UNC at Area 25 Health Centre",0,ba2125ee-8d80-11d8-abbb-0024217bb78e
+"UNC Project Kawale Health Centre","UNC at Kawale Health Centre",0,ba2126e8-8d80-11d8-abbb-0024217bb78e
+"MACRO Mzuzu","Malawi AIDS Counselling & Resource Organisation",0,ba2127e2-8d80-11d8-abbb-0024217bb78e
+"MACRO Lilongwe","Malawi AIDS Counselling & Resource Organisation",0,ba2128dc-8d80-11d8-abbb-0024217bb78e
+"XYZ Hospital","arv code:XYZ",0,ba2129d6-8d80-11d8-abbb-0024217bb78e
+"SOS Clinic",NULL,0,ba212ac6-8d80-11d8-abbb-0024217bb78e
+Registration,"Workstation Location",0,ba212bc0-8d80-11d8-abbb-0024217bb78e
+Vitals,"Workstation Location",0,ba212cba-8d80-11d8-abbb-0024217bb78e
+Outpatient,"Workstation Location",0,ba212db4-8d80-11d8-abbb-0024217bb78e
+"HIV Reception","Workstation Location",0,ba212ea4-8d80-11d8-abbb-0024217bb78e
+"HIV Clinician Station","Workstation Location",0,ba212f9e-8d80-11d8-abbb-0024217bb78e
+"HIV Nurse Station","Workstation Location",0,ba213098-8d80-11d8-abbb-0024217bb78e
+"Chronic Cough","Workstation Location",0,ba213192-8d80-11d8-abbb-0024217bb78e
+"TB Reception","Workstation Location",0,ba213282-8d80-11d8-abbb-0024217bb78e
+"TB Sputum Submission Station","Workstation Location",0,ba21337c-8d80-11d8-abbb-0024217bb78e
+Retrospective,"Workstation Location",0,ba213b1a-8d80-11d8-abbb-0024217bb78e
+"TB Clinician Station","Workstation Location",0,ba213c14-8d80-11d8-abbb-0024217bb78e
+"TB Registration","Workstation Location",0,ba213d04-8d80-11d8-abbb-0024217bb78e
+"TB Followup Room","Workstation Location",0,ba213e08-8d80-11d8-abbb-0024217bb78e
+Pharmacy,"Workstation Location",0,ba213f02-8d80-11d8-abbb-0024217bb78e
+"Baylor Childrens Centre Of Excellence In Malawi","Health Centre, Private Health Facility",0,ba213ffc-8d80-11d8-abbb-0024217bb78e
+"Dae-Yang Hospital","Hospital, Private Hospital",0,ba2140f6-8d80-11d8-abbb-0024217bb78e
+"TB HTC","workstation location",0,ba2141e6-8d80-11d8-abbb-0024217bb78e
+"Ward 4B",Ward,0,ba2142e0-8d80-11d8-abbb-0024217bb78e
+"Ward 3A",Ward,0,ba2143da-8d80-11d8-abbb-0024217bb78e
+"Gynaecology Ward",Ward,0,ba2144ca-8d80-11d8-abbb-0024217bb78e
+"Ward 5A",Ward,0,ba2145c4-8d80-11d8-abbb-0024217bb78e
+"Ward 5B",Ward,0,ba2146be-8d80-11d8-abbb-0024217bb78e
+"Ward 6A",Ward,0,ba2147ae-8d80-11d8-abbb-0024217bb78e
+Burns,Ward,0,ba2148a8-8d80-11d8-abbb-0024217bb78e
+"Ante-natal Ward",Ward,0,ba2149a2-8d80-11d8-abbb-0024217bb78e
+"Labour Ward",Ward,0,ba214a9c-8d80-11d8-abbb-0024217bb78e
+"Post-natal Ward",Ward,0,ba214b96-8d80-11d8-abbb-0024217bb78e
+"Post-natal Ward (Low Risk)",Ward,0,ba214c86-8d80-11d8-abbb-0024217bb78e
+"Post-natal Ward (High Risk)",Ward,0,ba214d80-8d80-11d8-abbb-0024217bb78e
+"Moyo Ward",Ward,0,ba214e70-8d80-11d8-abbb-0024217bb78e
+"Peadiatrics Nursery Ward",Ward,0,ba214f6a-8d80-11d8-abbb-0024217bb78e
+"Paeiatrics Special Care Ward",Ward,0,ba21505a-8d80-11d8-abbb-0024217bb78e
+"Paediatrics Surgical Ward",Ward,0,ba215154-8d80-11d8-abbb-0024217bb78e
+"Oncology Ward",Ward,0,ba215258-8d80-11d8-abbb-0024217bb78e
+"Malaria Research Ward",Ward,0,ba215348-8d80-11d8-abbb-0024217bb78e
+"Ligowe Health Centre","Health Centre , Public Health Facility",0,ba215442-8d80-11d8-abbb-0024217bb78e
+"Midzemba Health Centre","Health Centre , Public Health Facility",0,ba21553c-8d80-11d8-abbb-0024217bb78e
+"Shortstay Ward",Ward,0,ba215668-8d80-11d8-abbb-0024217bb78e
+"Ward 4A",Ward,0,ba215816-8d80-11d8-abbb-0024217bb78e
+"Ward 3B",Ward,0,ba215910-8d80-11d8-abbb-0024217bb78e
+"Ward 1A",Ward,0,ba215a14-8d80-11d8-abbb-0024217bb78e
+"Ward 2A","Ward ",0,ba215b04-8d80-11d8-abbb-0024217bb78e
+"Ward 2B",Ward,0,ba215bfe-8d80-11d8-abbb-0024217bb78e
+"ART clinic","Specialist clinic",0,ba215cf8-8d80-11d8-abbb-0024217bb78e
+"STI clinic","Specialist clinic",0,ba215df2-8d80-11d8-abbb-0024217bb78e
+"Dermatology clinic","Specialist clinic",0,ba215ee2-8d80-11d8-abbb-0024217bb78e
+"Dental clinic","Specialist clinic",0,ba215fdc-8d80-11d8-abbb-0024217bb78e
+"Opthalmology clinic","Specialist clinic",0,ba2160d6-8d80-11d8-abbb-0024217bb78e
+"Surgical clinic","Specialist clinic",0,ba216914-8d80-11d8-abbb-0024217bb78e
+"ENT clinic","Specialist clinic",0,ba216a0e-8d80-11d8-abbb-0024217bb78e
+"Orthopedic clinic","Specialist clinic",0,ba216afe-8d80-11d8-abbb-0024217bb78e
+"Breast clinic","specialist clinic",0,ba216bf8-8d80-11d8-abbb-0024217bb78e
+"Chest clinic","Specialist clinic",0,ba216cf2-8d80-11d8-abbb-0024217bb78e
+"Diabetic clinic","Specialists clinic",0,ba216dec-8d80-11d8-abbb-0024217bb78e
+"Hypertension clinic","Specialists clinic",0,ba216ee6-8d80-11d8-abbb-0024217bb78e
+"General medical","Specialists clinic",0,ba216fe0-8d80-11d8-abbb-0024217bb78e
+"Psychiatry clinic","Specialist clinic",0,ba2170da-8d80-11d8-abbb-0024217bb78e
+Gynaecology,"Specialists clinic",0,ba2171ca-8d80-11d8-abbb-0024217bb78e
+"Antenatal clinic","Specialists clinic",0,ba2172c4-8d80-11d8-abbb-0024217bb78e
+"Tiyanjane clinic","Specialists clinic",0,ba2173b4-8d80-11d8-abbb-0024217bb78e
+"Family planning clinic","Specialists clinic",0,ba2174ae-8d80-11d8-abbb-0024217bb78e
+"Other Specialist clinic","Specialists clinic",0,ba21f906-8d80-11d8-abbb-0024217bb78e
+"Machinjiri Health Centre","Health Centre , Public Health Facility",0,ba21fa14-8d80-11d8-abbb-0024217bb78e
+"Other Health Centres","Health Centre , Public Health Facility",0,ba21fb0e-8d80-11d8-abbb-0024217bb78e
+"Other Private Health facilities","Health Centre , Private Health Facility",0,ba21fc08-8d80-11d8-abbb-0024217bb78e
+"Other wards",Ward,0,ba21fd02-8d80-11d8-abbb-0024217bb78e
+"Chalasa Village","Village in Mtema ",0,ba21fdfc-8d80-11d8-abbb-0024217bb78e
+"Mtema 1","Group Village headman in Mtema",0,ba21fef6-8d80-11d8-abbb-0024217bb78e
+"Kangaroo ward","Ward where special care babies are admitted, mainly when born premature",0,ba21fff0-8d80-11d8-abbb-0024217bb78e
+"Nursery ward","A ward where babies who have developed complications are admitted for special care
+",0,ba2200ea-8d80-11d8-abbb-0024217bb78e
+Theatre,Ward,0,ba2207d4-8d80-11d8-abbb-0024217bb78e
+"High Dependency Unit (HDU)",Ward,0,ba2208ce-8d80-11d8-abbb-0024217bb78e
+"Private Obstetric and Gynaecology",Ward,0,ba2209be-8d80-11d8-abbb-0024217bb78e
+"Maula Prison Health Centre","Health Centre",0,ba220ac2-8d80-11d8-abbb-0024217bb78e
+"Karonga Prevention Study","NCDs Research Study",0,ba220bbc-8d80-11d8-abbb-0024217bb78e
+"room 1","HTC Locations",0,ba220cb6-8d80-11d8-abbb-0024217bb78e
+"room 2","HTC Locations",0,ba220da6-8d80-11d8-abbb-0024217bb78e
+"room 3","HTC Locations",0,ba220ea0-8d80-11d8-abbb-0024217bb78e
+"Kadidi Health Centre","Health Center , Public Health Facility",0,b70c5f59-1012-4f1a-9696-2803c827b98a
+"Thumbwe Health Centre","Health Centre , Public Health Facility",0,cf5e2bb8-4c31-4d15-8851-f424fc75f0a5
+"Kaseye Mission Hospital","Health Centre",0,5a71556c-3ee3-4ebc-9990-0827600fafb5
+"Atupele Health Centre","Health Centre",0,5d899ac6-21d7-42b0-b1b7-6d3554c32d65
+"Kasoba Health Centre","Health Centre",0,11fdd9a5-9087-4f36-a3d6-ed2582680f21
+"Karonga Banja La Mtsongolo Dispensary","Dispensary , Private Health Organisation (NGO/CBO)",0,bdcfcc7b-95d5-4bca-825b-f416bb308671
+"Luwazi Health Centre","Health Centre",0,7694ef39-f112-4c88-bbaf-0ef5f72205f2
+"Kavuzi Health Centre","Health Centre",0,390fb9e1-645d-48b2-8ad7-03f484b2a8f8
+"Nkhatabay Private Clinic",Clinic,0,90c17a9b-518e-47e3-9ccf-1e1eacb5ea93
+"Rumphi Banja La Mtsogolo Dispensary","Dispensary , Private Health Organisation (NGO/CBO)",0,ecb7e0bd-f0af-4bb0-bc4f-715e3ace47d4
+"Mphompha Health Centre","Health Centre",0,ba2bca7a-23c3-4d5b-856c-9925f2c096bd
+"Maula Health Centre (Nkhata Bay)","Health centre",0,a1b50d40-c15e-4500-b885-9c21af195b4c
+"Lura Health Centre","Health Centre",0,5d9c73f2-0e15-45fd-ac30-92b56a30b812
+"Chisimuka Health Centre","Health Centre",0,e6612c28-98a7-46c5-9dd7-f4c31ce2fb79
+"Eva Demaya Centre","Health centre",0,dfc555de-2991-4a5f-b28d-6cc4c2ecd565
+"Ng'onga Health Centre","Health Centre",0,773b77fc-842f-45dd-bb4b-0a7e377fbbc2
+"Livingstonia Mission Hospital (Rumphi)","Mission / District Hospital",0,38f968d0-563b-421c-ac75-ee528d80ac36
+"FPAM Clinic Mzuzu","Health centre
+",0,745cdc9d-7f37-4ecd-86b7-effb43844516
+"Wezi Medical Centre","Other Hospital",0,f5a997e9-4afa-4576-8489-003f1b8b81ba
+"St John of God Clinic","Special / other site
+",0,3c8f5e2f-4673-4610-ba6f-36d04198a71b
+"ESCOM Clinic Mzuzu","Health Centre",0,b7ab9a9b-481e-4857-98a0-45aae92136b9
+"MASM Medi Clinic Katoto","Special / other site
+",0,51b8f61a-0429-47ee-9e86-b9113e85201a
+"Manolo Health Centre","Health Centre",0,cac5f0f1-db21-4472-8882-c5b6b29e5368
+"Sunrise Private Clinic","Health Centre",0,5e11ac50-40bf-45b1-8203-0286bce4ed55
+"Khuyukuyu Health Centre","Health Centre",0,535d29cc-5cdf-4294-9814-0ae428a14c9b
+"Dr Msachi's Clinic","Special / other site
+",0,b7e02500-0cb6-4074-a039-9d42d40557cd
+"Mzuzu University Clinic","Special / other site
+",0,736a5f6b-3e00-4a21-93b2-5658d9abecba
+"Kaweche Health Centre","Health Centre",0,ebc2b7ef-22ec-4200-865a-141c85063d06
+"Care Medical Clinic","Special / other site
+",0,bbd33ad7-92e1-444e-bab9-9e89bba5e06d
+"Mzimba Banja La Mtsongolo Dispensary","Dispensary , Private Health Organisation (NGO/CBO)",0,f12c524c-3b99-4ac9-ba73-90c46371e45f
+"Mzuzu Central Prison","Special / other site
+",0,6e4e0076-a3c1-426a-8464-230884424cbd
+"Moyale Barracks Health Centre","Special / other site
+",0,b8d05597-a4e7-4afc-b987-47f1c8263a8d
+"Mabiri Health Centre","Health centre",0,50364e28-889e-4afb-965d-9faf24dfe0ca
+"Vibangala Dispensary",Dispensary,0,50f7d627-5879-42d0-8057-1a7b7eafda71
+"Katimbira Health Centre","Health Centre",0,6d3f7248-85e2-4743-aa79-ef72280c884d
+"FPAM Clinic Kawale","Health Centre",0,11446720-2160-470d-9893-a663df09e7a5
+"Chioza Health Centre","Health centre
+",0,6c915d19-c984-4160-a53e-a03cc581c9bb
+"Area 36 Private Clinic","Special / other site
+",0,3de849f7-d5dd-4b22-8b5a-36d09b1d92a2
+"Umoyo Private Clinic","Special / other site
+",0,264e23cb-8a28-469f-84a7-16cb4ad3fa64
+"Bethsaida Private Hospital","Other hospital
+",0,56e8168c-d576-416f-9754-510c7948b040
+"The Clinic","Other hospital
+",0,e4016243-6798-4fea-a2ff-70cb7f4f0f0e
+"Maziko Private Clinic","Other hospital
+",0,4bfe3f28-e5d2-4316-a484-cd8e6fe677f5
+"MASM Area 43","Other hospital
+",0,1dd6696b-811c-46af-84c9-093dcea89971
+"Area 18 Medi Clinic","Other hospital
+",0,22037972-7e61-4c4c-81d7-a04ea3895813
+"Kachere Private Clinic","Other hospital
+",0,ea6ce458-0227-4a50-b37c-01d7d3ea0c32
+"Good Hope Private Clinic","Other hospital
+",0,751ba9d5-ca32-493c-b3c7-895e9ad2cf85
+"Auction Holdings Limited Clinic (Kanengo)","Health centre
+",0,d0c795d9-761f-440c-b863-6ded10bf052c
+"Kanengo Tobacco Processors Clinic","Health Centre",0,93057521-f572-4f1b-8a2a-8e63e0f62cbe
+"JTI Leaf Clinic (Kanengo)","Health Centre",0,87426b0e-d0ea-4596-861b-801017793716
+"Central Health Clinic (Area 47)","Health Centre",0,7edd14b6-cbbc-4756-ad9a-61db3b97bb8f
+"Nkhalango Clinic","Special / other site
+",0,22a71ffc-bf78-434d-88d9-84a725b2bb66
+"Nyamanda Private Clinic","Special / other site
+",0,193b7dfe-7131-41db-abe0-3d332fc692a5
+"Achikondi Women Community Friendly Services Clinic","Special / other site
+",0,5d59c61c-5d27-4c5b-a803-310e6e8a3b2d
+"Tachira Private Clinic","Special / other site
+",0,de971b1f-ee78-4f68-963b-7f93052aa498
+"Daeyang Luke Hospital","Other hospital
+",0,6ba40606-67ec-479c-b195-1cc1f506b610
+"Lingadzi Private Clinic","Special / other site
+",0,4761151c-280f-47d4-a9f4-f423deb1af98
+"ESCOM Clinic Lilongwe","Special / other site
+",0,d9285b96-7667-4ba7-8990-cfe07bf4e0e4
+"Carlsberg / Sobo Clinic (Lilongwe)","Special / other site
+",0,97afdca2-d3f0-45e0-8b91-9921dae76fe6
+"Airwing Clinic (Lilongwe)","Health centre
+",0,31040936-d376-4222-9f72-0a0fc0c0670e
+"Bunda College","Health centre
+",0,3553bb8c-7efa-4665-821d-2421481de6ef
+"Discovery Medi Clinic","Special / other site
+",0,1cd6375a-5629-47ae-937f-20941f6c5145
+"Lilongwe City Assembly (Chinsapo)","Special / other site
+",0,02c5a8b8-5dc1-4a48-9d88-a1f0d933d22f
+"Katchale Health Centre","Health centre
+",0,429d6f3f-7028-4efe-a233-49e6fd3b8693
+"Limbe Leaf Tobacco Clinic (Lilongwe)","Special / other site
+",0,64f9cdda-ca45-486f-8eb7-6384463062ec
+"MASM Medi Clinic Lilongw","Health centre
+",0,374eac35-1ade-4c5c-b68a-c82b015350c2
+SSH,"Special / other site
+",0,de3edd17-5fb6-4b77-84b1-a917e948e811
+"Dr David Livingstone Memorial Clinic","Special / other site
+",0,0642daea-ddd0-4a2d-94d5-b1b650aab64e
+"Blessings Hospital","Other hospital
+",0,0674952e-268d-4eee-91a1-48acd584a58e
+"Mlolera Womens Clinic","Special / other site
+",0,183a0823-833e-42fa-b81f-ef97e4d1282d
+"City Centre Clinic (Lilongwe)","Special / other site
+",0,6b98e74a-19d5-4854-9b15-3ba23e6618fa
+"Kawale Medical Services","Special / other site
+",0,3aeb57e7-c451-42d5-a51f-67b03e679f10
+"Lilongwe Health Clinic","Special / other site
+",0,7cada7b0-b577-49d1-bbbd-dcf177783fe4
+"Lilongwe Private Clinic","Special / other site
+",0,8f25f672-74e1-45cf-ac30-e69a7aa6cd9a
+"Chiponde Health Post","Health post
+",0,b8d20974-c980-40fb-a57f-2a5ec70ec443
+"Diamphwi Health Centre","Health centre
+",0,aa1b6470-bffc-47f0-90c2-bb56e50f91a0
+"Guillime Mission Hospital","Rural / community hospital
+",0,6c31964e-8e05-4af4-bed4-d37c853b6691
+"Gumba Health Centre","Health centre
+",0,98d1af1d-b4b9-4dab-b9ae-a100243b0a7b
+"Home of Hope Clinic","Special / other site
+",0,43e69517-e2fc-4903-8183-20257041d7d0
+"Namizana Police Dispensary","Dispensary
+",0,c99db6a5-a5dc-4080-ae6a-2c5729d6f247
+"FPAM Clinic Dedza","Health centre
+",0,df19b54f-4316-4c9f-bf80-8721c32fd118
+"Mphati Health Centre","Health centre
+",0,1a10203e-a23d-4f94-8ce3-b7c328aa6492
+"Tiyese Private Maternity","Special / other site
+",0,81774bb4-51b8-406e-a0ab-edd3e86a8a29
+"Tsoyo Dispensary","Special / other site
+",0,eb54a734-22c1-49bd-b1d4-7f64fc708b40
+"Nakalazi Health Centre","Health centre
+",0,ffe6c8b4-9f14-482c-aabf-f5b45b26577b
+"Police College Health Centre (Mua)","Health centre
+",0,d180542b-75fe-4c9b-9b43-11cf4eb26797
+"Mganja Health Centre","Health centre
+",0,ed7b153e-a506-4331-afc0-65d29aaee8d9
+"Champiti Health Centre","Health centre
+",0,79cc2532-acd4-4fee-9443-900a0317addf
+"Kalimanjira Health Centre","Health centre
+",0,2a21782a-38fd-4b76-a630-ac72d68ec526
+"FPAM Clinic Ntcheu","Health centre
+",0,689af9ed-2126-46ed-a626-f51888859cfd
+"Sharpe Valley Health Centre","Special / other site
+",0,eab4b53e-feb3-4238-aabc-97c07a99a8dd
+"Ganya Health Centre","Health centre
+",0,03d6a22b-01df-470f-b901-637129465894
+"Alliance One Clinic (Lilongwe)","Special / other site
+",0,2b2855f6-3813-4662-87a3-a34a75c6026d
+"Lisungwi Community Hospital","Health centre
+",0,d9fc3c1e-96c7-46cc-8d85-a5a1edf5cff3
+"Dambe Health Centre","Health centre
+",0,e0fac85d-3725-4882-b122-54fd598ee39c
+"FPAM Clinic Neno","Health centre
+",0,1b2d5291-261d-418e-ad1c-85472fe22d02
+"Tedzani ESCOM Clinic","Dispensary
+",0,5961ad2d-db75-4fa9-bf36-7f014ca33432
+"Msambe Health Centre","Health centre
+",0,67b9c519-a1c5-4e61-b70b-9ca2911ba6d3
+"Zalewa PIH","Special / other site
+",0,6bafe831-7a75-4c5d-bc76-5d44061f3531
+"Tikondane Private Clinic","Special / other site
+",0,6abd2018-05d6-416e-9365-8a7a4ca302a8
+"Phokera Health Centre","Health centre
+",0,11295981-1350-4f68-9039-453311fc465c
+"Chithumba Dispensary","Special / other site
+",0,17da21f5-78dc-470d-abc9-fbb38af2ad30
+"Changambika Health Centre","Health centre
+",0,3fb381ef-83a4-40d4-8b6f-7772cbe3de54
+"Mangulenje Health Centre","Health centre
+",0,0b3ce210-6c56-47b0-b033-bc0f67252df0
+"Nkombedzi Health Centre","Health centre
+",0,1537acd9-bcbb-40be-9982-d632dada1e0d
+"Mgabu Banja La Mtsogolo Dispensary","Dispensary , Private Health Organisation (NGO/CBO)",0,dca8f876-0684-473c-90a1-5d54b056466a
+"Kapichira ESCOM Clinic","Dispensary
+",0,d225da17-1403-4938-b9d6-3c3ca02ed285
+"Bereu Health Post","Health post
+",0,205b6cd1-f712-4cf4-9de5-5cc8dac96198
+"Majete (Epicenter) Health Centre","Health centre
+",0,2b28cdac-3c44-4264-8902-0e772e126d11
+"Chithumba Health Centre","Health centre
+",0,1d7ecf51-6d62-4a11-8a00-14340cacbc2f
+"Mwanza Clinic Area 3","Health centre
+",0,5760b166-6383-4c0d-9744-54bd3458ffbb
+"Alumenda Health Centre","Health centre
+",0,7a9a847f-6a03-4833-8624-fb77d568251c
+"Lengwe Health Centre","Health centre
+",0,89b3e25e-7c3a-4e2a-8a36-76e89a2b7194
+"Ndakwera Health Centre","Health centre
+",0,5d3452a8-c552-4192-b177-69f690975d8b
+"Gombe Health Centre","Health post
+",0,b76c930b-f1b3-469f-8bc1-1457b0c648a8
+"Nsabwe Health Centre","Dispensary
+",0,ffe88211-0e42-4c9d-be7f-f383563c6b1b
+"Amalika Health Centre","Health post
+",0,b3060e64-04c6-4731-9cc0-bd3bc274f6a1
+"Sambankhanga Health Centre","Health centre
+",0,a5820daf-f21f-4810-88be-0548681d98e2
+"Mianga Health Centre","Health centre
+",0,993d3376-e1bf-4f57-b203-ac497cf7e21a
+"Didi Health Centre","Health centre
+",0,b5ce13d5-7255-4418-b96a-3850ae87e1b1
+"Chisoka Health Centre","Health centre
+",0,2888bf5d-f14b-4125-8dae-d933a9e34368
+"Makwasa Estate Clinic","Health centre
+",0,679a0fd5-209f-4c49-a7c6-7af18a7f0707
+"Thunga Health Centre","Health centre
+",0,43394839-4d0a-4a71-9928-c5df316b43be
+"Naming'omba Health Centre","Health centre
+",0,abaa8e1c-b5e7-4835-b546-dbe815d210c4
+"Mchima Clinic","Health Centre",0,367d7fd9-f379-4c9a-9ab6-8ea37965fb3b
+"Zoa Health Centre","Health centre
+",0,976f22fc-eea3-46a7-b083-b6898b4cf861
+"Satemwa Clinic","Health centre
+",0,dca38e00-aa43-4180-9775-b1d641cdae1d
+"Makungwa Health Centre","Health centre
+",0,4c403a5a-0a7e-412d-bdd5-f566a4fa3dc0
+"Lunzu DAPP Clinic","Special / other site
+",0,a27dd110-3c25-40a7-8fbd-617d5bf6acb4
+"Makheta Youth Organization Clinic","Special / other site
+",0,8653d086-c31d-4708-b303-218ff7dfb3c8
+"Dziwe Health Centre","Health centre
+",0,9e1aba57-1781-4bc2-8e78-7a0db1606ff6
+"St Vincent Health Centre (Chadzunda)","Health post
+",0,ca5e7267-bf27-4575-a6a3-d73c32869fd3
+"Chitawira Private Hospital","Other hospital
+",0,efe3afa0-c7e9-4d19-9147-66ce8d2db057
+"Blantyre Water Board Clinic","Special / other site
+",0,9d1383a1-83ae-43b2-bb38-fae9f34ab25d
+"MASM Medi Clinic Limbe","Special / other site
+",0,3666232c-366b-4f37-b0b1-a61509af5614
+"Carlsberg / Sobo Clinic (Blantyre)","Special / other site
+",0,5cfd5bf2-c9c5-466b-b283-d2464350a9e6
+"Lafarge Cement Clinic (Blantyre)","Special / other site
+",0,900615a6-0d62-49ea-a0c4-b72e39ee0fef
+"Pace Clinic","Special / other site
+",0,e7158b60-0a9e-41f8-a9e6-1b5de8adb7c1
+"Chichiri ESCOM Clinic","Special / other site
+",0,20c307cc-606d-49f1-bb06-4b4b9fec7a22
+"Limbe Diagnostic Centre","Special / other site
+",0,cc781f3d-216a-4d19-aff3-b1999243812d
+"Mtengoumodzi Private Hospital","Other hospital
+",0,b5dca8c0-1391-4177-8f0e-555b9bfa6707
+"Polytechnic Blantyre","Special / other site
+",0,6a68e78d-3fb7-4c48-b61d-bac899316c80
+"Chavala Health Centre","Health centre
+",0,d5cff0e5-4359-4511-9a3d-867dd95e7626
+"Blantyre Dream Project","Special / other site
+",0,66aa679a-7ffd-4e90-8126-7831417229d9
+"Limbe Leaf Tobacco Clinic (Limbe)","Special / other site
+",0,1f56e0e2-62f4-4357-83f7-e4ef1a79b369
+"Central East African Railways Clinic (Blantyre)","Special / other site
+",0,518f4a45-a169-4fef-992c-2f8a8390221f
+"Mwachira Private Clinic","Special / other site
+",0,9628f993-cc09-421b-8683-1a9c0bb7c044
+"Chichiri Prison Clinic","Health centre
+",0,ba9d8216-840f-4be1-a72c-171875a64253
+"Nyambadwe Private Hospital","Other hospital
+",0,0513f4a8-403a-463f-95ec-ac17c7520605
+"Malmed Private Clinic","Special / other site
+",0,81ab4808-4f83-4bad-bb02-a65d378d31fc
+"Kanjedza Police Clinic","Dispensary
+",0,ddd1c18d-627e-4206-9b72-77c1fd0ccc74
+"Lumbira / Mitsidi Health Centre","Health centre
+",0,9b011ecd-0e3b-47f2-a834-ab73d3e7ffa7
+"Sanjika Clinic","Dispensary
+",0,bbd029d3-50c2-4d6c-b3e2-2fd6d517d71d
+"Malabada Health Centre","Health Centre",0,f140d91e-0ee7-4b1e-80d8-64d06fab73f6
+"Chilimba City Clinic","Health post
+",0,8c69ea5a-ac3e-4dc7-9466-6ef206b5d85e
+"Pensulo Health Centre","Health centre
+",0,648edd46-20df-40ce-a49c-397e92ad111a
+"Kapeni Dream Centre","Health centre
+",0,395725fa-6a39-41be-8476-c98c214596c2
+"Mpingo Maternity","Health centre
+",0,495ec326-1f21-4d45-b192-2e04d5ca4b56
+"Makata Health Centre (Lunzu)","Health Centre",0,2ce399b9-aa55-4eaf-a3f2-8e250eb84294
+"Mbayani Health Centre","Health centre
+",0,0c2ed617-59f2-451f-96ed-ce6603b4c9f5
+"Malamulo Day Clinic","Other hospital
+",0,437ab8ae-81cf-4cd0-89b4-d0bedff4f5f4
+"Shifa Private Clinic","Other hospital
+",0,59528fde-004f-4589-aada-8b31aa01f1ec
+"El-Barakah Private Clinic","Special / other site
+",0,9c7be8b6-dedb-43aa-9d79-249d3284ab39
+"Merit Private Clinic","Special / other site
+",0,52a9d786-6948-40fa-914e-ac32789de1c8
+"Soche Adventist Health Centre","Health centre
+",0,82c1b768-477e-4ed1-ae17-2dd9fae55baf
+"Moyo Private Clinic (Blantyre)","Special / other site
+",0,ca347829-5263-4a1a-9cd5-857d8df30c64
+"Bangwe Madina Health Centre","Health centre
+",0,92126eff-9b8b-43f1-80a3-08c07a5be255
+"Chilomoni Private Clinic","Special / other site
+",0,e29436ac-741d-44e5-a471-6d3fcf8feea6
+"Kukalanga Health Centre","Health centre
+",0,a1f143ab-fcc0-4fc9-a220-8043074485fa
+"Comfort Clinic (Balaka)","Health centre
+",0,638e356b-b66e-411d-a6cd-e024e771057e
+"Balaka Dream Clinic","Special / other site
+",0,32133020-4951-4bc3-8ade-6be8865ae90d
+"Chimatilo Health Centre","Health centre
+",0,d5f75337-8689-4943-8c5f-7a44bbc8d93c
+"Namdumbo Health Centre","Health centre
+",0,034e564e-4b84-4d9d-83e7-e7f7cab818d8
+"Ipyana Private Maternity (Balaka)","Special / other site
+",0,805960f9-b589-46cc-bd63-2a0f8dbc8ec1
+"Nkhwayi Health Centre (Phalombe)","Health centre
+",0,147c04b3-2b77-433a-9d85-6446b0e9f93e
+"Balaka Banja La Mtsogolo Dispensary","Special / other site
+",0,31ddc56c-7f5b-406e-9692-d34401b10808
+"Chiringa CHAM Health Centre (Phalombe)","Health centre
+",0,66b84fa0-f1c1-4453-bcdf-f61051286e37
+"Mulungu Alinafe Clinic (Phalombe)","Health centre
+",0,3141df97-1ea6-4d14-b8b7-cab7887a1ac0
+"Nazombe Health Centre (Gogo Nazombe)","Health centre
+",0,77aa604b-ffb3-46b5-9a94-a3b106b5eafb
+"Chiringa Health Centre (Phalombe)","Health centre
+",0,cbb37dd6-9c85-4fd2-8779-e2dc13c2b7d8
+"Kalinde Health Centre (Phalombe)","Health centre
+",0,51cd0e68-9bd2-4c2a-90d8-e60b859dde94
+"Ruo Dispensary","Dispensary
+",0,0eb3e19d-599b-45ae-b7f2-0d9153dc586a
+"Thembe Health Centre (Mulanje)","Dispensary
+",0,5d13365e-9ca4-4348-b792-871a95f50b2e
+"Friends of Mulanje (FOMO)","Health post
+",0,9ee79a79-9409-455a-9c24-3fef87d44eb1
+"Minimini Dispensary (Mulanje)","Dispensary
+",0,050bdd8f-e433-40e2-a0bf-b7fba87c2092
+"Mkomaola Health Centre","Health centre
+",0,c7875d71-5d1a-4970-80f1-2b87ba3555a1
+"AHI Private Clinic (Zomba)","Special / other site",0,b4695e6c-6b2c-41ef-8b24-d98573a9e7a6
+"Chancellor College Clinic","Special / other site
+",0,6bb392fe-3a00-4362-8dc0-9515c2575ba0
+"Changalume Barracks Clinic","Special / other site
+",0,bcbeecd2-478c-4ee8-88d1-9b7faee560eb
+"Chinamwali Private Clinic (Zomba)","Special / other site
+",0,0bf0d065-c2ed-4d6b-b2df-7481a1f1ba29
+"H. Parker Sharp Health Centre (Domasi CCAP)","Health centre
+",0,252fb5c1-fdb5-4b4e-88bb-003823b479ff
+"City Clinic (Zomba)","Health centre
+",0,867825a1-5398-40e7-8e0d-a1516ea7c848
+"Maera Health Centre (Zomba)","Health centre
+",0,02c8f97b-c2eb-4a82-8314-fa4bca9187ec
+"Chamba Health Centre (Zomba)","Health centre
+",0,9681ae6f-83b3-4e74-8ea7-7010cf5bf27c
+"Chisi Health Centre (Zomba)","Health centre
+",0,5514f45f-2605-4311-b9dd-8e9c2d1f2729
+"Zomba Banja La Mtsogolo Dispensary","Special / other site
+",0,d328fff8-b154-4f6b-8c84-0da7339983ce
+"Naisi Health Centre","Health centre
+",0,33b5076f-e511-4900-9f00-4e69f8ffd972
+"Sadzi Health Centre","Health centre
+",0,3eca0111-040c-4a40-b536-b252d1341a95
+"Mwandama Health Centre (Zomba)","Health centre
+",0,0f0baa75-32ee-4a6c-8f3c-d73f8ec3ab90
+"Zilindo Health Centre (Zomba)","Health centre
+",0,03e998f9-01db-4d01-aa31-89c3e6509d32
+"MASM Medi Clinic Zomba","Health centre
+",0,8dbd5129-9b86-4602-8369-25ee4aa0b1a4
+"Mmambo Health Centre (Zomba)","Health centre
+",0,991dbbb1-05ed-47a1-90ed-be66850d223c
+"Namadidi Health Centre (Zomba)","Health centre
+",0,de9edb84-a631-47b3-9238-12345ff8040d
+"Lifune Dispensary (Machinga)","Dispensary
+",0,4719969f-f1f1-4a9a-ad87-c20632a53f0f
+"Mangamba Health Centre (Machinga)","Health centre
+",0,e6b03e8a-9884-42e7-bc45-e39961a54818
+"Liwonde Medical Clinic","Special / other site
+",0,1a219db6-eeac-4d77-b55d-36b113be4a2b
+"Ntholowa Health Centre","Health centre
+",0,19954bf7-e9bc-476e-bda0-7e9e73ef6079
+"Mpondasi Health Centre (Mangochi)","Health centre
+",0,9bce7726-357d-458f-ac15-3727c1046648
+"Sister Martha Hospital (Mangochi)","Health centre
+",0,1d1ad83a-1877-45a4-b8b3-6582a91d8e03
+"Malembo Health Centre (Mangochi)","Health centre
+",0,b9444c55-02ad-46c1-af8c-83d0b049a9cb
+"Chiunda Health Centre (Mangochi)","Dispensary
+",0,a85d7135-c96c-4bce-b959-bccf1bd689b8
+"Mangochi Banja La Mtsogolo Dispensary","Special / other site
+",0,441767e7-c4d0-4e36-ab3d-72a7a7f269f7
+"Kapire Dream Centre (Mangochi)","Health centre
+",0,60f7cabb-898b-4b52-aca5-2905da9248c7
+"Mama Khadija Private Clinic (Namwera)","Health centre
+",0,7149bcec-81a2-4496-90e4-330c4cdce6a5
+"Malawi Army Marine Camp Hospital","Dispensary
+",0,8005680f-3a26-4b9f-9644-3bc381a94f4d
+"Kadango Dispensary (Mangochi)","Dispensary
+",0,512a1559-1acf-4ddc-b964-f0bba1bd1a7c
+"Maldeco Fisheries Clinic (Mangochi)","Special / other site
+",0,afdaa0f7-7c78-4ebc-9679-8c69bfa0fa6f
+"Billy Riordan Memorial Health Clinic","Health centre
+",0,1eba75ab-e1c0-44f7-8745-9e548f9e5fae
+"Somba Health Centre","Health centre
+",0,a9adb1dc-7839-4a97-b966-dc318f8a53e2
+"Malukula Health Centre (Mangochi)","Health centre
+",0,5d7092ad-f3ba-43b2-ad87-66fc0041f252
+"Chilonga Health Centre (Mangochi)","Health centre
+",0,bd1ae587-843c-458d-9bfc-53f64fb129cf
+"Lunzu Banja La Mtsogolo Dispensary","Special / other site
+",0,32beb0f4-d00d-4a4f-8f36-67f2e917d805
+"Providence Industrial Mission Health Centre","Health centre
+",0,f62e5db5-ddbe-4053-a37f-856ae713bc15
+"Akasale Private Cinic (Chiradzulu)","Special / other site
+",0,ffee84ab-b58d-4006-8472-e0180ca7cf05
+"Chimwawa Health Centre (Chiradzulu)","Health centre
+",0,1760d8b4-8c5c-40ca-9044-c519715e9d25
+"Chagunda Health Centre (Salima)","Health centre
+",0,81044145-8904-498d-a38c-9bc07b16b519
+"Katawa Health Centre (Salima)","Health centre
+",0,c6e74642-35a0-42b0-9830-2c0061baa839
+"Parachute Battalion Clinic","Dispensary
+",0,0e3285c6-09e0-4a27-a381-52f5442c6634
+"Chinguluwe Health Centre (Salima)","Health centre
+",1,b875402b-5f35-4bc1-ac28-caf3f2a71dba
+"Life Line Salima Health Centre","Health centre
+",0,35708033-d1cb-413c-9b5c-b626118a203b
+"Chakhadza Health Centre (Dowa)","Health centre
+",0,1e2b719e-8209-4ad7-8bbd-1bf62a9f3785
+"Madisi Mission Hospital","District hospital
+",0,a7b4a92d-48cb-401d-a8e9-74351481187f
+"Mtengowanthenga Dream Project","Special / other site
+",0,87456893-88a2-49ff-b797-a3135601307d
+"FPAM Clinic Dowa","Health centre
+",0,83d042d3-3b59-43bb-8325-086f9e855eab
+"Chizolowondo Health Centre (Dowa)","Health centre
+",0,579df44a-dba1-41f3-8606-726746c7e19a
+"Kasese Health Centre (Dowa)","Health centre
+",0,670e9db7-8865-4122-8012-2cc205731964
+"Dzaleka Health Centre","Health centre
+",0,fdc348fb-d946-4427-b0ad-532510393e67
+"St Theresa Health Centre (Malambo)","Health centre
+",0,fec88b4f-29d4-4104-abb0-aaaf9aacce5d
+"Kansonga Health Centre (Ntchisi)","Health centre
+",0,5fe6e6dd-b63e-4340-a306-7f69a7d84c1e
+"Nthondo Health Centre (Ntchisi)","Health centre
+",0,45af783b-49fe-4b0a-827a-bcd02ebef80d
+"Mdunga Health Centre (Kasungu)","Health centre
+",0,9afa7f8e-7b57-427b-a422-f4e6eb53d7ad
+"Lodjwa Health Centre","Health centre
+",0,faafed1c-1438-4caa-8a3e-dba601efdd56
+"St Andrews Clinic (Kasungu)","Special / other site
+",0,225ba4a2-1d87-4b49-b2d6-0a372c1133a1
+"Simulemba Health Centre","Health centre
+",0,e89ad15a-1d24-492d-880e-a9bf084fb5ad
+"Kamuzu Academy Clinic","Special / other site
+",0,cf17eefc-2db0-43f0-aaaa-220aa6d889a5
+"Mpepa Health Centre (Kasungu)","Health centre
+",0,1090c7cb-d147-4c3e-bff3-d929b86e5d2b
+"Mnyanja Health Centre","Health centre
+",0,aad109d9-d67f-422c-9bf5-ea3f73a02329
+"Yankho Private Clinic (Kasungu)","Special / other site
+",0,db377796-1ead-4cdd-a7b2-bfe0b96456cc
+"Mziza Health Centre (Kasungu)","Health centre
+",0,8aa6a84c-8eb2-44de-b7e5-e68472de54a6
+"Kalikeni Private Clinic (Kasungu)","Special / other site
+",0,66426065-7080-4c0d-9229-94c4ab288251
+"FPAM Clinic Kasungu","Health centre
+",0,d0d23d81-e9ce-44c5-8a2b-2410e7853f73
+"Alinafe Community Hospital (Kasungu)","Health centre
+",0,f2b31aac-b7dc-4b46-816f-e086450697ef
+"World Medical Fund","Other hospital
+",0,ba38d517-47d1-4e60-a37c-23133a432a18
+"Malowa Health Centre (Nkhota-kota)","Health centre
+",0,a68ca448-71ab-4520-aa19-69b14999bc29
+"Mazunga Private Clinic (Nkhota-kota)","Dispensary
+",0,75d8b706-a56c-4b16-9467-9438cc12810d
+"McGuire Wellness Center (Child Legacy)","Health centre
+",0,0a5bf942-2113-4eb7-b584-4a2ee5be09c4
+"Fidelity Private Clinic (Lilongwe)","Special / other site
+",0,7a58bcae-6cb2-459f-ad75-3b5a209b1f3a
+"Medicare City Centre Clinic (Blantyre)","Special / other site
+",0,25caaeed-a230-4a2c-850f-bb687abb1255
+"Makadam Pvt Clinic (Blantyre)","Special / other site
+",0,5df84c03-f9a9-4873-b9ca-3a6a9370a374
+"City Centre Clinic (Blantyre)","Special / other site
+",0,1ff6db2d-38ee-4000-bfb1-25549837cc74
+"Gateway Clinic (Blantyre)","Health Center
+",0,6336d4eb-c066-4882-b87d-9501104b7570
+"Ngabu SDA Health Centre","Health Centre",0,b802a93b-a6ff-49d5-98eb-31b671869bbf
+"Amecca Chilaweni Health Centre","Amecca Chilaweni Health Centre",0,eee3eb85-1ee3-4241-b6ba-3d9b3363081e
+"Kameza Macro","Kameza Macro",0,a6f6555f-8d11-4d5e-9384-d076f0e279b3
+"Umunthu Foundation Clinic","Umunthu Foundation Clinic",0,f38c9af9-7eb8-40af-afe2-19ce293b793e
+"Holy family mission hospital","Holy family mission hospital (Phalombe)",0,881ad3a0-1a3b-458d-b614-82fcc416ba15
+"Partners in Hope - Dalitso Clinic","Partners in Hope - Dalitso Clinic",0,a834a367-92ea-4a2a-b36d-7752b8d04a15
+"FPAM Clinic Mangochi","FPAM Clinic Mangochi",0,c0f104d2-0035-4f34-bf19-11b2974bb6bb
+"Mehboob Clinic","Mehboob Clinic",0,3d5f2e91-4a3d-4fd9-bc2b-37f40364fd31
+"Maula Prison",Prison,0,e565e401-8abf-11e1-b88f-544249e32ba2
+"Zomba Prison",Prison,0,e565e403-8abf-11e1-b88f-544249e32ba2
+"Chichiri Prison",Prison,0,e565e404-8abf-11e1-b88f-544249e32ba2
+"Mzimba Prison",Prison,0,e565e405-8abf-11e1-b88f-544249e32ba2
+"Nkhatabay Prison","Health Centre",0,6a6ccee4-a656-11ef-954a-99c51105e56e
+"Mzimba Prison Clinic","Health Centre",0,8922e030-a656-11ef-954a-99c51105e56e
+"Ntchisi Prison Clinic","Health Centre",0,a58e0c22-a656-11ef-954a-99c51105e56e
+"Rumphi Prison Clinic","Health Centre",0,bdf370d6-a656-11ef-954a-99c51105e56e

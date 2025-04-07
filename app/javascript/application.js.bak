@@ -1,0 +1,41 @@
+// Configure your import map in config/importmap.rb
+import "@hotwired/turbo-rails"
+import "controllers"
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Copy to clipboard functionality
+  window.copyToClipboard = function(text) {
+    if (!text) {
+      const codeElement = document.getElementById('reset-code');
+      text = codeElement ? codeElement.textContent : '';
+    }
+    
+    navigator.clipboard.writeText(text).then(() => {
+      const copyButton = document.getElementById('copy-button');
+      if (copyButton) {
+        copyButton.textContent = 'Copied!';
+        setTimeout(() => {
+          copyButton.textContent = 'Copy';
+        }, 2000);
+      }
+      console.log('Copying to clipboard was successful!');
+    }, (err) => {
+      console.error('Could not copy text: ', err);
+    });
+  };
+
+  // Date picker initialization
+  const dateInputs = document.querySelectorAll('input[type="date"]');
+  dateInputs.forEach(input => {
+    const today = new Date().toISOString().split('T')[0];
+    input.setAttribute('max', today);
+  });
+
+  // Dropdown toggle functionality
+  window.toggleDropdown = function(id) {
+    const dropdown = document.getElementById(id);
+    if (dropdown) {
+      dropdown.classList.toggle('hidden');
+    }
+  };
+});

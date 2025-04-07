@@ -1,237 +1,270 @@
-<% content_for :title, "Dashboard | Password Reset System" %>
-
-<div class="mb-8 space-y-2">
-  <h1 class="text-3xl font-bold text-gray-900">Password Reset Dashboard</h1>
-  <p class="text-gray-600">Welcome back, <%= current_user.full_name %></p>
-</div>
-
-<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-  <div class="overflow-hidden rounded-lg bg-white shadow transition-all duration-300 hover:shadow-md">
-    <div class="p-5">
-      <div class="flex items-center">
-        <div class="flex-shrink-0">
-          <div class="flex h-12 w-12 items-center justify-center rounded-md bg-primary-100 text-primary-600">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
+<div class="container mx-auto px-4 py-6">
+  <h1 class="text-3xl font-medium text-teal-700 mb-8">Password Reset Dashboard</h1>
+  
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <!-- Left column - Generate Password Reset Code -->
+    <div class="lg:col-span-2">
+      <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+        <h2 class="text-xl font-semibold mb-4">Generate Password Reset Code</h2>
+        <%= form_with(url: password_resets_path, local: true, class: "space-y-4") do |f| %>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <%= f.label :first_name, class: "block text-sm font-medium text-gray-700 mb-1" %>
+              <%= f.text_field :first_name, 
+                  class: "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500", 
+                  placeholder: "Given Name" %>
+            </div>
+            <div>
+              <%= f.label :last_name, class: "block text-sm font-medium text-gray-700 mb-1" %>
+              <%= f.text_field :last_name, 
+                  class: "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500", 
+                  placeholder: "Lastname" %>
+            </div>
           </div>
-        </div>
-        <div class="ml-5 w-0 flex-1">
-          <dl>
-            <dt class="truncate text-sm font-medium text-gray-500">Today's Resets</dt>
-            <dd>
-              <div class="text-3xl font-semibold text-gray-900"><%= @stats[:total_today] %></div>
-            </dd>
-          </dl>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <div class="overflow-hidden rounded-lg bg-white shadow transition-all duration-300 hover:shadow-md">
-    <div class="p-5">
-      <div class="flex items-center">
-        <div class="flex-shrink-0">
-          <div class="flex h-12 w-12 items-center justify-center rounded-md bg-green-100 text-green-600">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          </div>
-        </div>
-        <div class="ml-5 w-0 flex-1">
-          <dl>
-            <dt class="truncate text-sm font-medium text-gray-500">Active Codes</dt>
-            <dd>
-              <div class="text-3xl font-semibold text-gray-900"><%= @stats[:active_codes] %></div>
-            </dd>
-          </dl>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="overflow-hidden rounded-lg bg-white shadow transition-all duration-300 hover:shadow-md">
-    <div class="p-5">
-      <div class="flex items-center">
-        <div class="flex-shrink-0">
-          <div class="flex h-12 w-12 items-center justify-center rounded-md bg-red-100 text-red-600">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          </div>
-        </div>
-        <div class="ml-5 w-0 flex-1">
-          <dl>
-            <dt class="truncate text-sm font-medium text-gray-500">Expired Codes</dt>
-            <dd>
-              <div class="text-3xl font-semibold text-gray-900"><%= @stats[:expired_codes] %></div>
-            </dd>
-          </dl>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="overflow-hidden rounded-lg bg-white shadow transition-all duration-300 hover:shadow-md">
-    <div class="p-5">
-      <div class="flex items-center">
-        <div class="flex-shrink-0">
-          <div class="flex h-12 w-12 items-center justify-center rounded-md bg-secondary-100 text-secondary-600">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" />
-            </svg>
-          </div>
-        </div>
-        <div class="ml-5 w-0 flex-1">
-          <dl>
-            <dt class="truncate text-sm font-medium text-gray-500">Total Transactions</dt>
-            <dd>
-              <div class="text-3xl font-semibold text-gray-900"><%= @stats[:total_transactions] %></div>
-            </dd>
-          </dl>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-3">
-  <div class="lg:col-span-2">
-    <div class="overflow-hidden rounded-lg bg-white shadow">
-      <div class="flex items-center justify-between border-b border-gray-200 px-6 py-4">
-        <h2 class="text-lg font-medium text-gray-900">Recent Transactions</h2>
-        <%= link_to reset_transactions_path, class: "text-sm font-medium text-primary-600 hover:text-primary-500" do %>
-          View all
-          <span aria-hidden="true"> &rarr;</span>
-        <% end %>
-      </div>
-      <div class="px-6 py-4">
-        <% if @recent_transactions.any? %>
-          <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
-            <table class="min-w-full divide-y divide-gray-300">
-              <thead class="bg-gray-50">
-                <tr>
-                  <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">ID</th>
-                  <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">User</th>
-                  <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Created</th>
-                  <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Status</th>
-                  <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-6">
-                    <span class="sr-only">Actions</span>
-                  </th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-gray-200 bg-white">
-                <% @recent_transactions.each do |transaction| %>
-                  <tr>
-                    <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6"><%= transaction.id %></td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                      <div><%= transaction.user.full_name %></div>
-                      <div class="text-xs text-gray-400">@<%= transaction.user.username %></div>
-                    </td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"><%= transaction.created_at.strftime("%Y-%m-%d %H:%M") %></td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm">
-                      <% if transaction.status == "active" %>
-                        <span class="inline-flex items-center rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800">Active</span>
-                      <% elsif transaction.status == "expired" %>
-                        <span class="inline-flex items-center rounded-full bg-red-100 px-2.5 py-0.5 text-xs font-medium text-red-800">Expired</span>
-                      <% else %>
-                        <span class="inline-flex items-center rounded-full bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800">Used</span>
-                      <% end %>
-                    </td>
-                    <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
-                      <%= link_to "View", reset_transaction_path(transaction), class: "text-primary-600 hover:text-primary-900" %>
-                    </td>
-                  </tr>
-                <% end %>
-              </tbody>
-            </table>
-          </div>
-        <% else %>
-          <div class="py-12 text-center">
-            <svg class="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-            </svg>
-            <h3 class="mt-2 text-sm font-medium text-gray-900">No transactions</h3>
-            <p class="mt-1 text-sm text-gray-500">Get started by creating a new reset code.</p>
-            <div class="mt-6">
-              <%= link_to new_reset_transaction_path, class: "inline-flex items-center rounded-md bg-primary-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600" do %>
-                <svg class="-ml-0.5 mr-1.5 h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                  <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <%= f.label :username, "Username", class: "block text-sm font-medium text-gray-700 mb-1" %>
+              <%= f.text_field :username, 
+                  class: "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500", 
+                  placeholder: "username" %>
+            </div>
+            
+            <div 
+              data-controller="location-select" 
+              class="relative group"
+            >
+              <%= f.label :location, "Location", class: "block text-sm font-medium text-gray-700 mb-1" %>
+              
+              <%= f.hidden_field :location_id, value: nil %>
+              
+              <button 
+                type="button" 
+                data-location-select-target="button"
+                class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-teal-500"
+              >
+                <span class="mr-2">Select Location</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 -mr-1 text-current" viewBox="0 0 20 20" fill="none" stroke="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M6.293 9.293a1 1 0 011.414 0L10 11.586l2.293-2.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
                 </svg>
-                New Reset Code
-              <% end %>
+              </button>
+
+              <div 
+                data-location-select-target="menu"
+                class="hidden absolute right-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 p-1 space-y-1 z-50 w-full"
+              >
+                <input 
+                  type="text" 
+                  data-location-select-target="searchInput"
+                  class="block w-full px-4 py-2 text-gray-800 border rounded-md border-gray-300 focus:outline-none" 
+                  placeholder="Search locations" 
+                  autocomplete="off"
+                >
+
+                <div class="max-h-60 overflow-y-auto">
+                  <% Location.order(:name).each do |location| %>
+                    <a 
+                      href="#" 
+                      data-action="click->location-select#selectLocation"
+                      data-location-id="<%= location.id %>"
+                      class="block px-4 py-2 text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer rounded-md"
+                    >
+                      <%= location.name %>
+                      <% if location.description.present? %>
+                        <span class="block text-xs text-gray-500"><%= location.description %></span>
+                      <% end %>
+                    </a>
+                  <% end %>
+                </div>
+              </div>
             </div>
+          </div>
+
+          <div class="text-center mt-6">
+            
+          <%= button_tag type: "submit", class: "w-full py-2 px-4 bg-amber-300 hover:bg-amber-400 rounded-md font-medium transition duration-200 inline-flex items-center justify-center" do %>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+            </svg>
+            Generate Code
+          <% end %>
+
           </div>
         <% end %>
       </div>
     </div>
-  </div>
-
-  <div class="space-y-6">
-    <div class="overflow-hidden rounded-lg bg-white shadow">
-      <div class="border-b border-gray-200 px-6 py-4">
-        <h2 class="text-lg font-medium text-gray-900">Quick Tips</h2>
+    
+    <!-- Right column - System Overview and Quick Tips -->
+    <div>
+      <div class="bg-white rounded-lg shadow p-6 mb-6">
+        <h2 class="text-xl font-semibold text-teal-700 mb-4">System Overview</h2>
+        
+        <div class="space-y-4">
+          <div class="flex justify-between items-center">
+            <span class="text-gray-600">Total Resets Today</span>
+            <span class="text-xl font-semibold"><%= @total_resets_today || 12 %></span>
+          </div>
+          
+          <div class="flex justify-between items-center">
+            <span class="text-gray-600">Active Reset Codes</span>
+            <span class="text-xl font-semibold"><%= @active_resets || 8 %></span>
+          </div>
+          
+          <div class="flex justify-between items-center">
+            <span class="text-gray-600">Expired Codes (24h)</span>
+            <span class="text-xl font-semibold"><%= @expired_resets || 4 %></span>
+          </div>
+        </div>
       </div>
-      <div class="px-6 py-4">
-        <ul class="space-y-4">
-          <li class="flex items-start">
-            <div class="flex-shrink-0">
-              <svg class="h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-              </svg>
-            </div>
-            <p class="ml-3 text-sm text-gray-700">Verify user identity before generating reset codes</p>
-          </li>
-          <li class="flex items-start">
-            <div class="flex-shrink-0">
-              <svg class="h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-              </svg>
-            </div>
-            <p class="ml-3 text-sm text-gray-700">Reset codes expire after 24 hours</p>
-          </li>
-          <li class="flex items-start">
-            <div class="flex-shrink-0">
-              <svg class="h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-              </svg>
-            </div>
-            <p class="ml-3 text-sm text-gray-700">Send reset codes via secure channels only</p>
-          </li>
-          <li class="flex items-start">
-            <div class="flex-shrink-0">
-              <svg class="h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-              </svg>
-            </div>
-            <p class="ml-3 text-sm text-gray-700">Record all password reset requests for audit purposes</p>
-          </li>
+      
+      <div class="bg-white rounded-lg shadow p-6">
+        <h2 class="text-xl font-semibold text-teal-700 mb-4">Quick Tips</h2>
+        
+        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+          <li>Verify user identity before generating reset codes</li>
+          <li>Reset codes expire after 24 hours</li>
+          <li>Send reset codes via secure channels only</li>
+          <li>Record all password reset requests for audit purposes</li>
         </ul>
       </div>
     </div>
-
-    <div class="overflow-hidden rounded-lg bg-white shadow">
-      <div class="border-b border-gray-200 px-6 py-4">
-        <h2 class="text-lg font-medium text-gray-900">Quick Actions</h2>
-      </div>
-      <div class="px-6 py-4">
-        <div class="space-y-3">
-          <%= link_to new_reset_transaction_path, class: "flex w-full items-center justify-center rounded-md bg-primary-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600" do %>
-            <svg class="-ml-0.5 mr-1.5 h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
-            </svg>
-            Generate New Reset Code
+  </div>
+  
+  <!-- Recent Transactions -->
+  <div class="mt-8">
+    <h2 class="text-2xl font-medium text-teal-700 mb-4">Recent Transactions</h2>
+    
+    <div class="bg-white rounded-lg shadow overflow-hidden">
+      <table class="min-w-full divide-y divide-gray-200">
+        <thead class="bg-gray-50">
+          <tr>
+            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Generated Code</th>
+            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">User</th>
+            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Created</th>
+            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Expires</th>
+            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white divide-y divide-gray-200">
+          <% if @recent_resets && @recent_resets.any? %>
+            <% @recent_resets.each do |reset| %>
+              <tr>
+                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                  <%= reset.reset_code %>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="text-sm font-medium text-gray-900"><%= reset.user.full_name %></div>
+                  <div class="text-sm text-gray-500">@<%= reset.user.username %></div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                  <%= reset.created_at.strftime("%m/%d/%Y, %I:%M:%S %p") %>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                  <%= reset.expires_at.strftime("%m/%d/%Y, %I:%M:%S %p") %>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <% if reset.status == "active" && !reset.expired? %>
+                    <span class="px-2 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                      Active
+                    </span>
+                  <% elsif reset.status == "used" %>
+                    <span class="px-2 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">
+                      Used
+                    </span>
+                  <% else %>
+                    <span class="px-2 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">
+                      Expired
+                    </span>
+                  <% end %>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                  <%= link_to "View", password_reset_path(reset), class: "text-teal-600 hover:text-teal-800" %>
+                </td>
+              </tr>
+            <% end %>
+          <% else %>
+            <!-- Sample data for display -->
+            <tr>
+              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">TX-1234</td>
+              <td class="px-6 py-4 whitespace-nowrap">
+                <div class="text-sm font-medium text-gray-900">John Smith</div>
+                <div class="text-sm text-gray-500">@jsmith</div>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">6/15/2023, 12:30:00 PM</td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">6/16/2023, 12:30:00 PM</td>
+              <td class="px-6 py-4 whitespace-nowrap">
+                <span class="px-2 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                  Active
+                </span>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium relative">
+                <div class="dropdown">
+                  <button class="text-gray-500 hover:text-gray-700 dropdown-toggle" onclick="toggleDropdown(this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-current" viewBox="0 0 20 20" fill="none" stroke="currentColor">
+                      <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
+                    </svg>
+                  </button>
+                  <div class="dropdown-menu hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                    <div class="py-1">
+                      <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 inline text-current" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                        </svg>
+                        View Details
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">TX-1235</td>
+              <td class="px-6 py-4 whitespace-nowrap">
+                <div class="text-sm font-medium text-gray-900">Mary Johnson</div>
+                <div class="text-sm text-gray-500">@mjohnson</div>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">6/15/2023, 11:15:00 AM</td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">6/16/2023, 11:15:00 AM</td>
+              <td class="px-6 py-4 whitespace-nowrap">
+                <span class="px-2 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                  Active
+                </span>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium relative">
+                <div class="dropdown">
+                  <button class="text-gray-500 hover:text-gray-700 dropdown-toggle" onclick="toggleDropdown(this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-current" viewBox="0 0 20 20" fill="none" stroke="currentColor">
+                      <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
+                    </svg>
+                  </button>
+                  <div class="dropdown-menu hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                    <div class="py-1">
+                      <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 inline text-current" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                        </svg>
+                        View Details
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
           <% end %>
-          
-          <%= link_to reports_reset_transactions_path, class: "flex w-full items-center justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" do %>
-            <svg class="-ml-0.5 mr-1.5 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm2 10a1 1 0 10-2 0v3a1 1 0 102 0v-3zm4-1a1 1 0 011 1v3a1 1 0 11-2 0v-3a1 1 0 011-1zm-2-7a1 1 0 00-1 1v3a1 1 0 102 0V5a1 1 0 00-1-1z" clip-rule="evenodd" />
-            </svg>
-            Generate Report
-          <% end %>
-        </div>
-      </div>
+        </tbody>
+      </table>
+    </div>
+    
+    <div class="mt-4 flex justify-center">
+      <%= link_to password_resets_path, class: "inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500" do %>
+        Show All Transactions
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 text-current" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+        </svg>
+      <% end %>
     </div>
   </div>
 </div>
-

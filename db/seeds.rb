@@ -1,52 +1,53 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+# Disable foreign key checks
+ActiveRecord::Base.connection.execute("SET FOREIGN_KEY_CHECKS=0")
 
-# Create admin user
-User.find_or_create_by!(username: 'admin') do |user|
-  user.password = 'password123'
-  user.password_confirmation = 'password123'
-  user.first_name = 'Admin'
-  user.last_name = 'User'
-end
+# Clear existing data
+PasswordReset.delete_all
+Location.delete_all
+User.delete_all
 
-# Create some sample users
-User.find_or_create_by!(username: 'johndoe') do |user|
-  user.password = 'password123'
-  user.password_confirmation = 'password123'
-  user.first_name = 'John'
-  user.last_name = 'Doe'
-end
+# Re-enable foreign key checks
+ActiveRecord::Base.connection.execute("SET FOREIGN_KEY_CHECKS=1")
 
-User.find_or_create_by!(username: 'janedoe') do |user|
-  user.password = 'password123'
-  user.password_confirmation = 'password123'
-  user.first_name = 'Jane'
-  user.last_name = 'Doe'
-end
+# Import locations from CSV
+require 'csv'
 
-# Create some sample reset transactions
-user = User.find_by(username: 'johndoe')
-if user
-  ResetTransaction.find_or_create_by!(reset_code: 'JODO20240325ABC123XYZ') do |transaction|
-    transaction.user = user
-    transaction.status = :active
-    transaction.location = 'New York'
-    transaction.date_of_birth = '1990-01-15'
-    transaction.sex = 'male'
-    transaction.expires_at = 24.hours.from_now
+def import_locations
+  csv_path = Rails.root.join('public', 'locations.csv')
+  
+  CSV.foreach(csv_path, headers: true, quote_char: '"', col_sep: ',', liberal_parsing: true) do |row|
+    Location.create!(
+      name: row['name']&.strip,
+      description: row['description']&.gsub('""', '"')&.strip,
+      retired: row['retired'] == '1' || row['retired']&.downcase == 'true',
+      uuid: row['uuid']&.strip
+    )
   end
   
-  ResetTransaction.find_or_create_by!(reset_code: 'JODO20240324DEF456UVW') do |transaction|
-    transaction.user = user
-    transaction.status = :expired
-    transaction.location = 'New York'
-    transaction.date_of_birth = '1990-01-15'
-    transaction.sex = 'male'
-    transaction.expires_at = 1.day.ago
-  end
+  puts "Imported #{Location.count} locations"
 end
+
+# Import locations first
+import_locations
+
+# Create a default location if none exists
+default_location = Location.find_or_create_by!(
+  name: 'Unknown',
+  description: 'Default location when no specific location is selected',
+  retired: false,
+  uuid: SecureRandom.uuid
+)
+
+# Create admin user
+admin_user = User.create!(
+  username: 'admin',
+  email: 'admin@example.com',
+  password: 'password123',
+  password_confirmation: 'password123',
+  first_name: 'Admin',
+  last_name: 'User',
+  role: 'admin'
+)
+
+puts "Seeding complete!"
+puts "Total Locations: #{Location.count}"

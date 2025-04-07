@@ -13,25 +13,3 @@
  *= require_tree .
  *= require_self
  */
-
-/* Custom styles */
-.badge-success {
-  background-color: #28a745;
-  color: white;
-}
-
-.badge-danger {
-  background-color: #dc3545;
-  color: white;
-}
-
-.badge-info {
-  background-color: #17a2b8;
-  color: white;
-}
-
-.badge-secondary {
-  background-color: #6c757d;
-  color: white;
-}
-

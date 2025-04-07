@@ -10,31 +10,47 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_03_28_100601) do
-  create_table "reset_transactions", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.string "reset_code", null: false
-    t.integer "status", default: 0
-    t.datetime "expires_at"
-    t.string "location"
-    t.date "date_of_birth"
-    t.string "sex"
+ActiveRecord::Schema[7.2].define(version: 2025_03_30_161329) do
+  create_table "locations", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.boolean "retired"
+    t.string "uuid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "encrypted_reset_data"
-    t.index ["reset_code"], name: "index_reset_transactions_on_reset_code", unique: true
-    t.index ["user_id"], name: "index_reset_transactions_on_user_id"
+  end
+
+  create_table "password_resets", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "created_by_id"
+    t.string "reset_code", limit: 1024, null: false
+    t.string "status", default: "active", null: false
+    t.datetime "expires_at", null: false
+    t.string "location"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "location_id"
+    t.index ["created_by_id"], name: "index_password_resets_on_created_by_id"
+    t.index ["expires_at"], name: "index_password_resets_on_expires_at"
+    t.index ["location_id"], name: "index_password_resets_on_location_id"
+    t.index ["status"], name: "index_password_resets_on_status"
+    t.index ["user_id"], name: "index_password_resets_on_user_id"
   end
 
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "username", null: false
-    t.string "password_digest", null: false
     t.string "first_name", null: false
     t.string "last_name", null: false
+    t.string "username", null: false
+    t.string "email", null: false
+    t.string "password_digest", null: false
+    t.string "role", default: "user", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 
-  add_foreign_key "reset_transactions", "users"
+  add_foreign_key "password_resets", "locations"
+  add_foreign_key "password_resets", "users"
+  add_foreign_key "password_resets", "users", column: "created_by_id"
 end

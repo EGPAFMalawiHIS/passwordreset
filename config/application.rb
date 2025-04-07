@@ -6,10 +6,15 @@ require "rails/all"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module PasswordResetApp
+module Password20
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.2
+
+    # Please, add to the `ignore` list any other `lib` subdirectories that do
+    # not contain `.rb` files, or that should not be reloaded or eager loaded.
+    # Common ones are `templates`, `generators`, or `middleware`, for example.
+    config.autoload_lib(ignore: %w[assets tasks])
 
     # Configuration for the application, engines, and railties goes here.
     #
@@ -18,15 +23,5 @@ module PasswordResetApp
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
-    
-    # Load lib directory
-    config.autoload_paths << Rails.root.join('lib')
-    config.middleware.insert_before 0, Rack::Cors do
-      allow do
-                 origins '*'
-                resource '*', headers: :any, methods: [:get, :post, :options]
-     end
-  end
   end
 end
-
