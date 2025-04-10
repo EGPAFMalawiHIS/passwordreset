@@ -26,7 +26,6 @@ ActiveRecord::Schema[7.2].define(version: 2025_03_30_161329) do
     t.string "reset_code", limit: 1024, null: false
     t.string "status", default: "active", null: false
     t.datetime "expires_at", null: false
-    t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "location_id"
@@ -42,6 +41,7 @@ ActiveRecord::Schema[7.2].define(version: 2025_03_30_161329) do
     t.string "last_name", null: false
     t.string "username", null: false
     t.string "email", null: false
+    t.string "phone", null: false
     t.string "password_digest", null: false
     t.string "role", default: "user", null: false
     t.datetime "created_at", null: false

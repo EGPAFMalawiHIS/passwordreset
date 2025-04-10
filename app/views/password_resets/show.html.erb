@@ -19,8 +19,7 @@
                 <button 
                   onclick="toggleFullResetCode()" 
                   class="ml-2 text-teal-600 hover:text-teal-800 text-sm"
-                  id="toggle-reset-code-btn"
-                >
+                  id="toggle-reset-code-btn">
                   Show full
                 </button>
               <% end %>
@@ -63,7 +62,9 @@
               Download Barcode
             </button>
             
-            <button type="button" class="flex items-center px-4 py-2 bg-amber-300 border border-transparent rounded-md shadow-sm text-sm font-medium text-gray-800 hover:bg-amber-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500">
+            <button type="button" 
+              onclick="sendWhatsAppMessage()"
+              class="flex items-center px-4 py-2 bg-amber-300 border border-transparent rounded-md shadow-sm text-sm font-medium text-gray-800 hover:bg-amber-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
               </svg>
@@ -144,5 +145,16 @@ function copyToClipboard() {
   navigator.clipboard.writeText(fullResetCode).then(() => {
     alert('Reset code copied to clipboard');
   });
+}
+
+function sendWhatsAppMessage() {
+  const fullResetCode = document.getElementById('reset-code-full').textContent.trim();
+  const phoneNumber = "<%= @password_reset.user.phone %>";
+  const cleanNumber = phoneNumber.replace(/\D/g, '');
+  
+  //WhatsApp URL (include the phone number and message)
+  const whatsappUrl = `https://wa.me/${cleanNumber}?text=${encodeURIComponent(fullResetCode)}`;
+  
+  window.open(whatsappUrl, '_blank');
 }
 </script>

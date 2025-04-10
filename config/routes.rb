@@ -24,6 +24,11 @@ Rails.application.routes.draw do
       get :search
     end
   end
+
+  # Check phone
+  get 'check_phone', to: 'application#check_phone'
+  # Check phone
+  get 'check_username', to: 'dashboard#check_username'
   
   # Reports
   resources :reports, only: [:index]

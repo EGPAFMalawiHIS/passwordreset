@@ -7,20 +7,6 @@
       <div class="bg-white shadow-md rounded-lg p-6 mb-6">
         <h2 class="text-xl font-semibold mb-4">Generate Password Reset Code</h2>
         <%= form_with(url: password_resets_path, local: true, class: "space-y-4") do |f| %>
-          <div class="grid grid-cols-2 gap-4">
-            <div>
-              <%= f.label :first_name, class: "block text-sm font-medium text-gray-700 mb-1" %>
-              <%= f.text_field :first_name, 
-                  class: "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500", 
-                  placeholder: "Given Name" %>
-            </div>
-            <div>
-              <%= f.label :last_name, class: "block text-sm font-medium text-gray-700 mb-1" %>
-              <%= f.text_field :last_name, 
-                  class: "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500", 
-                  placeholder: "Lastname" %>
-            </div>
-          </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
@@ -30,12 +16,10 @@
                   placeholder: "username" %>
             </div>
             
-            <div 
-              data-controller="location-select" 
-              class="relative group"
-            >
-              <%= f.label :location, "Location", class: "block text-sm font-medium text-gray-700 mb-1" %>
-              
+            <div data-controller="location-select" class="relative group">
+
+              <%= f.label :location, "Location", 
+                   class: "block text-sm font-medium text-gray-700 mb-1" %>
               <%= f.hidden_field :location_id, value: nil %>
               
               <button 
@@ -79,6 +63,48 @@
               </div>
             </div>
           </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <%= f.label :first_name, class: "block text-sm font-medium text-gray-700 mb-1" %>
+              <%= f.text_field :first_name, 
+                      id: "first_name",
+                  class: "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500", 
+                  placeholder: "Given Name" %>
+            </div>
+            <div>
+              <%= f.label :last_name, class: "block text-sm font-medium text-gray-700 mb-1" %>
+              <%= f.text_field :last_name, 
+                  id: "last_name",
+                  class: "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500", 
+                  placeholder: "Lastname" %>
+            </div>
+          </div>
+
+         <div class="mt-6">
+           <div>
+             <%= f.label :Whatsapp_number, class: "block text-sm font-medium text-gray-700 mb-1" %>
+             <div class="flex w-full">
+               <div class="relative w-full">
+                 <%= f.telephone_field :phone_number, 
+                        id: "phone",
+                     class: "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500", 
+                     placeholder: "999107700",
+                     size: "100" %>
+                 <%= f.hidden_field :full_phone, id: "full_phone" %>
+                 
+                 <% # Only check for existing user if phone is present %>
+                 <% if f.object.respond_to?(:phone_number) && f.object.phone_number.present? %>
+                   <% existing_user = User.find_by(phone: f.object.phone_number) %>
+                   <% if existing_user %>
+                     <div class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm text-gray-500">
+                       Linked to: <%= existing_user.username %>
+                     </div>
+                   <% end %>
+                 <% end %>
+               </div>
+             </div>
+           </div>
+         </div>
 
           <div class="text-center mt-6">
             
@@ -268,3 +294,122 @@
     </div>
   </div>
 </div>
+<% content_for :page_scripts do %>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize the phone input
+      const phoneInput = document.querySelector("#phone");
+      const fullPhoneField = document.querySelector("#full_phone");
+      
+      if (phoneInput) {
+        const iti = window.intlTelInput(phoneInput, {
+          utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js",
+          initialCountry: "mw", // Set Malawi as default
+          preferredCountries: ["mw", "za", "zm", "zw", "tz"], // Preferred countries at the top
+          separateDialCode: true,
+          autoPlaceholder: "polite"
+        });
+        
+        // Update hidden input with full phone number on input change
+        phoneInput.addEventListener('input', updateFullPhone);
+        phoneInput.addEventListener('countrychange', updateFullPhone);
+        
+        function updateFullPhone() {
+          if (phoneInput.value) {
+            fullPhoneField.value = iti.getNumber(); // E.164 format: +265999107725 
+          }
+        }
+        
+        // Initialize with default value
+        setTimeout(updateFullPhone, 100);
+      }
+      
+      // Dropdown toggle function
+      window.toggleDropdown = function(button) {
+        const dropdown = button.nextElementSibling;
+        dropdown.classList.toggle('hidden');
+        
+        // Close other dropdowns
+        document.querySelectorAll('.dropdown-menu').forEach(menu => {
+          if (menu !== dropdown && !menu.classList.contains('hidden')) {
+            menu.classList.add('hidden');
+          }
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function closeDropdown(e) {
+          if (!button.contains(e.target) && !dropdown.contains(e.target)) {
+            dropdown.classList.add('hidden');
+            document.removeEventListener('click', closeDropdown);
+          }
+        });
+      };
+    });
+  </script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const phoneInput = document.getElementById('phone');
+    const fullPhoneField = document.getElementById('full_phone');
+    
+    const iti = window.intlTelInput(phoneInput, {
+      utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js",
+      initialCountry: "mw", // Set Malawi as default
+      preferredCountries: ["mw", "za", "zm", "zw", "tz"], // Preferred countries at the top
+      separateDialCode: true,
+      autoPlaceholder: "polite"
+    });
+    
+    // Update hidden input with full phone number on input change
+    phoneInput.addEventListener('input', updateFullPhone);
+    phoneInput.addEventListener('countrychange', updateFullPhone);
+    
+    function updateFullPhone() {
+      if (phoneInput.value) {
+        fullPhoneField.value = iti.getNumber(); // E.164 format: +265999107724
+        
+        // AJAX call to check if phone exists (optional enhancement)
+        fetch(`/check_phone?phone=${fullPhoneField.value}`)
+          .then(response => response.json())
+          .then(data => {
+            const existingUserDisplay = document.querySelector('.existing-user-display');
+            if (existingUserDisplay) {
+              existingUserDisplay.remove();
+            }
+            
+            if (data.username) {
+              const userDisplay = document.createElement('div');
+              userDisplay.className = 'existing-user-display absolute inset-y-0 right-0 pr-3 flex items-center text-sm text-gray-500';
+              userDisplay.textContent = `Linked to: ${data.username}`;
+              phoneInput.parentElement.appendChild(userDisplay);
+            }
+          });
+      }
+    }
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+
+     const userInput = document.getElementById('username');
+     userInput.addEventListener('blur', function() {
+      const username = userInput.value;
+      // Perform an AJAX request to check if the username exists
+      fetch(`/check_username?username=${username}`)
+        .then(response => response.json())
+        .then(data => {
+          const existingUserDisplay = document.querySelector('.existing-user-display');
+          if (existingUserDisplay) {
+            existingUserDisplay.remove();
+          }
+          // If the username exists, display the linked user
+          if (data.firstname) {
+            document.getElementById('first_name').value = data.firstname;
+            document.getElementById('last_name').value = data.lastname;
+            document.getElementById('phone').value = data.phone;
+          }
+        });
+      
+      });
+});
+</script>
+<% end %>

@@ -42,6 +42,7 @@ default_location = Location.find_or_create_by!(
 admin_user = User.create!(
   username: 'admin',
   email: 'admin@example.com',
+  phone: '+265888876600',
   password: 'password123',
   password_confirmation: 'password123',
   first_name: 'Admin',

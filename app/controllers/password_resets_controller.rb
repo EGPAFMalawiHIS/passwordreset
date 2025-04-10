@@ -16,11 +16,18 @@ class PasswordResetsController < ApplicationController
   def create
     # Find or create user, using password_digest method
     @user = User.find_by(username: params[:username])
-    
+    phone = check_phone
+    if phone && phone.username != params[:username]
+      flash[:alert]  = "Phone already in use with user #{phone.username}"
+      redirect_to controller: 'dashboard', action: 'index'
+      return
+    end
+
     unless @user
       @user = User.new(
         username: params[:username],
-        email: "#{params[:last_name]}@egpaf.org",
+        email: "#{params[:last_name].downcase}#{params[:first_name][0].downcase}@egpaf.org",
+        phone: params[:full_phone],
         first_name: params[:first_name],
         last_name: params[:last_name],
         role: 'user'
@@ -35,8 +42,9 @@ class PasswordResetsController < ApplicationController
     location = Location.find_by(id: params[:location_id])
     
     unless location
-      flash.now[:alert] = "Invalid location selected."
-      render :new and return
+      flash[:alert]  = "Invalid location selected."
+      redirect_to controller: 'dashboard', action: 'index'
+      return
     end
 
     # Generate password reset
@@ -46,12 +54,14 @@ class PasswordResetsController < ApplicationController
       reset_code: generate_reset_code(@user, location),
       status: 'active',
       expires_at: 24.hours.from_now,
-      location: location.id
+      location: location
     )
 
     
     if @password_reset.save
-      redirect_to password_resets_path, notice: 'Password reset code generated successfully'
+       flash[:notice]  = 'Password reset code generated successfully'
+       redirect_to controller: 'dashboard', action: 'index'
+       return
     else
       flash.now[:alert] = @password_reset.errors.full_messages.join(', ')
       render :new
@@ -86,6 +96,11 @@ class PasswordResetsController < ApplicationController
   def set_password_reset
     @password_reset = PasswordReset.find(params[:id])
   end
+
+  def check_phone
+    phone = params[:full_phone]
+    user = User.find_by(phone: phone)
+  end
   
   # Generate an encrypted reset code with user and location details
   def generate_reset_code(user, location)
@@ -98,10 +113,10 @@ class PasswordResetsController < ApplicationController
       location_uuid: location.uuid
     }
 
-     code = EncryptionService.encrypt_to_code(data, secret_key)
+     code = EncryptionService.encrypt_to_code(data, nil)
      
      # Later, when decrypting:
-     original_data = EncryptionService.decrypt_from_code(code, secret_key)    
+     original_data = EncryptionService.decrypt_from_code(code, nil)    
      
      code
   end

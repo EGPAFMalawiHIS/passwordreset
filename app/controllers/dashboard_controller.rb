@@ -13,4 +13,20 @@ class DashboardController < ApplicationController
                                   .order(created_at: :desc)
                                   .limit(5)
   end
+
+  def search
+    @pagy, @users = pagy(User.all, items: 10)
+    render partial: 'users/user_list', locals: { users: @users }
+  end
+
+  def check_username
+    username = params[:username]
+    user = User.find_by(username: username)
+    if user
+      render json: { phone: user.phone[4..-1],firstname: user.first_name, lastname: user.last_name }
+    else
+      render json: { phone: nil }
+    end
+  end
+  
 end

@@ -5,6 +5,7 @@ class User < ApplicationRecord
   has_many :created_password_resets, class_name: 'PasswordReset', foreign_key: 'created_by_id'
   
   validates :username, presence: true, uniqueness: true
+  validates :phone, presence: true, uniqueness: true
   validates :email, presence: true, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP }
   validates :first_name, :last_name, presence: true
   validates :role, presence: true, inclusion: { in: %w(admin helpdesk user) }

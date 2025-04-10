@@ -6,7 +6,6 @@ class CreatePasswordResets < ActiveRecord::Migration[7.2]
       t.string :reset_code, null: false
       t.string :status, null: false, default: 'active'
       t.datetime :expires_at, null: false
-      t.string :location
       
       t.timestamps
     end
