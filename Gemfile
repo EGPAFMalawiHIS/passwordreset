@@ -24,7 +24,7 @@ gem "turbo-rails"
 gem "stimulus-rails"
 
 # Use Tailwind CSS [https://github.com/rails/tailwindcss-rails]
-gem "tailwindcss-rails"
+gem "tailwindcss-rails", "~> 3.3.1"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
@@ -58,7 +58,7 @@ gem 'prawn'  # PDF generation
 gem 'axlsx', '~> 1.3.6'  # XLSX generation
 gem 'axlsx_rails'  # Rails integration for Axlsx
 gem 'base32'
-gem 'base62'
+gem 'base62', '~> 1.0'
 gem 'base64'
 gem 'base62-rb'
 gem 'zlib'

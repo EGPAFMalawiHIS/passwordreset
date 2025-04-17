@@ -3,7 +3,7 @@ class PasswordReset < ApplicationRecord
   belongs_to :created_by, class_name: 'User'
   belongs_to :location, optional: true
 
-  validates :reset_code, presence: true, uniqueness: true
+  validates :reset_code, presence: true, uniqueness: false
   validates :status, inclusion: { in: ['active', 'used', 'expired'] }
   validate :code_expiration
 

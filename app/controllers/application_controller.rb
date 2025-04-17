@@ -15,17 +15,6 @@ class ApplicationController < ActionController::Base
     !!current_user
   end
 
-  def check_phone
-    phone = params[:phone]
-    user = User.find_by(phone: phone)
-    
-    if user
-      render json: { username: user.username }
-    else
-      render json: { username: nil }
-    end
-  end
-
   def require_login
     unless logged_in?
       flash[:alert] = "You must be logged in to access this section"

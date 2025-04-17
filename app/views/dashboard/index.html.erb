@@ -1,26 +1,41 @@
 <div class="container mx-auto px-4 py-6">
   <h1 class="text-3xl font-medium text-teal-700 mb-8">Password Reset Dashboard</h1>
+
+     <div class="container mx-auto px-4 mt-4">
+      
+        <div class="bg-red-100 text-red-800 p-4 rounded-md mb-4" id="error-messages" style="display: none;">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h1m0 0h1m-1 0V8m0 8v4m-6.293-6.293a1 1 0 011.414 0L12 12l2.293-2.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3z" />
+          </svg>
+          <span id="error-message-text"></span>
+        </div>
+    
+    </div>
   
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
     <!-- Left column - Generate Password Reset Code -->
     <div class="lg:col-span-2">
       <div class="bg-white shadow-md rounded-lg p-6 mb-6">
         <h2 class="text-xl font-semibold mb-4">Generate Password Reset Code</h2>
-        <%= form_with(url: password_resets_path, local: true, class: "space-y-4") do |f| %>
+        <%= form_with(url: password_resets_path,id: "password-reset-form", local: true, class: "space-y-4") do |f| %>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <%= f.label :username, "Username", class: "block text-sm font-medium text-gray-700 mb-1" %>
-              <%= f.text_field :username, 
+              <%= f.text_field :username,
+                  id: "username",
                   class: "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500", 
                   placeholder: "username" %>
             </div>
-            
+           
+
             <div data-controller="location-select" class="relative group">
 
               <%= f.label :location, "Location", 
                    class: "block text-sm font-medium text-gray-700 mb-1" %>
-              <%= f.hidden_field :location_id, value: nil %>
+              <%= f.hidden_field :location_id, 
+                  id: "location_id",
+              value: nil %>
               
               <button 
                 type="button" 
@@ -90,8 +105,9 @@
                      class: "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500", 
                      placeholder: "999107700",
                      size: "100" %>
-                 <%= f.hidden_field :full_phone, id: "full_phone" %>
-                 
+                   <%= f.hidden_field :full_phone, id: "full_phone" %>
+                  <div class="text-red-800" id="phone-error" style="display: none;">
+                  </div>
                  <% # Only check for existing user if phone is present %>
                  <% if f.object.respond_to?(:phone_number) && f.object.phone_number.present? %>
                    <% existing_user = User.find_by(phone: f.object.phone_number) %>
@@ -365,12 +381,18 @@
     
     function updateFullPhone() {
       if (phoneInput.value) {
-        fullPhoneField.value = iti.getNumber(); // E.164 format: +265999107724
-        
+        fullPhoneField.value = iti.getNumber(); // E.164 format: +265999107720
         // AJAX call to check if phone exists (optional enhancement)
         fetch(`/check_phone?phone=${fullPhoneField.value}`)
           .then(response => response.json())
           .then(data => {
+            if(data.error) {
+              document.getElementById('phone-error').textContent = data.error;
+              document.getElementById('phone-error').style.display = 'block';
+            } else {
+              document.getElementById('phone-error').style.display = 'none';
+            }
+            // Remove existing user display if it exists
             const existingUserDisplay = document.querySelector('.existing-user-display');
             if (existingUserDisplay) {
               existingUserDisplay.remove();
@@ -378,11 +400,14 @@
             
             if (data.username) {
               const userDisplay = document.createElement('div');
-              userDisplay.className = 'existing-user-display absolute inset-y-0 right-0 pr-3 flex items-center text-sm text-gray-500';
+              userDisplay.className = 'existing-user-display absolute inset-y-0 right-0 pr-3 flex items-center text-sm text-green-800';
               userDisplay.textContent = `Linked to: ${data.username}`;
               phoneInput.parentElement.appendChild(userDisplay);
             }
           });
+      }else {
+             document.getElementById('phone-error').textContent = "Please enter a valid number, phone can not be empty!!";
+             document.getElementById('phone-error').style.display = 'block';
       }
     }
   });
@@ -412,4 +437,69 @@
       });
 });
 </script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("password-reset-form");
+    const username = document.getElementById("username");
+    const locationId = document.getElementById("location_id");
+    const firstName = document.getElementById("first_name");
+    const lastName = document.getElementById("last_name");
+    const phoneInput = document.getElementById("phone");
+
+    form.addEventListener("submit", function (e) {
+      let errors = [];
+
+      if (!username.value.trim()) {
+        document.getElementById('error-messages').style.display = 'block';
+        document.getElementById('error-message-text').textContent = "Username is required.";
+        e.preventDefault();
+        return;
+      }
+
+      if (!locationId.value || locationId.value === "null") {
+        document.getElementById('error-messages').style.display = 'block';
+        document.getElementById('error-message-text').textContent = "Please select a location.";
+        e.preventDefault();
+        return;
+      }
+
+      if (!firstName.value.trim()) {
+        document.getElementById('error-messages').style.display = 'block';
+        document.getElementById('error-message-text').textContent = "First name is required.";
+        e.preventDefault();
+        return;
+      }
+
+      if (!lastName.value.trim()) {
+        document.getElementById('error-messages').style.display = 'block';
+        document.getElementById('error-message-text').textContent = "Last name is required.";
+        e.preventDefault();
+        return;
+      }
+      if(!phoneInput.value.trim()) {
+        document.getElementById('error-messages').style.display = 'block';
+        document.getElementById('error-message-text').textContent = "Phone number is required.";
+        e.preventDefault();
+        return;
+      }
+      
+    });
+  });
+
+  //clear the error message when the user starts typing
+  document.addEventListener("input", function (e) {
+    if (e.target.matches("#username, #first_name, #last_name, #phone")) {
+      document.getElementById('error-messages').style.display = 'none';
+    }
+  });
+
+  //clear the error when location is selected
+  document.addEventListener("click", function (e) {
+    if (e.target.matches("[data-action='click->location-select#selectLocation']")) {
+      document.getElementById('error-messages').style.display = 'none';
+    }
+  });
+
+</script>
+
 <% end %>

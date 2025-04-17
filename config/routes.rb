@@ -26,9 +26,11 @@ Rails.application.routes.draw do
   end
 
   # Check phone
-  get 'check_phone', to: 'application#check_phone'
+  get 'check_phone', to: 'dashboard#check_phone'
   # Check phone
   get 'check_username', to: 'dashboard#check_username'
+  # Barcode download
+  get 'barcode_proxy', to: 'password_resets#barcode_proxy'
   
   # Reports
   resources :reports, only: [:index]

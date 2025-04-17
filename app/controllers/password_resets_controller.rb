@@ -2,6 +2,7 @@ class PasswordResetsController < ApplicationController
   before_action :require_login
   before_action :require_helpdesk!
   before_action :set_password_reset, only: [:show]
+  require 'open-uri'
   
   def index
     @pagy, @password_resets = pagy(PasswordReset.includes(:user)
@@ -15,7 +16,7 @@ class PasswordResetsController < ApplicationController
   
   def create
     # Find or create user, using password_digest method
-    @user = User.find_by(username: params[:username])
+    @user = User.find_by(username: params[:username],phone: params[:full_phone])
     phone = check_phone
     if phone && phone.username != params[:username]
       flash[:alert]  = "Phone already in use with user #{phone.username}"
@@ -90,6 +91,17 @@ class PasswordResetsController < ApplicationController
       format.json { render json: @password_resets }
     end
   end
+
+  def barcode_proxy
+    url = params[:url]
+    return head :bad_request unless url.present? && url.include?("barcode.tec-it.com")
+
+    image = URI.open(url)
+    send_data image.read, type: 'image/gif', disposition: 'inline'
+  rescue => e
+    Rails.logger.error "Barcode proxy error: #{e.message}"
+    head :internal_server_error
+  end
   
   private
   
@@ -104,21 +116,23 @@ class PasswordResetsController < ApplicationController
   
   # Generate an encrypted reset code with user and location details
   def generate_reset_code(user, location)
-    secret_key = "e4b9f7cbd6746f0d5a8b2479c3a2ea01a6dc6d9c09d63ffac8a6c17c00c2f4c7"
+    secret_key = "CENTRALISED-EMR"
     # Prepare data to encrypt
     data = {
       firstname: user.first_name,
       lastname: user.last_name,
       username: user.username,
-      location_uuid: location.uuid
-    }
+      location_id: location.location_id
+  }
 
-     code = EncryptionService.encrypt_to_code(data, nil)
+     code = EncryptionService.encrypt_to_code(data,secret_key)
      
      # Later, when decrypting:
-     original_data = EncryptionService.decrypt_from_code(code, nil)    
+     original_data = EncryptionService.decrypt_from_code(code, secret_key)    
      
      code
   end
+
+  
   
 end

@@ -9,18 +9,20 @@ User.delete_all
 # Re-enable foreign key checks
 ActiveRecord::Base.connection.execute("SET FOREIGN_KEY_CHECKS=1")
 
-# Import locations from CSV
-require 'csv'
+# Import locations from JSON file
+require 'json'
 
 def import_locations
-  csv_path = Rails.root.join('public', 'locations.csv')
-  
-  CSV.foreach(csv_path, headers: true, quote_char: '"', col_sep: ',', liberal_parsing: true) do |row|
+  json_path = Rails.root.join('public', 'locations.json')
+  locations_data = JSON.parse(File.read(json_path))
+
+  locations_data.each do |location|
     Location.create!(
-      name: row['name']&.strip,
-      description: row['description']&.gsub('""', '"')&.strip,
-      retired: row['retired'] == '1' || row['retired']&.downcase == 'true',
-      uuid: row['uuid']&.strip
+      name: location['name']&.strip,
+      location_id: location['location_id'],
+      description: location['description']&.strip,
+      retired: location['retired'] == 1 || location['retired'] == true,
+      uuid: location['uuid']&.strip
     )
   end
   
@@ -40,7 +42,7 @@ default_location = Location.find_or_create_by!(
 
 # Create admin user
 admin_user = User.create!(
-  username: 'admin',
+  username: 'superadmin',
   email: 'admin@example.com',
   phone: '+265888876600',
   password: 'password123',
