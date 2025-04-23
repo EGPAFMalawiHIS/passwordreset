@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+cd passwordreset
 
-Things you may want to cover:
+default: &default
+  adapter: mysql2
+  encoding: utf8mb4
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: root
+  password: your_mysql_password
+  host: localhost
 
-* Ruby version
+bundle install
 
-* System dependencies
+./bin/rails tailwindcss:install
 
-* Configuration
+rails db:create db:migrate db:seed
 
-* Database creation
+rails db:seed
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+rails server
