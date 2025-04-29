@@ -55,8 +55,8 @@ gem "faker"
 
 # PDF and XLSX generation
 gem 'prawn'  # PDF generation
-gem 'axlsx', '~> 1.3.6'  # XLSX generation
-gem 'axlsx_rails'  # Rails integration for Axlsx
+gem 'caxlsx', '~> 1.3.6'  # XLSX generation
+gem 'caxlsx_rails'  # Rails integration for Axlsx
 gem 'base32'
 gem 'base62', '~> 1.0'
 gem 'base64'
