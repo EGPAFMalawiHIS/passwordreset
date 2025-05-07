@@ -12,6 +12,10 @@ default: &default
 
 bundle install
 
+RAILS_ENV=development bundle exec rails tailwindcss:build
+sudo systemctl restart nginx
+sudo systemctl restart puma
+
 ./bin/rails tailwindcss:install
 
 rails db:create db:migrate db:seed
@@ -19,3 +23,5 @@ rails db:create db:migrate db:seed
 rails db:seed
 
 rails server
+
+
