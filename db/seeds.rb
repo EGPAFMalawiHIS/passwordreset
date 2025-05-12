@@ -52,5 +52,16 @@ admin_user = User.create!(
   role: 'admin'
 )
 
+admin_user = User.create!(
+  username: 'lilian',
+  email: 'lmajawa@pedaids.org',
+  phone: '+265991312980',
+  password: 'password@123',
+  password_confirmation: 'password@123',
+  first_name: 'Lilian',
+  last_name: 'Majawa',
+  role: 'admin'
+)
+
 puts "Seeding complete!"
 puts "Total Locations: #{Location.count}"
