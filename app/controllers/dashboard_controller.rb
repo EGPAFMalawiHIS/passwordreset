@@ -12,6 +12,7 @@ class DashboardController < ApplicationController
     @recent_resets = PasswordReset.includes(:user)
                                   .order(created_at: :desc)
                                   .limit(5)
+    
   end
 
   def search

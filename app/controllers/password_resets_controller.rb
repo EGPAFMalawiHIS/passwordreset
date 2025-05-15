@@ -16,11 +16,29 @@ class PasswordResetsController < ApplicationController
   
   def create
     # Find or create user, using password_digest method
-    @user = User.find_by(username: params[:username],phone: params[:full_phone])
-    phone = check_phone
-    if phone && phone.username != params[:username]
-      flash[:alert]  = "Phone already in use with user #{phone.username}"
-      redirect_to controller: 'dashboard', action: 'index'
+    @user = User.find_by(username: params[:username], phone: params[:full_phone])
+    
+    unless params[:username].present? 
+      flash[:notice]  = 'Missing username'
+      redirect_to dashboard_path
+      return
+    end
+
+    unless params[:location_id].present?
+      flash[:notice]  = 'Missing phone number'
+      redirect_to dashboard_path
+      return
+    end
+
+    unless params[:first_name].present?
+      flash[:notice]  = 'Missing firstname'
+      redirect_to dashboard_path
+      return
+    end
+
+    unless params[:last_name].present?
+      flash[:notice]  = 'Missing lastname'
+      redirect_to dashboard_path
       return
     end
 
@@ -44,7 +62,8 @@ class PasswordResetsController < ApplicationController
     
     unless location
       flash[:alert]  = "Invalid location selected."
-      redirect_to controller: 'dashboard', action: 'index'
+      #redirect_to controller: 'dashboard', action: 'index'
+      redirect_to dashboard_path
       return
     end
 
@@ -61,7 +80,7 @@ class PasswordResetsController < ApplicationController
     
     if @password_reset.save
        flash[:notice]  = 'Password reset code generated successfully'
-       redirect_to controller: 'dashboard', action: 'index'
+       redirect_to dashboard_path
        return
     else
       flash.now[:alert] = @password_reset.errors.full_messages.join(', ')

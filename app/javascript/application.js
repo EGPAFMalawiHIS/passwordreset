@@ -2,12 +2,13 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 
-// Explicitly import Stimulus
-import { Application } from "@hotwired/stimulus"
-
-// Initialize Stimulus
-const application = Application.start()
-window.Stimulus = application
+// Handle Turbo navigation
+document.addEventListener("turbo:load", () => {
+  // Ensure dropdowns are closed after navigation
+  document.querySelectorAll('[data-location-select-target="menu"]').forEach(menu => {
+    menu.classList.add('hidden')
+  })
+})
 
 // Copy to clipboard functionality
 window.copyToClipboard = function(text) {
