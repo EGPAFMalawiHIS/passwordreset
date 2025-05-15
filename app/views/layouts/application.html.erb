@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="turbo-cache-control" content="no-preview">
   <title>PRS</title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
@@ -10,12 +11,10 @@
   <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
   <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   <%= javascript_importmap_tags %>
-  <%= javascript_include_tag "dropdown", "data-turbo-track": "reload" %>
-  <%= javascript_include_tag "location_select", "data-turbo-track": "reload" %>
   <!-- International Telephone Input -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js" defer></script>
 </head>
 <body class="bg-gray-50 min-h-screen">
   <header class="bg-white shadow-sm border-b border-gray-200">
@@ -38,10 +37,11 @@
           <% end %>
         </nav>
         
-        <div class="flex items-center gap-4" data-controller="dropdown">
+        <div class="flex items-center gap-4" data-controller="header-menu">
           <div class="relative">
             <button 
-              data-action="click->dropdown#toggle"
+              type="button"
+              data-action="header-menu#toggle"
               class="flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-gray-900">
               <span><%= current_user.username %></span>
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -50,8 +50,8 @@
             </button>
             
             <div 
-              data-dropdown-target="menu"
-              class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10 hidden" >
+              data-header-menu-target="menu"
+              class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10 hidden">
               <%= link_to "Profile", "#", class: "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" %>
               <%= link_to "Settings", "#", class: "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" %>
               <div class="border-t border-gray-100"></div>

@@ -6,6 +6,7 @@ pin "@hotwired/stimulus-loading", to: "stimulus-loading.js", preload: true
 pin_all_from "app/javascript/controllers", under: "controllers"
 pin "app/javascript/controllers/dropdown_controller", to: "controllers/dropdown_controller.js"
 pin "app/javascript/controllers/location_select_controller", to: "controllers/location_select_controller.js"
+pin "app/javascript/controllers/header_menu_controller", to: "controllers/header_menu_controller.js"
 
 # Add reports controller
 pin "controllers/reports_controller", to: "controllers/reports_controller.js"

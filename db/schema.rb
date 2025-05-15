@@ -47,7 +47,7 @@ ActiveRecord::Schema[7.2].define(version: 2025_03_30_161329) do
     t.string "role", default: "user", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["phone"], name: "index_users_on_phone", unique: true
+    t.index ["phone"], name: "index_users_on_phone"
   end
 
   add_foreign_key "password_resets", "locations"
