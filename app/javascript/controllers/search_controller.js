@@ -10,6 +10,7 @@ export default class extends Controller {
   
   search() {
     clearTimeout(this.timeout)
+    console.log(this.inputTarget.value,"....")
     
     this.timeout = setTimeout(() => {
       this.element.requestSubmit()

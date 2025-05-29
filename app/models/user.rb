@@ -24,6 +24,10 @@ class User < ApplicationRecord
   def admin?
     role == 'admin'
   end
+
+  def can_login?
+    active? && (admin? || helpdesk?)
+  end
   
   # Check if user is a helpdesk officer
   def helpdesk?

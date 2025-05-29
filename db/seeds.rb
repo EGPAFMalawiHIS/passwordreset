@@ -65,3 +65,4 @@ admin_user = User.create!(
 
 puts "Seeding complete!"
 puts "Total Locations: #{Location.count}"
+puts "Total Users: #{User.count}"

@@ -1,0 +1,327 @@
+<div class="container mx-auto px-4 py-6">
+   User Profile </h1>
+
+    <div class="container mx-auto px-4 mt-4">
+     
+       <div class="bg-red-100 text-red-800 p-4 rounded-md mb-4" id="error-messages" style="display: none;">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h1m0 0h1m-1 0V8m0 8v4m-6.293-6.293a1 1 0 011.414 0L12 12l2.293-2.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3z" />
+      </svg>
+      <span id="error-message-text"></span>
+       </div>
+      
+      </div>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <!-- Left column - Generate Password Reset Code -->
+      <div class="lg:col-span-2">
+     <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+       <h2 class="text-xl font-semibold mb-4">Edit user details</h2>
+       <%= form_with(model: @user,id: "password-reset-form", local: true, class: "space-y-4") do |f| %>
+
+      
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <%= f.label :first_name, class: "block text-sm font-medium text-gray-700 mb-1" %>
+          <%= f.text_field :first_name, 
+            id: "first_name",
+           class: "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500", 
+           value:  @user.first_name %>
+        </div>
+        <div>
+          <%= f.label :last_name, class: "block text-sm font-medium text-gray-700 mb-1" %>
+          <%= f.text_field :last_name, 
+           id: "last_name",
+           class: "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500", 
+          value:  @user.last_name %>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <%= f.label :username, "Username", class: "block text-sm font-medium text-gray-700 mb-1" %>
+          <%= f.text_field :username,
+           id: "username",
+           class: "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500", 
+           value: @user.username %>
+        </div>
+       
+       <div  data-controller="phone-input">
+         <%= f.label :Whatsapp_number, class: "block text-sm font-medium text-gray-700 mb-1" %>
+         <div class="flex w-full">
+        <div class="relative w-full">
+          <%= f.telephone_field :phone_number, 
+              id: "phone",
+              data: { phone_input_target: "phone" },
+           class: "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500", 
+          value: @user&.phone&.gsub('+265', ''),
+           size: "100" %>
+            <%= f.hidden_field :full_phone, 
+              id: "full_phone", 
+              data: { phone_input_target: "fullPhone" } %>
+           <div class="text-red-800" 
+             id="phone-error" 
+             data-phone-input-target="error" 
+             style="display: none;">
+                  </div>
+               </div>
+             </div>
+           </div>
+           
+           
+
+            
+          </div>
+
+        
+
+          <div class="text-center mt-6">
+            
+          <%= button_tag type: "submit", class: "w-full py-2 px-4 bg-teal-600 hover:bg-teal-300 rounded-md font-medium transition duration-200 inline-flex items-center justify-center" do %>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline-block ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+            </svg>
+            Update user details
+          <% end %>
+
+          </div>
+        <% end %>
+      </div>
+    </div>
+    
+    <!-- Right column - System Overview and Quick Tips -->
+    <div>
+      <div class="bg-white rounded-lg shadow p-6 mb-6">
+        <h2 class="text-xl font-semibold text-teal-700 mb-4">System Overview</h2>
+        
+        <div class="space-y-4">
+          <div class="flex justify-between items-center">
+            <span class="text-gray-600">Total Resets Today</span>
+            <span class="text-xl font-semibold"><%= @total_resets_today || 12 %></span>
+          </div>
+          
+          <div class="flex justify-between items-center">
+            <span class="text-gray-600">Active Reset Codes</span>
+            <span class="text-xl font-semibold"><%= @active_resets || 8 %></span>
+          </div>
+          
+          <div class="flex justify-between items-center">
+            <span class="text-gray-600">Expired Codes (24h)</span>
+            <span class="text-xl font-semibold"><%= @expired_resets || 4 %></span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bg-white rounded-lg shadow p-6">
+        <h2 class="text-xl font-semibold text-teal-700 mb-4">Quick Tips</h2>
+        
+        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+          <li>Verify user identity before generating reset codes</li>
+          <li>Reset codes expire after 24 hours</li>
+          <li>Send reset codes via secure channels only</li>
+          <li>Record all password reset requests for audit purposes</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- Recent Transactions -->
+  <div class="mt-8">
+    
+    
+    
+    
+  </div>
+</div>
+<% content_for :page_scripts do %>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize the phone input
+      const phoneInput = document.querySelector("#phone");
+      const fullPhoneField = document.querySelector("#full_phone");
+      
+      if (phoneInput) {
+        const iti = window.intlTelInput(phoneInput, {
+          utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js",
+          initialCountry: "mw", // Set Malawi as default
+          preferredCountries: ["mw", "za", "zm", "zw", "tz"], // Preferred countries at the top
+          separateDialCode: true,
+          autoPlaceholder: "polite"
+        });
+        
+        // Update hidden input with full phone number on input change
+        phoneInput.addEventListener('input', updateFullPhone);
+        phoneInput.addEventListener('countrychange', updateFullPhone);
+        
+        function updateFullPhone() {
+          if (phoneInput.value) {
+            fullPhoneField.value = iti.getNumber(); // E.164 format: +265999107725 
+          }
+        }
+        
+        // Initialize with default value
+        setTimeout(updateFullPhone, 100);
+      }
+      
+      // Dropdown toggle function
+      window.toggleDropdown = function(button) {
+        const dropdown = button.nextElementSibling;
+        dropdown.classList.toggle('hidden');
+        
+        // Close other dropdowns
+        document.querySelectorAll('.dropdown-menu').forEach(menu => {
+          if (menu !== dropdown && !menu.classList.contains('hidden')) {
+            menu.classList.add('hidden');
+          }
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function closeDropdown(e) {
+          if (!button.contains(e.target) && !dropdown.contains(e.target)) {
+            dropdown.classList.add('hidden');
+            document.removeEventListener('click', closeDropdown);
+          }
+        });
+      };
+    });
+  </script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const phoneInput = document.getElementById('phone');
+    const fullPhoneField = document.getElementById('full_phone');
+    
+    const iti = window.intlTelInput(phoneInput, {
+      utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js",
+      initialCountry: "mw", // Set Malawi as default
+      preferredCountries: ["mw", "za", "zm", "zw", "tz"], // Preferred countries at the top
+      separateDialCode: true,
+      autoPlaceholder: "polite"
+    });
+    
+    // Update hidden input with full phone number on input change
+    phoneInput.addEventListener('input', updateFullPhone);
+    phoneInput.addEventListener('countrychange', updateFullPhone);
+    
+    function updateFullPhone() {
+      if (phoneInput.value) {
+        fullPhoneField.value = iti.getNumber(); // E.164 format: +265999107720
+        // AJAX call to check if phone exists (optional enhancement)
+        fetch(`/check_phone?phone=${fullPhoneField.value}`)
+          .then(response => response.json())
+          .then(data => {
+            if(data.error) {
+              document.getElementById('phone-error').textContent = data.error;
+              document.getElementById('phone-error').style.display = 'block';
+            } else {
+              document.getElementById('phone-error').style.display = 'none';
+            }
+            // Remove existing user display if it exists
+            const existingUserDisplay = document.querySelector('.existing-user-display');
+            if (existingUserDisplay) {
+              existingUserDisplay.remove();
+            }
+            
+            if (data.username) {
+              const userDisplay = document.createElement('div');
+              userDisplay.className = 'existing-user-display absolute inset-y-0 right-0 pr-3 flex items-center text-sm text-green-800';
+              userDisplay.textContent = `Linked to: ${data.username}`;
+              phoneInput.parentElement.appendChild(userDisplay);
+            }
+          });
+      }else {
+             document.getElementById('phone-error').textContent = "Please enter a valid number, phone can not be empty!!";
+             document.getElementById('phone-error').style.display = 'block';
+      }
+    }
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+
+     const userInput = document.getElementById('username');
+     userInput.addEventListener('blur', function() {
+      const username = userInput.value;
+      // Perform an AJAX request to check if the username exists
+      fetch(`/check_username?username=${username}`)
+        .then(response => response.json())
+        .then(data => {
+          const existingUserDisplay = document.querySelector('.existing-user-display');
+          if (existingUserDisplay) {
+            existingUserDisplay.remove();
+          }
+          // If the username exists, display the linked user
+          if (data.firstname) {
+            document.getElementById('first_name').value = data.firstname;
+            document.getElementById('last_name').value = data.lastname;
+            document.getElementById('phone').value = data.phone;
+          }
+        });
+      
+      });
+});
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("password-reset-form");
+    const username = document.getElementById("username");
+    const locationId = document.getElementById("location_id");
+    const firstName = document.getElementById("first_name");
+    const lastName = document.getElementById("last_name");
+    const phoneInput = document.getElementById("phone");
+
+    form.addEventListener("submit", function (e) {
+      let errors = [];
+
+      if (!username.value.trim()) {
+        document.getElementById('error-messages').style.display = 'block';
+        document.getElementById('error-message-text').textContent = "Username is required.";
+        e.preventDefault();
+        return;
+      }
+
+      if (!locationId.value || locationId.value === "null") {
+        document.getElementById('error-messages').style.display = 'block';
+        document.getElementById('error-message-text').textContent = "Please select a location.";
+        e.preventDefault();
+        return;
+      }
+
+      if (!firstName.value.trim()) {
+        document.getElementById('error-messages').style.display = 'block';
+        document.getElementById('error-message-text').textContent = "First name is required.";
+        e.preventDefault();
+        return;
+      }
+
+      if (!lastName.value.trim()) {
+        document.getElementById('error-messages').style.display = 'block';
+        document.getElementById('error-message-text').textContent = "Last name is required.";
+        e.preventDefault();
+        return;
+      }
+      if(!phoneInput.value.trim()) {
+        document.getElementById('error-messages').style.display = 'block';
+        document.getElementById('error-message-text').textContent = "Phone number is required.";
+        e.preventDefault();
+        return;
+      }
+      
+    });
+  });
+
+  //clear the error message when the user starts typing
+  document.addEventListener("input", function (e) {
+    if (e.target.matches("#username, #first_name, #last_name, #phone")) {
+      document.getElementById('error-messages').style.display = 'none';
+    }
+  });
+
+  //clear the error when location is selected
+  document.addEventListener("click", function (e) {
+    if (e.target.matches("[data-action='click->location-select#selectLocation']")) {
+      document.getElementById('error-messages').style.display = 'none';
+    }
+  });
+
+</script>
+
+<% end %>

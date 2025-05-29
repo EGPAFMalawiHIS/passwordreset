@@ -17,7 +17,7 @@ class PasswordResetsController < ApplicationController
   def create
     # Find or create user, using password_digest method
     @user = User.find_by(username: params[:username], phone: params[:full_phone])
-    
+
     unless params[:username].present? 
       flash[:notice]  = 'Missing username'
       redirect_to dashboard_path
@@ -109,6 +109,18 @@ class PasswordResetsController < ApplicationController
       format.html { render :index }
       format.json { render json: @password_resets }
     end
+  end
+
+  def destroy
+    @password_reset = PasswordReset.find(params[:id])
+    
+    if @password_reset.destroy
+      flash[:notice] = "Password reset request voided successfully"
+    else
+      flash[:alert] = "Failed to void password reset request"
+    end
+    
+    redirect_to dashboard_path
   end
 
   def barcode_proxy

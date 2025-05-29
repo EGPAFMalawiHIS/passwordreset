@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_03_30_161329) do
+ActiveRecord::Schema[7.2].define(version: 2025_05_29_093733) do
   create_table "locations", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "location_id"
     t.string "name"
@@ -47,6 +47,7 @@ ActiveRecord::Schema[7.2].define(version: 2025_03_30_161329) do
     t.string "role", default: "user", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "active", default: false, null: false
     t.index ["phone"], name: "index_users_on_phone"
   end
 

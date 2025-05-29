@@ -32,7 +32,7 @@
         <nav class="hidden md:flex items-center gap-6">
           <%= link_to "Dashboard", dashboard_path, class: "text-sm font-medium transition-colors hover:text-teal-700 #{current_page?(dashboard_path) ? 'text-teal-700' : 'text-gray-600'}" %>
           <%= link_to "Reports", reports_path, class: "text-sm font-medium transition-colors hover:text-teal-700 #{controller_name == 'reports' ? 'text-teal-700' : 'text-gray-600'}" %>
-          <% if current_user.admin? %>
+          <% if [1,2].include?current_user.id %>
             <%= link_to "Users", users_path, class: "text-sm font-medium transition-colors hover:text-teal-700 #{controller_name == 'users' && action_name != 'new' ? 'text-teal-700' : 'text-gray-600'}" %>
           <% end %>
         </nav>

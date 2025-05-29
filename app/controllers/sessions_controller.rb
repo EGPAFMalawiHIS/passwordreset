@@ -9,8 +9,13 @@ class SessionsController < ApplicationController
     user = User.find_by(username: params[:username])
     
     if user && user.authenticate(params[:password])
-      session[:user_id] = user.id
-      redirect_to root_path, notice: 'Logged in successfully'
+      if user.can_login?
+        session[:user_id] = user.id
+        redirect_to dashboard_path, notice: "Logged in successfully!"
+      else
+        flash.now[:alert] = "Your account is inactive. Please contact an administrator."
+        render :new
+      end
     else
       flash.now[:alert] = 'Invalid username or password'
       render :new
