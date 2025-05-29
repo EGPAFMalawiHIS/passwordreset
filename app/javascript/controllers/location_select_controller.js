@@ -6,6 +6,15 @@ export default class extends Controller {
   connect() {
     // Add click outside listener when controller connects
     document.addEventListener('click', this.closeOnClickOutside.bind(this))
+    
+    // Restore selected location from hidden input if it exists
+    const locationInput = document.getElementById('location_id')
+    if (locationInput && locationInput.value) {
+      const selectedLocation = this.element.querySelector(`[data-location-id="${locationInput.value}"]`)
+      if (selectedLocation) {
+        this.buttonTarget.querySelector('span').textContent = selectedLocation.textContent.trim()
+      }
+    }
   }
 
   disconnect() {
@@ -30,6 +39,7 @@ export default class extends Controller {
 
   selectLocation(event) {
     event.preventDefault()
+    event.stopPropagation()
     
     const locationId = event.currentTarget.dataset.locationId
     const locationName = event.currentTarget.textContent.trim()
@@ -39,6 +49,22 @@ export default class extends Controller {
       locationInput.value = locationId
       this.buttonTarget.querySelector('span').textContent = locationName
       this.menuTarget.classList.add('hidden')
+      
+      // Clear any existing error messages
+      const errorMessages = document.getElementById('error-messages')
+      if (errorMessages) {
+        errorMessages.style.display = 'none'
+      }
     }
+  }
+
+  filterLocations(event) {
+    const searchText = event.target.value.toLowerCase()
+    const locationLinks = this.menuTarget.getElementsByTagName('a')
+    
+    Array.from(locationLinks).forEach(link => {
+      const locationName = link.textContent.toLowerCase()
+      link.style.display = locationName.includes(searchText) ? '' : 'none'
+    })
   }
 }

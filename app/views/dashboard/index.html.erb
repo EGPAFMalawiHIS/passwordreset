@@ -3,10 +3,7 @@
 
      <div class="container mx-auto px-4 mt-4">
       
-        <div class="bg-red-100 text-red-800 p-4 rounded-md mb-4" id="error-messages" style="display: none;">
-          /2000/svg" class="h-5 w-5 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h1m0 0h1m-1 0V8m0 8v4m-6.293-6.293a1 1 0 011.414 0L12 12l2.293-2.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3z" />
-                </svg>
+              <div class="bg-red-100 text-red-800 p-4 rounded-md mb-4" id="error-messages" style="display: none;">
                 <span id="error-message-text"></span>
               </div>
             
@@ -28,12 +25,13 @@
                     placeholder: "username" %>
                 </div>
                  
-               <div class="relative">
+               <div class="relative" data-controller="location-select">
   <%= f.label :location, "Location", class: "block text-sm font-medium text-gray-700 mb-1" %>
   <%= f.hidden_field :location_id, id: "location_id", value: nil %>
   
   <button type="button"
-          id="location-button"
+          data-location-select-target="button"
+          data-action="click->location-select#toggleMenu"
           class="inline-flex justify-between w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-teal-500">
     <span class="mr-2">Select Location</span>
     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -41,10 +39,10 @@
     </svg>
   </button>
 
-  <div id="location-menu"
+  <div data-location-select-target="menu"
        class="hidden absolute z-50 mt-1 w-full rounded-md bg-white shadow-lg">
     <input type="text"
-           id="location-search"
+           data-action="input->location-select#filterLocations"
            class="block w-full px-4 py-2 text-gray-800 border rounded-md border-gray-300 focus:outline-none"
            placeholder="Search locations"
            autocomplete="off">
@@ -52,7 +50,8 @@
     <div class="max-h-60 overflow-y-auto">
       <% Location.order(:name).each do |location| %>
         <a href="#"
-           onclick="selectLocation(event, <%= location.id %>, '<%= location.name %>')"
+           data-action="click->location-select#selectLocation"
+           data-location-id="<%= location.id %>"
            class="block px-4 py-2 text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer rounded-md">
           <%= location.name %>
           <% if location.description.present? %>
@@ -82,27 +81,31 @@
                 </div>
                 </div>
 
-               <div class="mt-6" class="relative">
-                 <div>
-                 <%= f.label :Whatsapp_number, class: "block text-sm font-medium text-gray-700 mb-1" %>
-                 <div class="flex w-full">
-                   <div class="relative w-full">
-                   <%= f.telephone_field :phone_number, 
-                    id: "phone",
-                    class: "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500", 
-                    placeholder: "999107700",
-                    size: "100" %>
-                   <%= f.hidden_field :full_phone, 
-                    id: "full_phone" %>
-                    <div class="text-red-800" 
-                       id="phone-error" 
-                       data-phone-input-target="error" 
-                       style="display: none;">
+               <div class="mt-6">
+
+               <div data-controller="phone-input">
+         <%= f.label :Whatsapp_number, class: "block text-sm font-medium text-gray-700 mb-1" %>
+           <div class="flex w-full">
+               <div class="relative w-full">
+                      <%= f.telephone_field :phone_number, 
+              id: "phone",
+              data: { phone_input_target: "phone" },
+           class: "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500", 
+          value: @user&.phone&.gsub('+265', ''),
+           size: "100" %>
+            <%= f.hidden_field :full_phone, 
+              id: "full_phone", 
+              data: { phone_input_target: "fullPhone" } %>
+           <div class="text-red-800" 
+             id="phone-error" 
+             data-phone-input-target="error" 
+             style="display: none;">
                   </div>
                </div>
              </div>
            </div>
-         </div>
+                 
+               </div>
 
           <div class="text-center mt-6">
             
@@ -215,14 +218,10 @@
                             <%= link_to "View", password_reset_path(reset), class: "text-teal-600 hover:text-teal-800" %>
                           </td>
                           <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                            <%= button_to "Void", 
-                              password_reset_path(reset), 
-                              method: :delete,
-                              class: "text-red-600 hover:text-red-800",
-                              data: { 
-                              turbo_confirm: "Are you sure you want to Void this reset code?",
-                              turbo_method: :delete 
-                              } %>
+                            <button onclick="voidResetCode('<%= reset.id %>')"
+                              class="text-red-600 hover:text-red-800">
+                              Void
+                            </button>
                           </td>
                           </tr>
                         <% end %>
@@ -312,8 +311,78 @@
 </div>
 <% content_for :page_scripts do %>
   <script>
+    // Initialize all functionality when DOM is ready
     document.addEventListener('DOMContentLoaded', function() {
-      // Initialize the phone input
+      // Initialize location dropdown
+      initializeLocationDropdown();
+      
+      // Initialize phone input
+      initializePhoneInput();
+      
+      // Initialize form validation
+      initializeFormValidation();
+      
+      // Initialize username check
+      initializeUsernameCheck();
+    });
+
+    // Location dropdown functionality
+    function initializeLocationDropdown() {
+      const locationButton = document.getElementById('location-button');
+      const locationMenu = document.getElementById('location-menu');
+      const locationSearch = document.getElementById('location-search');
+      
+      if (!locationButton || !locationMenu || !locationSearch) return;
+
+      // Toggle menu when button is clicked
+      locationButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        locationMenu.classList.toggle('hidden');
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!locationButton.contains(e.target) && !locationMenu.contains(e.target)) {
+          locationMenu.classList.add('hidden');
+        }
+      });
+
+      // Prevent menu from closing when clicking inside search
+      locationSearch.addEventListener('click', function(e) {
+        e.stopPropagation();
+      });
+
+      // Filter locations when searching
+      locationSearch.addEventListener('input', function(e) {
+        const searchText = e.target.value.toLowerCase();
+        const locationLinks = locationMenu.getElementsByTagName('a');
+        
+        Array.from(locationLinks).forEach(link => {
+          const locationName = link.textContent.toLowerCase();
+          link.style.display = locationName.includes(searchText) ? '' : 'none';
+        });
+      });
+    }
+
+    // Select location function (keep this outside as it's called from HTML)
+    function selectLocation(event, locationId, locationName) {
+      event.preventDefault();
+      event.stopPropagation();
+      
+      // Update hidden input and button text
+      document.getElementById('location_id').value = locationId;
+      document.querySelector('#location-button span').textContent = locationName;
+      
+      // Hide the menu
+      document.getElementById('location-menu').classList.add('hidden');
+
+      // Clear any existing error messages
+      document.getElementById('error-messages').style.display = 'none';
+    }
+
+    // Phone input initialization
+    function initializePhoneInput() {
       const phoneInput = document.querySelector("#phone");
       const fullPhoneField = document.querySelector("#full_phone");
       
@@ -339,210 +408,132 @@
         // Initialize with default value
         setTimeout(updateFullPhone, 100);
       }
-      
-      // Dropdown toggle function
-      window.toggleDropdown = function(button) {
-        const dropdown = button.nextElementSibling;
-        dropdown.classList.toggle('hidden');
+    }
+
+    // Form validation initialization
+    function initializeFormValidation() {
+      const form = document.getElementById("password-reset-form");
+      const username = document.getElementById("username");
+      const locationId = document.getElementById("location_id");
+      const firstName = document.getElementById("first_name");
+      const lastName = document.getElementById("last_name");
+      const phoneInput = document.getElementById("phone");
+
+      form.addEventListener("submit", function (e) {
+        let errors = [];
+
+        if (!username.value.trim()) {
+          document.getElementById('error-messages').style.display = 'block';
+          document.getElementById('error-message-text').textContent = "Username is required.";
+          e.preventDefault();
+          return;
+        }
+
+        if (!locationId.value || locationId.value === "null") {
+          document.getElementById('error-messages').style.display = 'block';
+          document.getElementById('error-message-text').textContent = "Please select a location.";
+          e.preventDefault();
+          return;
+        }
+
+        if (!firstName.value.trim()) {
+          document.getElementById('error-messages').style.display = 'block';
+          document.getElementById('error-message-text').textContent = "First name is required.";
+          e.preventDefault();
+          return;
+        }
+
+        if (!lastName.value.trim()) {
+          document.getElementById('error-messages').style.display = 'block';
+          document.getElementById('error-message-text').textContent = "Last name is required.";
+          e.preventDefault();
+          return;
+        }
+        if(!phoneInput.value.trim()) {
+          document.getElementById('error-messages').style.display = 'block';
+          document.getElementById('error-message-text').textContent = "Phone number is required.";
+          e.preventDefault();
+          return;
+        }
         
-        // Close other dropdowns
-        document.querySelectorAll('.dropdown-menu').forEach(menu => {
-          if (menu !== dropdown && !menu.classList.contains('hidden')) {
-            menu.classList.add('hidden');
-          }
-        });
-        
-        // Close dropdown when clicking outside
-        document.addEventListener('click', function closeDropdown(e) {
-          if (!button.contains(e.target) && !dropdown.contains(e.target)) {
-            dropdown.classList.add('hidden');
-            document.removeEventListener('click', closeDropdown);
-          }
-        });
-      };
-    });
-  </script>
-  <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const phoneInput = document.getElementById('phone');
-    const fullPhoneField = document.getElementById('full_phone');
-    
-    const iti = window.intlTelInput(phoneInput, {
-      utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js",
-      initialCountry: "mw", // Set Malawi as default
-      preferredCountries: ["mw", "za", "zm", "zw", "tz"], // Preferred countries at the top
-      separateDialCode: true,
-      autoPlaceholder: "polite"
-    });
-    
-    // Update hidden input with full phone number on input change
-    phoneInput.addEventListener('input', updateFullPhone);
-    phoneInput.addEventListener('countrychange', updateFullPhone);
-    
-    function updateFullPhone() {
-      if (phoneInput.value) {
-        fullPhoneField.value = iti.getNumber(); // E.164 format: +265999107720
-        // AJAX call to check if phone exists (optional enhancement)
-        fetch(`/check_phone?phone=${fullPhoneField.value}`)
+      });
+    }
+
+    // Username check initialization
+    function initializeUsernameCheck() {
+      const userInput = document.getElementById('username');
+      userInput.addEventListener('blur', function() {
+        const username = userInput.value;
+        // Perform an AJAX request to check if the username exists
+        fetch(`/check_username?username=${username}`)
           .then(response => response.json())
           .then(data => {
-            if(data.error) {
-              document.getElementById('phone-error').textContent = data.error;
-              document.getElementById('phone-error').style.display = 'block';
-            } else {
-              document.getElementById('phone-error').style.display = 'none';
-            }
-            // Remove existing user display if it exists
             const existingUserDisplay = document.querySelector('.existing-user-display');
             if (existingUserDisplay) {
               existingUserDisplay.remove();
             }
-            
-            if (data.username) {
-              const userDisplay = document.createElement('div');
-              userDisplay.className = 'existing-user-display absolute inset-y-0 right-0 pr-3 flex items-center text-sm text-green-800';
-              userDisplay.textContent = `Linked to: ${data.username}`;
-              phoneInput.parentElement.appendChild(userDisplay);
+            // If the username exists, display the linked user
+            if (data.firstname) {
+              document.getElementById('first_name').value = data.firstname;
+              document.getElementById('last_name').value = data.lastname;
+              document.getElementById('phone').value = data.phone;
             }
           });
-      }else {
-             document.getElementById('phone-error').textContent = "Please enter a valid number, phone can not be empty!!";
-             document.getElementById('phone-error').style.display = 'block';
-      }
-    }
-  });
-</script>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-
-     const userInput = document.getElementById('username');
-     userInput.addEventListener('blur', function() {
-      const username = userInput.value;
-      // Perform an AJAX request to check if the username exists
-      fetch(`/check_username?username=${username}`)
-        .then(response => response.json())
-        .then(data => {
-          const existingUserDisplay = document.querySelector('.existing-user-display');
-          if (existingUserDisplay) {
-            existingUserDisplay.remove();
-          }
-          // If the username exists, display the linked user
-          if (data.firstname) {
-            document.getElementById('first_name').value = data.firstname;
-            document.getElementById('last_name').value = data.lastname;
-            document.getElementById('phone').value = data.phone;
-          }
+        
         });
-      
-      });
-});
-</script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("password-reset-form");
-    const username = document.getElementById("username");
-    const locationId = document.getElementById("location_id");
-    const firstName = document.getElementById("first_name");
-    const lastName = document.getElementById("last_name");
-    const phoneInput = document.getElementById("phone");
-
-    form.addEventListener("submit", function (e) {
-      let errors = [];
-
-      if (!username.value.trim()) {
-        document.getElementById('error-messages').style.display = 'block';
-        document.getElementById('error-message-text').textContent = "Username is required.";
-        e.preventDefault();
-        return;
-      }
-
-      if (!locationId.value || locationId.value === "null") {
-        document.getElementById('error-messages').style.display = 'block';
-        document.getElementById('error-message-text').textContent = "Please select a location.";
-        e.preventDefault();
-        return;
-      }
-
-      if (!firstName.value.trim()) {
-        document.getElementById('error-messages').style.display = 'block';
-        document.getElementById('error-message-text').textContent = "First name is required.";
-        e.preventDefault();
-        return;
-      }
-
-      if (!lastName.value.trim()) {
-        document.getElementById('error-messages').style.display = 'block';
-        document.getElementById('error-message-text').textContent = "Last name is required.";
-        e.preventDefault();
-        return;
-      }
-      if(!phoneInput.value.trim()) {
-        document.getElementById('error-messages').style.display = 'block';
-        document.getElementById('error-message-text').textContent = "Phone number is required.";
-        e.preventDefault();
-        return;
-      }
-      
-    });
-  });
-
-  //clear the error message when the user starts typing
-  document.addEventListener("input", function (e) {
-    if (e.target.matches("#username, #first_name, #last_name, #phone")) {
-      document.getElementById('error-messages').style.display = 'none';
     }
-  });
 
-  //clear the error when location is selected
-  document.addEventListener("click", function (e) {
-    if (e.target.matches("[data-action='click->location-select#selectLocation']")) {
-      document.getElementById('error-messages').style.display = 'none';
-    }
-  });
-
-    document.addEventListener('DOMContentLoaded', function() {
-    // Get the button and menu elements
-    const locationButton = document.getElementById('location-button');
-    const locationMenu = document.getElementById('location-menu');
-    const locationSearch = document.getElementById('location-search');
-  
-    // Toggle menu when button is clicked
-    locationButton.addEventListener('click', function(e) {
-      e.preventDefault();
-      locationMenu.classList.toggle('hidden');
-    });
-  
-    // Close menu when clicking outside
-    document.addEventListener('click', function(e) {
-      if (!locationButton.contains(e.target) && !locationMenu.contains(e.target)) {
-        locationMenu.classList.add('hidden');
-      }
-    });
-  
-    // Filter locations when searching
-    locationSearch.addEventListener('input', function(e) {
-      const searchText = e.target.value.toLowerCase();
-      const locationLinks = locationMenu.getElementsByTagName('a');
+    // Dropdown toggle function
+    window.toggleDropdown = function(button) {
+      const dropdown = button.nextElementSibling;
+      dropdown.classList.toggle('hidden');
       
-      Array.from(locationLinks).forEach(link => {
-        const locationName = link.textContent.toLowerCase();
-        link.style.display = locationName.includes(searchText) ? '' : 'none';
+      // Close other dropdowns
+      document.querySelectorAll('.dropdown-menu').forEach(menu => {
+        if (menu !== dropdown && !menu.classList.contains('hidden')) {
+          menu.classList.add('hidden');
+        }
       });
-    });
-  });
-  
-  // Function to select location
-  function selectLocation(event, locationId, locationName) {
-    event.preventDefault();
-    
-    // Update hidden input and button text
-    document.getElementById('location_id').value = locationId;
-    document.querySelector('#location-button span').textContent = locationName;
-    
-    // Hide the menu
-    document.getElementById('location-menu').classList.add('hidden');
-  }
+      
+      // Close dropdown when clicking outside
+      document.addEventListener('click', function closeDropdown(e) {
+        if (!button.contains(e.target) && !dropdown.contains(e.target)) {
+          dropdown.classList.add('hidden');
+          document.removeEventListener('click', closeDropdown);
+        }
+      });
+    };
 
-</script>
+    // CSRF token setup for AJAX requests
+    const token = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content');
+    
+    // Function to void a reset code
+    function voidResetCode(resetId) {
+      if (!confirm('Are you sure you want to void this reset code?')) {
+        return;
+      }
+
+      fetch(`/password_resets/${resetId}`, {
+        method: 'DELETE',
+        headers: {
+          'X-CSRF-Token': token,
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        // Remove the row from the table or refresh the page
+        const row = document.querySelector(`button[onclick="voidResetCode('${resetId}')"]`).closest('tr');
+        row.remove();
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('Failed to void the reset code. Please try again.');
+      });
+    }
+  </script>
 
 <% end %>
