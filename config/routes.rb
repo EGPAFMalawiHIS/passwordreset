@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   
   # User registration
   get '/signup', to: 'users#new'
+  get '/forgot_password', to: 'users#forgot_password'
+  post '/update_password', to: 'users#update_password'
   resources :users, only: [:create, :index, :show, :edit,:update] do
     member do
       patch :toggle_activation 

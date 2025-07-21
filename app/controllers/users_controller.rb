@@ -1,20 +1,66 @@
 class UsersController < ApplicationController
-  before_action :require_login, except: [:new, :create]
+  skip_before_action :verify_authenticity_token, only: [:update_password]
+  before_action :require_login, except: [:new, :create, :forgot_password, :update_password]
   before_action :require_admin!, only: [:index, :show]
   
   layout 'auth', only: [:new]
   
   def index
   
-        @pagy, @users = pagy(     User.where.not(role: "user")
-                                     .where.not(id: current_user.id)
-                                     .order(:last_name, :first_name), items: 20)
+        @pagy, @users = pagy(User.where.not(role: "user")
+                                 .where.not(id: current_user.id)
+                                 .order(:last_name, :first_name), items: 20)
   end
   
   def new
     @user = User.new
   end
-  
+
+  def forgot_password
+       @users = {}
+
+        User.where.not(role: "user").each do |user|
+            @users[user.email] = {
+                                     phone: user.phone,
+                               maskedPhone: mask_phone(user.phone)
+                            }
+        end
+  end
+
+  def update_password
+  begin
+      
+      @user = User.find_by(email: params[:email])
+    if @user
+      if @user.update(
+        password: params[:password],
+        password_confirmation: params[:password],
+        active: true
+      )
+        render json: { 
+          success: true, 
+          message: "Password updated successfully" 
+        }, status: :ok
+      else
+        render json: { 
+          success: false, 
+          message: @user.errors.full_messages.join(", ") 
+        }, status: :unprocessable_entity
+      end
+    else
+      render json: { 
+        success: false, 
+        message: "User not found" 
+      }, status: :not_found
+    end
+  rescue => e
+    render json: { 
+      success: false, 
+      message: "An error occurred: #{e.message}" 
+    }, status: :internal_server_error
+  end
+  end
+
   def create
     @user = User.new(user_params)
     @user.role = 'helpdesk' # Default role for new users
@@ -76,6 +122,15 @@ class UsersController < ApplicationController
   end
   
   private
+
+  def mask_phone(phone)
+    return "" unless phone.present? && phone.length >= 10
+
+    prefix = phone[0..3]  
+    masked = '***'
+    suffix = phone[-5..-1] 
+    "#{prefix}#{masked}#{suffix}"
+  end
   
   def user_params
     params.require(:user).permit(:first_name, :last_name, :username, :phone, :email, :password, :password_confirmation)
